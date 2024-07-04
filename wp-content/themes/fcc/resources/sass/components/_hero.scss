@@ -1,0 +1,11 @@
+#hero {
+    min-height: 800px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 30px;
+    .hero-text {
+        max-width: 755px;
+    }
+}

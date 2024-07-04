@@ -1,0 +1,121 @@
+.site-footer {
+  color: $white;
+  text-align: center;
+  @include media-breakpoint-up(lg) {
+    text-align: left;
+  }
+
+  .curve-shape {
+    color: $green;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: -1px;
+    pointer-events: none;
+    @include media-breakpoint-up(md) {
+      margin-bottom: -2px;
+    }
+  }
+
+  a:not(.btn) {
+    color: $white;
+    display: inline-block;
+    border-bottom: 1px solid rgba($white, 0);
+    //margin-bottom: -1px;
+
+    &:hover {
+      border-bottom: 1px solid rgba($white, 1);
+    }
+
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  .bottom-links {
+    background-color: $green;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    font-size: $font-size-sm;
+    line-height: 1.75;
+
+    ul {
+      --fcc-gutter-x: 1.25rem;
+      --fcc-gutter-y: 0;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: calc(-1 * var(--fcc-gutter-y));
+      margin-right: calc(-0.5 * var(--fcc-gutter-x));
+
+      justify-content: center;
+      @include media-breakpoint-up(md) {
+        justify-content: unset;
+      }
+
+      li {
+        padding-right: calc(var(--fcc-gutter-x) * 0.5);
+        padding-left: calc(var(--fcc-gutter-x) * 0.5);
+        margin-top: var(--fcc-gutter-y);
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 100%;
+      }
+    }
+
+    .social-links {
+      a {
+        border-bottom: none;
+      }
+    }
+
+    .link-group {
+      li {
+        width: 100%;
+        @include media-breakpoint-up(sm) {
+          width: auto;
+        }
+      }
+
+      a {
+        border-bottom: 1px solid rgba($white, 1);
+      }
+    }
+  }
+}
+
+#footer-navigation {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background: url(../../resources/images/main-theme/shapes/trees-green-footer.svg) right -20px bottom -20px/108px auto no-repeat,
+  url(../../resources/images/main-theme/shapes/splatter-green-footer.svg) center bottom 0 no-repeat,
+  linear-gradient(180deg, #6BDE46 0%, #60C052 100%);
+
+  @include media-breakpoint-up(md) {
+    background: url(../../resources/images/main-theme/shapes/trees-green-footer.svg) left 0 bottom -10px/108px auto no-repeat,
+    url(../../resources/images/main-theme/shapes/trees-green-footer.svg) right bottom -20px/236px auto no-repeat,
+    url(../../resources/images/main-theme/shapes/splatter-green-footer.svg) center bottom -50px no-repeat,
+    linear-gradient(180deg, #6BDE46 0%, #60C052 100%);
+  }
+
+  @include media-breakpoint-up(lg) {
+    background: url(../../resources/images/main-theme/shapes/trees-green-footer.svg) left 10% bottom -10px/108px auto no-repeat,
+    url(../../resources/images/main-theme/shapes/trees-green-footer.svg) right 5% bottom -20px/236px auto no-repeat,
+    url(../../resources/images/main-theme/shapes/splatter-green-footer.svg) center bottom -50px no-repeat,
+    linear-gradient(180deg, #6BDE46 0%, #60C052 100%);
+  }
+
+  @include media-breakpoint-up(xxxl) {
+    background: url(../../resources/images/main-theme/shapes/trees-green-footer.svg) left 20% bottom -10px/108px auto no-repeat,
+    url(../../resources/images/main-theme/shapes/trees-green-footer.svg) right 12% bottom -20px/236px auto no-repeat,
+    url(../../resources/images/main-theme/shapes/splatter-green-footer.svg) center bottom -50px no-repeat,
+    linear-gradient(180deg, #6BDE46 0%, #60C052 100%);
+  }
+
+  li + li {
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,184 @@
+
+#top-bar {
+  display: none;
+  @include make-container(40px);
+  background: var(--fcc-gray-100, #{$grey100});
+
+  @extend %button;
+
+  @include media-breakpoint-up(lg) {
+    @include font-size(13px);
+    display: block;
+  }
+
+  @include media-breakpoint-up(xl) {
+    @include font-size(16px);
+  }
+
+  @include media-breakpoint-up(xxxl) {
+    @include font-size(18px);
+  }
+
+  @include media-breakpoint-up(xxxl) {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+
+  ul {
+    margin-bottom: 0;
+    @include make-row();
+
+    li {
+      @include make-col-ready();
+      @include make-col-auto();
+    }
+
+    a {
+      color: var(--fcc-grey-600, #{$grey600});
+      display: block;
+    }
+  }
+
+  .center-links {
+    --fcc-gutter-x: 0;
+
+    a {
+      padding: 10px 20px;
+    }
+  }
+
+  .side-links {
+    justify-content: flex-end;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    a {
+      border-bottom: 2px solid var(--fcc-grey-600, #{$grey600});
+
+      &:hover {
+        border-color: var(--fcc-white, #{$white});
+      }
+    }
+  }
+}
+
+
+#masthead {
+  background: rgba(255, 255, 255, 0.80);
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.10);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  z-index: 99;
+  top: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @include media-breakpoint-up(lg) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .btn {
+    @include media-breakpoint-up(lg) {
+      @include font-size(13px);
+    }
+
+    @include media-breakpoint-up(xl) {
+      @include font-size(16px);
+    }
+
+    @include media-breakpoint-up(xxxl) {
+      @include font-size(18px);
+    }
+  }
+
+
+  .col-register {
+    .btn {
+      --fcc-btn-padding-y: 22px;
+      @include media-breakpoint-up(lg) {
+        --fcc-btn-padding-x: 9px;
+      }
+      @include media-breakpoint-up(xl) {
+        --fcc-btn-padding-x: 12px;
+      }
+      @include media-breakpoint-up(xxxl) {
+        --fcc-btn-padding-x: 27px;
+      }
+    }
+  }
+
+  .btn-text {
+    @include media-breakpoint-up(lg) {
+      --fcc-btn-padding-x: 9px;
+    }
+    @include media-breakpoint-up(xl) {
+      --fcc-btn-padding-x: 12px;
+    }
+    @include media-breakpoint-up(xxxl) {
+      --fcc-btn-padding-x: 17px;
+    }
+  }
+
+  .col-logo {
+    @include media-breakpoint-up(lg) {
+      width: 170px;
+    }
+  }
+
+  .col-logo,
+  .col-register {
+    @include media-breakpoint-up(xxl) {
+      width: 220px;
+    }
+    @include media-breakpoint-up(xxxl) {
+      width: 240px;
+    }
+    @media screen and (min-width: 1760px) {
+      width: 256px;
+    }
+  }
+
+  .nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+.mobile-button {
+  --fcc-btn-padding-y: 7px;
+  --fcc-btn-padding-x: 7px;
+}
+
+#mobile-navigation {
+  .nav-header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    @include media-breakpoint-up(lg) {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+
+  .nav-footer {
+    position: sticky;
+    bottom: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .accordion-item{
+    margin-bottom: 10px;
+
+    ul{
+      li+li{
+        margin-top: 10px;
+      }
+    }
+  }
+}

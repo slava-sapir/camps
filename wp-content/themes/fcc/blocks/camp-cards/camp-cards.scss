@@ -1,0 +1,36 @@
+@import "../../resources/sass/bootstrap";
+#camp-cards {
+    background: url(../../resources/images/main-theme/shapes/splatter-beige-top.svg) center bottom 50% no-repeat,
+                linear-gradient(180deg, white 60%, $tan 60%);
+    img {
+        border-radius: 20px 20px 0 0;
+    }
+    .camp-card-text {
+        border-radius: 0px 0px 20px 20px;
+
+        a {
+            margin-bottom: -24px;
+        }
+    }
+    .day-camps {
+        position: relative;
+        .camp-card-text {
+            background: url(../../resources/images/main-theme/shapes/splatter-gold.svg) center bottom 0 no-repeat,
+                        $gold;
+        }
+    }
+    .overnight-camps {
+        position: relative;
+        .camp-card-text {
+            background: url(../../resources/images/main-theme/shapes/splatter-blue.svg) center bottom 0 no-repeat,
+                        $teal;
+        }
+    }
+    .schools-groups {
+        position: relative;
+        .camp-card-text {
+            background: url(../../resources/images/main-theme/shapes/splatter-green-footer.svg) center bottom 0 no-repeat,
+                        $green;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+.container-ed {
+  @media screen and (min-width: 1760px) {
+    max-width: 1700px;
+  }
+}
+
+// Type
+%button {
+  font-family: $btn-font-family;
+  @include font-size($btn-font-size);
+  font-weight: $btn-font-weight;
+  line-height: $btn-line-height;
+  font-style: $btn-font-style;
+}
+
+a {
+  transition: all .3s ease;
+}
+
+.has-background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.tile-shadow {
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.10);
+}
+
+body small {
+  font-size: $font-size-sm;
+}

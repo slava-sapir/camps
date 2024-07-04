@@ -1,0 +1,274 @@
+// Color system
+
+// scss-docs-start color-variables
+$white: #ffffff;
+$grey100: #f3f4f8;
+$grey300: #a0a3b0;
+$grey600: #58616b;
+$grey900: #090a16;
+$green: #6bde46;
+$brown: #5b3729;
+$tan: #f2efeb;
+$gold: #ffc340;
+$red: #d63731;
+$slate: #325251;
+$night: #18184a;
+$chill: #89a3c5;
+$teal: #1fd3fa;
+$charcoal: #404040;
+$orange: #ff7f3e;
+$darkgreen: #49c637;
+$darkgold: #f5a800;
+$darkteal: #00b3da;
+$darklavendar: #a295ff;
+$lavendar: #c3bbff;
+// scss-docs-end color-variables
+
+// scss-docs-start colors-map
+$colors: (
+        "white": $white,
+        "grey100": $grey100,
+        "grey300": $grey300,
+        "grey600": $grey600,
+        "grey900": $grey900,
+        "green": $green,
+        "brown": $brown,
+        "tan": $tan,
+        "gold": $gold,
+        "red": $red,
+        "slate": $slate,
+        "night": $night,
+        "chill": $chill,
+        "teal": $teal,
+        "charcoal": $charcoal,
+        "orange": $orange,
+        "darkgreen": $darkgreen,
+        "darkgold": $darkgold,
+        "darkteal": $darkteal,
+        "darklavendar": $darklavendar,
+        "lavendar": $lavendar,
+);
+
+$theme-colors: $colors;
+// scss-docs-end colors-map
+
+// scss-docs-start theme-color-variables
+//$primary: $black;
+//$secondary: $clay;
+// scss-docs-end theme-color-variables
+
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+$enable-gradients: true;
+
+// Prefix for :root CSS variables
+$variable-prefix: fcc-;
+
+// Gradient
+//
+// The gradient which is added to components if `$enable-gradients` is `true`
+// This gradient is also added to elements with `.bg-gradient`
+// scss-docs-start variable-gradient
+$gradient: radial-gradient(50% 50% at 50% 50%, rgba($white, .25), rgba($white, 0)) !default;
+// scss-docs-end variable-gradient
+
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+// scss-docs-start spacer-variables-maps
+$spacers: (
+        0: 0,
+        5: #{divide(5, 16)}rem,
+        10: #{divide(10, 16)}rem,
+        15: #{divide(15, 16)}rem,
+        20:#{divide(20, 16)}rem,
+        30:#{divide(30, 16)}rem,
+        40:#{divide(40, 16)}rem,
+        50:#{divide(50, 16)}rem,
+        100:#{divide(100, 16)}rem,
+        125:#{divide(125, 16)}rem,
+);
+// scss-docs-end spacer-variables-maps
+
+
+// Body
+//
+// Settings for the `<body>` element.
+$body-color: $grey600;
+
+
+// Links
+//
+// Style anchor elements.
+
+$link-color: $grey600;
+$link-decoration: none;
+$link-hover-color: $charcoal;
+
+// Paragraphs
+//
+// Style p element.
+$paragraph-margin-bottom: 1.25rem;
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+
+// scss-docs-start grid-breakpoints
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1400px,
+        xxxl: 1520px
+);
+// scss-docs-end grid-breakpoints
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+// scss-docs-start container-max-widths
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1140px,
+        xxl: 1320px,
+        xxxl: 1460px
+);
+
+$small-container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1140px,
+);
+
+// scss-docs-end container-max-widths
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+$grid-gutter-width: 1.25rem;
+
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// scss-docs-start font-variables
+$font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+
+// $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
+// $font-size-base affects the font size of the body text
+// $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
+// $font-size-base affects the font size of the body text
+$font-size-base: 1rem;
+$font-size-xs: 0.5625rem; // 9px
+$font-size-sm: 0.75rem; // 12px
+$font-size-lg: 1.3125rem; // 21px
+
+// $h1-font-size: 5.625rem; // 90px
+$h1-font-size: 4.1875rem; // 67px
+$h2-font-size: 3.1875rem; // 51px
+$h3-font-size: 2.375rem; // 38px
+$h4-font-size: 1.75rem; // 28px
+$h5-font-size: 1.3125rem; // 21px
+$h6-font-size: 1rem; // 16px
+// scss-docs-end font-variables
+
+
+// scss-docs-start headings-variables
+$headings-font-family: $font-family-sans-serif;
+$headings-margin-bottom: 1.25rem;
+$headings-font-style: italic;
+$headings-font-weight: 900;
+$headings-line-height: 1.3;
+// scss-docs-end headings-variables
+
+$stretched-link-z-index: 5;
+
+
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background, and border color.
+
+// scss-docs-start btn-variables
+$btn-padding-y: 12px;
+$btn-padding-x: 30px;
+$btn-font-family: $headings-font-family;
+$btn-font-size: 1.125rem;
+$btn-font-weight: 700;
+$btn-font-style: $headings-font-style;
+$btn-line-height: 1;
+$btn-border-width: 3px;
+$btn-border-radius: 40px;
+
+$btn-transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out, box-shadow .3s ease-in-out;
+// scss-docs-end btn-variables
+
+
+// Accordion
+
+// scss-docs-start accordion-variables
+$accordion-padding-y: 1.25rem;
+//$accordion-padding-x:                     1.25rem !default;
+//$accordion-color:                         var(--#{$prefix}body-color) !default;
+$accordion-bg: $tan;
+$accordion-border-width: 0;
+$accordion-border-color: $tan;
+$accordion-border-radius: 0;
+//$accordion-inner-border-radius:           subtract($accordion-border-radius, $accordion-border-width) !default;
+//
+//$accordion-body-padding-y:                $accordion-padding-y !default;
+//$accordion-body-padding-x:                $accordion-padding-x !default;
+//
+//$accordion-button-padding-y:              $accordion-padding-y !default;
+//$accordion-button-padding-x:              $accordion-padding-x !default;
+//$accordion-button-color:                  var(--#{$prefix}body-color) !default;
+//$accordion-button-bg:                     var(--#{$prefix}accordion-bg) !default;
+//$accordion-transition:                    $btn-transition, border-radius .15s ease !default;
+$accordion-button-active-bg: $tan;
+$accordion-button-active-color: $body-color;
+//
+//// fusv-disable
+//$accordion-button-focus-border-color:     $input-focus-border-color !default; // Deprecated in v5.3.3
+//// fusv-enable
+$accordion-button-focus-box-shadow: none;
+//
+$accordion-icon-width: 28px;
+$accordion-icon-color: $green;
+$accordion-icon-active-color: $green;
+//$accordion-icon-transition:               transform .2s ease-in-out !default;
+//$accordion-icon-transform:                rotate(-180deg) !default;
+//
+
+$accordion-button-icon: url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28' fill='#{$accordion-icon-color}'><path d='M18.5208 10.4999L13.9942 15.0266L9.46751 10.4999C9.24954 10.2815 8.95362 10.1587 8.64501 10.1587C8.33641 10.1587 8.04048 10.2815 7.82251 10.4999C7.36751 10.9549 7.36751 11.6899 7.82251 12.1449L13.1775 17.4999C13.6325 17.9549 14.3675 17.9549 14.8225 17.4999L20.1775 12.1449C20.6325 11.6899 20.6325 10.9549 20.1775 10.4999C19.7225 10.0566 18.9758 10.0449 18.5208 10.4999Z' /></svg>");
+$accordion-button-active-icon: url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28' fill='#{$accordion-icon-active-color}'><path d='M18.5208 10.4999L13.9942 15.0266L9.46751 10.4999C9.24954 10.2815 8.95362 10.1587 8.64501 10.1587C8.33641 10.1587 8.04048 10.2815 7.82251 10.4999C7.36751 10.9549 7.36751 11.6899 7.82251 12.1449L13.1775 17.4999C13.6325 17.9549 14.3675 17.9549 14.8225 17.4999L20.1775 12.1449C20.6325 11.6899 20.6325 10.9549 20.1775 10.4999C19.7225 10.0566 18.9758 10.0449 18.5208 10.4999Z' /></svg>");
+
+// scss-docs-end accordion-variables
+
+
+// Offcanvas
+// Offcanvas5
+
+// scss-docs-start offcanvas-variables
+$offcanvas-padding-y: 0;
+$offcanvas-padding-x: 0;
+$offcanvas-vertical-height: 100vh;
+// scss-docs-end offcanvas-variables
+
+$border-radius: #{divide(20, 16)}rem;
+$border-radius-lg: 50%;

@@ -1,0 +1,10 @@
+!*
+public
+node_modules
+vendor
+package-lock.json
+composer.lock
+mix-manifest.json
+script.js
+style.css
+!js/script.js

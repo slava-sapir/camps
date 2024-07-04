@@ -1,0 +1,12 @@
+.accordion-body{
+  padding-top: 0 !important;
+}
+
+.accordion-item{
+  border-radius: 10px !important;
+  overflow: hidden;
+
+  button{
+    @extend %button;
+  }
+}

@@ -1,0 +1,235 @@
+//
+// Base styles
+//
+
+.btn {
+  // scss-docs-start btn-css-vars
+  --#{$prefix}btn-padding-x: #{$btn-padding-x};
+  --#{$prefix}btn-padding-y: #{$btn-padding-y};
+  --#{$prefix}btn-font-family: #{$btn-font-family};
+  @include rfs($btn-font-size, --#{$prefix}btn-font-size);
+  --#{$prefix}btn-font-weight: #{$btn-font-weight};
+  --#{$prefix}btn-line-height: #{$btn-line-height};
+  --#{$prefix}btn-color: #{$btn-color};
+  --#{$prefix}btn-bg: transparent;
+  --#{$prefix}btn-border-width: #{$btn-border-width};
+  --#{$prefix}btn-border-color: transparent;
+  --#{$prefix}btn-border-radius: #{$btn-border-radius};
+  --#{$prefix}btn-hover-border-color: transparent;
+  --#{$prefix}btn-box-shadow: #{$btn-box-shadow};
+  --#{$prefix}btn-disabled-opacity: #{$btn-disabled-opacity};
+  --#{$prefix}btn-focus-box-shadow: 0 0 0 #{$btn-focus-width} rgba(var(--#{$prefix}btn-focus-shadow-rgb), .5);
+  // scss-docs-end btn-css-vars
+
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: var(--#{$prefix}btn-padding-y) var(--#{$prefix}btn-padding-x);
+  font-family: var(--#{$prefix}btn-font-family);
+  @include font-size(var(--#{$prefix}btn-font-size));
+  font-weight: var(--#{$prefix}btn-font-weight);
+  font-style: $btn-font-style;
+  line-height: var(--#{$prefix}btn-line-height);
+  color: var(--#{$prefix}btn-color);
+  text-align: center;
+  text-decoration: if($link-decoration == none, null, none);
+  white-space: $btn-white-space;
+  vertical-align: middle;
+  cursor: if($enable-button-pointers, pointer, null);
+  user-select: none;
+  border: var(--#{$prefix}btn-border-width) solid var(--#{$prefix}btn-border-color);
+  background: var(--#{$prefix}btn-bg);
+  @include border-radius(var(--#{$prefix}btn-border-radius));
+  @include box-shadow(var(--#{$prefix}btn-box-shadow));
+  @include transition($btn-transition);
+
+  &:hover {
+    color: var(--#{$prefix}btn-hover-color);
+    text-decoration: if($link-hover-decoration == underline, none, null);
+    background-color: var(--#{$prefix}btn-hover-bg);
+    border-color: var(--#{$prefix}btn-hover-border-color);
+  }
+
+  .btn-check + &:hover {
+    // override for the checkbox/radio buttons
+    color: var(--#{$prefix}btn-color);
+    background-color: var(--#{$prefix}btn-bg);
+    border-color: var(--#{$prefix}btn-border-color);
+  }
+
+  &:focus-visible {
+    color: var(--#{$prefix}btn-hover-color);
+    @include gradient-bg(var(--#{$prefix}btn-hover-bg));
+    border-color: var(--#{$prefix}btn-hover-border-color);
+    outline: 0;
+    // Avoid using mixin so we can pass custom focus shadow properly
+    @if $enable-shadows {
+      box-shadow: var(--#{$prefix}btn-box-shadow), var(--#{$prefix}btn-focus-box-shadow);
+    } @else {
+      box-shadow: var(--#{$prefix}btn-focus-box-shadow);
+    }
+  }
+
+  .btn-check:focus-visible + & {
+    border-color: var(--#{$prefix}btn-hover-border-color);
+    outline: 0;
+    // Avoid using mixin so we can pass custom focus shadow properly
+    @if $enable-shadows {
+      box-shadow: var(--#{$prefix}btn-box-shadow), var(--#{$prefix}btn-focus-box-shadow);
+    } @else {
+      box-shadow: var(--#{$prefix}btn-focus-box-shadow);
+    }
+  }
+
+  .btn-check:checked + &,
+  :not(.btn-check) + &:active,
+  &:first-child:active,
+  &.active,
+  &.show {
+    color: var(--#{$prefix}btn-active-color);
+    background-color: var(--#{$prefix}btn-active-bg);
+    // Remove CSS gradients if they're enabled
+    background-image: if($enable-gradients, none, null);
+    border-color: var(--#{$prefix}btn-active-border-color);
+    @include box-shadow(var(--#{$prefix}btn-active-shadow));
+
+    &:focus-visible {
+      // Avoid using mixin so we can pass custom focus shadow properly
+      @if $enable-shadows {
+        box-shadow: var(--#{$prefix}btn-active-shadow), var(--#{$prefix}btn-focus-box-shadow);
+      } @else {
+        box-shadow: var(--#{$prefix}btn-focus-box-shadow);
+      }
+    }
+  }
+
+  .btn-check:checked:focus-visible + & {
+    // Avoid using mixin so we can pass custom focus shadow properly
+    @if $enable-shadows {
+      box-shadow: var(--#{$prefix}btn-active-shadow), var(--#{$prefix}btn-focus-box-shadow);
+    } @else {
+      box-shadow: var(--#{$prefix}btn-focus-box-shadow);
+    }
+  }
+
+  &:disabled,
+  &.disabled,
+  fieldset:disabled & {
+    color: var(--#{$prefix}btn-disabled-color);
+    pointer-events: none;
+    background-color: var(--#{$prefix}btn-disabled-bg);
+    background-image: if($enable-gradients, none, null);
+    border-color: var(--#{$prefix}btn-disabled-border-color);
+    opacity: var(--#{$prefix}btn-disabled-opacity);
+    @include box-shadow(none);
+  }
+
+
+}
+
+
+.btn-white {
+  --fcc-btn-color: #{$grey600};
+  --fcc-btn-bg: #{$white};
+  --fcc-btn-border-color: #{$white};
+  --fcc-btn-hover-color: #{$charcoal};
+  --fcc-btn-hover-bg: #{$white};
+  --fcc-btn-hover-border-color: #{$white};
+  --fcc-btn-active-color: #{$charcoal};
+  --fcc-btn-active-bg: #{$white};
+  --fcc-btn-active-border-color: #{$white};
+  --fcc-btn-disabled-color: #{$grey600};
+  --fcc-btn-disabled-bg: #{$white};
+  --fcc-btn-disabled-border-color: #{$white};
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.20);
+
+  &:hover,
+  &:active {
+    @include gradient-bg($tan);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);
+  }
+}
+
+
+.btn-gold {
+  --fcc-btn-color: #{$white};
+  --fcc-btn-bg: #{$gold};
+  --fcc-btn-border-color: #{$gold};
+  --fcc-btn-hover-color: #{$white};
+  --fcc-btn-hover-bg: #{$gold};
+  --fcc-btn-hover-border-color: #{$gold};
+  --fcc-btn-active-color: #{$white};
+  --fcc-btn-active-bg: #{$gold};
+  --fcc-btn-active-border-color: #{$gold};
+  --fcc-btn-disabled-color: #{$white};
+  --fcc-btn-disabled-bg: #{$gold};
+  --fcc-btn-disabled-border-color: #{$gold};
+  box-shadow: 0 0 10px 0 rgba(9, 10, 22, 0.20);
+
+  &:hover,
+  &:active {
+    @include gradient-bg(#F5A800);
+    box-shadow: 0 0 10px 0 rgba(9, 10, 22, 0);
+  }
+}
+
+.btn-green {
+  --fcc-btn-color: #{$white};
+  --fcc-btn-bg: #{$green};
+  --fcc-btn-border-color: #{$green};
+  --fcc-btn-hover-color: #{$white};
+  --fcc-btn-hover-bg: #{$green};
+  --fcc-btn-hover-border-color: #{$green};
+  --fcc-btn-active-color: #{$white};
+  --fcc-btn-active-bg: #{$green};
+  --fcc-btn-active-border-color: #{$green};
+  --fcc-btn-disabled-color: #{$white};
+  --fcc-btn-disabled-bg: #{$green};
+  --fcc-btn-disabled-border-color: #{$green};
+
+  &:hover,
+  &:active {
+    @include gradient-bg(#49C637);
+  }
+}
+
+
+.btn-teal {
+  --fcc-btn-color: #{$white};
+  --fcc-btn-bg: #{$teal};
+  --fcc-btn-border-color: #{$teal};
+  --fcc-btn-hover-color: #{$white};
+  --fcc-btn-hover-bg: #{$teal};
+  --fcc-btn-hover-border-color: #{$teal};
+  --fcc-btn-active-color: #{$white};
+  --fcc-btn-active-bg: #{$teal};
+  --fcc-btn-active-border-color: #{$teal};
+  --fcc-btn-disabled-color: #{$white};
+  --fcc-btn-disabled-bg: #{$teal};
+  --fcc-btn-disabled-border-color: #{$teal};
+  box-shadow: 0 0 10px 0 rgba(9, 10, 22, 0.20);
+
+  &:hover,
+  &:active {
+    @include gradient-bg(#00B3DA);
+    box-shadow: 0 0 10px 0 rgba(9, 10, 22, 0);
+  }
+}
+
+
+.btn-text {
+  --fcc-btn-color: #{$grey600};
+  --fcc-btn-bg: transparent;
+  --fcc-btn-border-color: transparent;
+  --fcc-btn-hover-color: #{$charcoal};
+  --fcc-btn-hover-bg: transparent;
+  --fcc-btn-hover-border-color: transparent;
+  --fcc-btn-active-color: #{$charcoal};
+  --fcc-btn-active-bg: transparent;
+  --fcc-btn-active-border-color: transparent;
+  --fcc-btn-disabled-color: #{$grey600};
+  --fcc-btn-disabled-bg: transparent;
+  --fcc-btn-disabled-border-color: transparent;
+  --fcc-btn-border-radius: 10px;
+  --fcc-btn-padding-x: 20px;
+}
