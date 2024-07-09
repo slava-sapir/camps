@@ -58,13 +58,15 @@ if($query->have_posts()) : ?>
                                     
                                 </div>
                             </div>
-                            <div class="author-info px-20 pb-20">
-                            Written by <?= get_the_author() ?>
+                            <div class="author-info d-flex align-items-center px-20 pb-20">
+                                <?= get_avatar(get_the_author_meta('ID'), 48); ?>
+                                <div class="d-flex flex-column ps-10"><small class="fw-bold">Written by</small> <?= get_the_author() ?></div>
                             </div>
                         </div>
                     </div>
                 <?php endwhile; wp_reset_postdata(); ?>
             </div>
+            <div class="text-center pt-20"><a href="/blog" class="btn btn-white">View Our Blog</a></div>
         </div>
     </section>
 <?php endif; ?>
