@@ -57,6 +57,7 @@ $theme-colors: $colors;
 //$secondary: $clay;
 // scss-docs-end theme-color-variables
 
+$enable-negative-margins: true;
 
 // Options
 //
@@ -91,6 +92,10 @@ $spacers: (
         30:#{divide(30, 16)}rem,
         40:#{divide(40, 16)}rem,
         50:#{divide(50, 16)}rem,
+        60:#{divide(60, 16)}rem,
+        70:#{divide(70, 16)}rem,
+        80:#{divide(80, 16)}rem,
+        90:#{divide(90, 16)}rem,
         100:#{divide(100, 16)}rem,
         125:#{divide(125, 16)}rem,
 );

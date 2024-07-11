@@ -142,6 +142,11 @@ function forest_cliff_camps_scripts()
 
 add_action('wp_enqueue_scripts', 'forest_cliff_camps_scripts');
 
+add_action('enqueue_block_editor_assets','forest_cliff_camps_add_block_editor_assets',10,0);
+function forest_cliff_camps_add_block_editor_assets(){
+  wp_enqueue_style('block_editor_css', get_template_directory_uri() . '/public/css/theme.min.css');
+}
+
 /**
  * Custom template tags for this theme.
  */

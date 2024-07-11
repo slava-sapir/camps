@@ -1,0 +1,9 @@
+#image-text-rows {
+    background: url(../../resources/images/main-theme/shapes/splatter-beige-top.svg) center bottom 5% no-repeat,
+                linear-gradient(180deg, white 95%, $tan 95%);
+    li {
+        &::marker {
+            color: $green;
+        }
+    }
+}

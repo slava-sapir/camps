@@ -9,11 +9,11 @@
 
 
  ?>
- <section id="hero" class="position-relative" style="background-image: url(<?= get_field('hero_image')['url']; ?>);" role="image" aria-label="<?= get_field('hero_image')['alt']; ?>">
-    <div class="custom-container">
-        <?php if(get_field('hero_text')) : ?>
-        <div class="hero-text text-cloud <?= get_field('text_position'); ?>">
-            <?= get_field('hero_text'); ?>
+ <section id="hero" class="position-relative d-flex align-items-end justify-content-center" style="background-image: url(<?= get_field('hero_image')['url']; ?>);" role="image" aria-label="<?= get_field('hero_image')['alt']; ?>">
+    <div class="small-container">
+        <?php if(get_field('hero_title')) : ?>
+        <div>
+            <h1 class="text-center text-white mb-0 pb-100"><?= get_field('hero_title'); ?></h1>
         </div>
         <?php endif;
         if(get_field('hero_cta')) : ?>

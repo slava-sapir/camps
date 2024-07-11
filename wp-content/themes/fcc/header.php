@@ -55,7 +55,7 @@
             <div class="row align-items-center">
                 <!-- Logo -->
                 <div class="col col-lg-auto col-logo">
-                    <a href="">
+                    <a href="<?= get_home_url(); ?>">
                         <img src="<?php echo get_template_directory_uri() . '/resources/images/main-theme/logos/forest-cliff-camps-logo-original.svg'; ?>"
                              alt="<?php bloginfo('name'); ?>" class="header-logo img-fluid">
                     </a>
