@@ -30,3 +30,13 @@ a {
 body small {
   font-size: $font-size-sm;
 }
+
+.modal-max {
+  @extend .modal-xl;
+  @include media-breakpoint-up(xxl) {
+    max-width: 1320px;
+  }
+  @include media-breakpoint-up(xxxl) {
+    max-width: 1440px;
+  }
+}
