@@ -26,7 +26,7 @@ if(have_rows('direction_team')) :
                 </svg>
             </div>
         <?php endif; ?>
-        <div class="row gx-sm-20 py-40">
+        <div class="row gx-sm-20 gy-40 py-40">
             <?php while(have_rows('direction_team')) : the_row(); 
             $image = get_sub_field('image');
             $name = get_sub_field('name');
@@ -35,13 +35,13 @@ if(have_rows('direction_team')) :
             <div class="col-md-6 col-lg-4 d-flex">
                 <div class="team-card d-flex align-self-stretch flex-column w-100 justify-content-between position-relative">
                     <div class="team-member-image position-relative rounded">
-                        <?= wp_get_attachment_image( $image['id'], 'full', false, ['class' => 'img-fluid rounded position-relative',] ); ?>
+                        <?= wp_get_attachment_image( $image['id'], 'staff-thumb', false, ['class' => 'img-fluid rounded position-relative',] ); ?>
                     </div>
                     <div class="pt-20">
                         <h3 class="h5 mb-10"><?= $name; ?></h3>
                         <p class="fw-bold mb-10"><?= $position; ?></p>
                         <a href="javascript:void(0)" class="stretched-link" data-bs-toggle="modal" data-bs-target="#team_member_<?= get_row_index(); ?>" title="<?= $name; ?>"></a>
-                        <hr class="border border-grey300 border-5 rounded">
+                        <hr class="border border-grey300 border-3 rounded">
                     </div>
                 </div>
             </div>
@@ -61,7 +61,7 @@ if(have_rows('direction_team')) :
                             <div class="row gx-lg-50">
                                 <div class="col-lg-4 pt-lg-70 pt-xl-0">
                                     <button type="button" class="btn-close d-block d-lg-none ms-auto bg-white border-0 mb-20" data-bs-dismiss="modal" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M18.3002 5.70996C18.1134 5.5227 17.8597 5.41747 17.5952 5.41747C17.3307 5.41747 17.077 5.5227 16.8902 5.70996L12.0002 10.59L7.11021 5.69996C6.92338 5.5127 6.66973 5.40747 6.40521 5.40747C6.1407 5.40747 5.88705 5.5127 5.70021 5.69996C5.31021 6.08996 5.31021 6.71996 5.70021 7.10996L10.5902 12L5.70021 16.89C5.31021 17.28 5.31021 17.91 5.70021 18.3C6.09021 18.69 6.72021 18.69 7.11021 18.3L12.0002 13.41L16.8902 18.3C17.2802 18.69 17.9102 18.69 18.3002 18.3C18.6902 17.91 18.6902 17.28 18.3002 16.89L13.4102 12L18.3002 7.10996C18.6802 6.72996 18.6802 6.08996 18.3002 5.70996Z" fill="#6BDE46"/></svg></button>
-                                    <?= wp_get_attachment_image( $image['id'], 'full', false, ['class' => 'img-fluid rounded position-relative rounded-bottom-xxl-0',] ); ?>
+                                    <?= wp_get_attachment_image( $image['id'], 'staff-thumb', false, ['class' => 'img-fluid rounded position-relative rounded-bottom-xxl-0',] ); ?>
                                 </div>
                                 <div class="col-lg-8">
                                     <button type="button" class="btn-close d-none d-lg-block ms-auto bg-white border-0" data-bs-dismiss="modal" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M18.3002 5.70996C18.1134 5.5227 17.8597 5.41747 17.5952 5.41747C17.3307 5.41747 17.077 5.5227 16.8902 5.70996L12.0002 10.59L7.11021 5.69996C6.92338 5.5127 6.66973 5.40747 6.40521 5.40747C6.1407 5.40747 5.88705 5.5127 5.70021 5.69996C5.31021 6.08996 5.31021 6.71996 5.70021 7.10996L10.5902 12L5.70021 16.89C5.31021 17.28 5.31021 17.91 5.70021 18.3C6.09021 18.69 6.72021 18.69 7.11021 18.3L12.0002 13.41L16.8902 18.3C17.2802 18.69 17.9102 18.69 18.3002 18.3C18.6902 17.91 18.6902 17.28 18.3002 16.89L13.4102 12L18.3002 7.10996C18.6802 6.72996 18.6802 6.08996 18.3002 5.70996Z" fill="#6BDE46"/></svg></button>

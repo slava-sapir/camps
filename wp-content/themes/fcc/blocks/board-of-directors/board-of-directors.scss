@@ -1,0 +1,22 @@
+#board-of-directors {
+    .director {
+        h3 {
+            transition: color ease-in-out 0.3s;
+        }
+
+        hr {
+            opacity: 1;
+            transition: border-color ease-in-out 0.3s;
+        }
+
+        &:hover {
+            h3 {
+                color: $brown;
+            }
+
+            hr {
+                border-color: $green !important;
+            }
+        }
+    }
+}

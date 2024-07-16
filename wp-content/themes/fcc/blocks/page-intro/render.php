@@ -1,6 +1,6 @@
 <?php
 /**
- * Page Intro Block Template.
+ * Call-to-Action with Background Image Block Template.
  *
 * @param array $block The block settings and attributes.
 * @param string $content The block inner HTML (empty).
