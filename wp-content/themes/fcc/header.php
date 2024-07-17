@@ -19,8 +19,13 @@
 
     <?php wp_head(); ?>
 </head>
-
-<body <?php body_class(); ?>>
+<?php 
+$theme_color = 'green-theme';
+if(get_field('theme_colour')) : 
+    $theme_color = get_field('theme_colour');
+endif; 
+?>
+<body <?php body_class($theme_color); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 

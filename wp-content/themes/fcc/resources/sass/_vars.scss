@@ -231,7 +231,7 @@ $btn-transition: color .3s ease-in-out, background-color .3s ease-in-out, border
 $accordion-padding-y: 1.25rem;
 //$accordion-padding-x:                     1.25rem !default;
 //$accordion-color:                         var(--#{$prefix}body-color) !default;
-$accordion-bg: $tan;
+$accordion-bg: $white;
 $accordion-border-width: 0;
 $accordion-border-color: $tan;
 $accordion-border-radius: 0;
@@ -243,9 +243,9 @@ $accordion-border-radius: 0;
 //$accordion-button-padding-y:              $accordion-padding-y !default;
 //$accordion-button-padding-x:              $accordion-padding-x !default;
 //$accordion-button-color:                  var(--#{$prefix}body-color) !default;
-//$accordion-button-bg:                     var(--#{$prefix}accordion-bg) !default;
+$accordion-button-bg: $tan;
 //$accordion-transition:                    $btn-transition, border-radius .15s ease !default;
-$accordion-button-active-bg: $tan;
+$accordion-button-active-bg: $white;
 $accordion-button-active-color: $body-color;
 //
 //// fusv-disable
@@ -254,14 +254,16 @@ $accordion-button-active-color: $body-color;
 $accordion-button-focus-box-shadow: none;
 //
 $accordion-icon-width: 28px;
-$accordion-icon-color: $green;
-$accordion-icon-active-color: $green;
+$accordion-icon-color: var(--theme-color);
+$accordion-icon-active-color: var(--theme-color);
 //$accordion-icon-transition:               transform .2s ease-in-out !default;
 //$accordion-icon-transform:                rotate(-180deg) !default;
 //
 
-$accordion-button-icon: url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28' fill='#{$accordion-icon-color}'><path d='M18.5208 10.4999L13.9942 15.0266L9.46751 10.4999C9.24954 10.2815 8.95362 10.1587 8.64501 10.1587C8.33641 10.1587 8.04048 10.2815 7.82251 10.4999C7.36751 10.9549 7.36751 11.6899 7.82251 12.1449L13.1775 17.4999C13.6325 17.9549 14.3675 17.9549 14.8225 17.4999L20.1775 12.1449C20.6325 11.6899 20.6325 10.9549 20.1775 10.4999C19.7225 10.0566 18.9758 10.0449 18.5208 10.4999Z' /></svg>");
-$accordion-button-active-icon: url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28' fill='#{$accordion-icon-active-color}'><path d='M18.5208 10.4999L13.9942 15.0266L9.46751 10.4999C9.24954 10.2815 8.95362 10.1587 8.64501 10.1587C8.33641 10.1587 8.04048 10.2815 7.82251 10.4999C7.36751 10.9549 7.36751 11.6899 7.82251 12.1449L13.1775 17.4999C13.6325 17.9549 14.3675 17.9549 14.8225 17.4999L20.1775 12.1449C20.6325 11.6899 20.6325 10.9549 20.1775 10.4999C19.7225 10.0566 18.9758 10.0449 18.5208 10.4999Z' /></svg>");
+
+$accordion-button-active-icon: url("data:image/svg+xml, <svg width='29' height='29' viewBox='0 0 29 29' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M6.04199 13.292H22.9587V15.7087H6.04199V13.292Z' fill='#{$accordion-icon-active-color}'/></svg>");
+$accordion-button-icon: url("data:image/svg+xml, <svg width='29' height='29' viewBox='0 0 29 29' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M22.9587 13.292H15.7087V6.04199H13.292V13.292H6.04199V15.7087H13.292V22.9587H15.7087V15.7087H22.9587V13.292Z' fill='#{$accordion-icon-color}'/></svg>");
+
 
 // scss-docs-end accordion-variables
 
@@ -277,3 +279,12 @@ $offcanvas-vertical-height: 100vh;
 
 $border-radius: #{divide(20, 16)}rem;
 $border-radius-lg: 50%;
+
+// Form Control
+$input-padding-y: 10px;
+$input-padding-x: 10px;
+$input-bg: $tan;
+$input-placeholder-color: $grey600;
+$input-border-radius: 5px;
+$input-border-width: 0;
+$input-focus-box-shadow: 0;

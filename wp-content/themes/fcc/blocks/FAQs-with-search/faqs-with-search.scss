@@ -1,0 +1,56 @@
+.green-theme {
+  #faq-accordion {
+    .accordion-button {
+      &::after {
+        background-image: url("data:image/svg+xml, %3csvg width='29' height='29' viewBox='0 0 29 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M22.9587 13.292H15.7087V6.04199H13.292V13.292H6.04199V15.7087H13.292V22.9587H15.7087V15.7087H22.9587V13.292Z' fill='%236BDE46'/%3e%3c/svg%3e")
+      }
+      &:not(.collapsed)::after {
+        background-image: url("data:image/svg+xml, %3csvg width='29' height='29' viewBox='0 0 29 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M6.04199 13.292H22.9587V15.7087H6.04199V13.292Z' fill='%236BDE46'/%3e%3c/svg%3e")
+      }
+    }
+    .accordion-body {
+      background: url(../../resources/images/main-theme/shapes/splatter-green-top.svg) center bottom 50% no-repeat,
+    }
+  }
+}
+
+.gold-theme {
+  #faq-accordion {
+    .accordion-button {
+      &::after {
+        background-image: url("data:image/svg+xml, %3csvg width='29' height='29' viewBox='0 0 29 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M22.9587 13.292H15.7087V6.04199H13.292V13.292H6.04199V15.7087H13.292V22.9587H15.7087V15.7087H22.9587V13.292Z' fill='%23ffc340'/%3e%3c/svg%3e")
+      }
+      &:not(.collapsed)::after {
+        background-image: url("data:image/svg+xml, %3csvg width='29' height='29' viewBox='0 0 29 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M6.04199 13.292H22.9587V15.7087H6.04199V13.292Z' fill='%23ffc340'/%3e%3c/svg%3e")
+      }
+    }
+    .accordion-body {
+      background: url(../../resources/images/main-theme/shapes/splatter-gold-top.svg) center bottom 50% no-repeat,
+    }
+  }
+}
+    
+.teal-theme{
+  #faq-accordion {
+      .accordion-button {
+        &::after {
+          background-image: url("data:image/svg+xml, %3csvg width='29' height='29' viewBox='0 0 29 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M22.9587 13.292H15.7087V6.04199H13.292V13.292H6.04199V15.7087H13.292V22.9587H15.7087V15.7087H22.9587V13.292Z' fill='%231FD3FA'/%3e%3c/svg%3e")
+        }
+        &:not(.collapsed)::after {
+          background-image: url("data:image/svg+xml, %3csvg width='29' height='29' viewBox='0 0 29 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M6.04199 13.292H22.9587V15.7087H6.04199V13.292Z' fill='%231FD3FA'/%3e%3c/svg%3e")
+        }
+      }
+      .accordion-body {
+        background: url(../../resources/images/main-theme/shapes/splatter-teal-top.svg) center bottom 50% no-repeat,
+      }
+    }
+}
+
+.inline-submit {
+  & > div {
+    max-width: 345px;
+  }
+  button {
+    bottom: 7px;
+  }
+}
