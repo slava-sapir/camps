@@ -1,0 +1,27 @@
+
+#contact-cards {
+    a {
+        color: $white;
+        text-decoration: underline;
+
+        &:hover {
+            color: $white;
+        }
+    }
+
+    .day-camps {
+            background: url(../../resources/images/main-theme/shapes/splatter-gold.svg) center bottom 0 no-repeat,
+            linear-gradient(180deg, #FFC340 0%, #F5A800 100%);
+    }
+    .overnight-camps {
+            background: url(../../resources/images/main-theme/shapes/splatter-blue.svg) center bottom 0 no-repeat,
+            linear-gradient(180deg, #1FD3FA 0%, #0FC1E8 100%);
+
+    }
+    .schools-groups {
+
+            background: url(../../resources/images/main-theme/shapes/splatter-green-footer.svg) center bottom 0 no-repeat,
+            linear-gradient(180deg, #6BDE46 0%, #60C052 100%);
+        
+    }
+}
