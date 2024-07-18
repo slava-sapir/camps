@@ -19,8 +19,13 @@
 
     <?php wp_head(); ?>
 </head>
-
-<body <?php body_class(); ?>>
+<?php 
+$theme_color = 'green-theme';
+if(get_field('theme_colour')) : 
+    $theme_color = get_field('theme_colour');
+endif; 
+?>
+<body <?php body_class($theme_color); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 
@@ -55,7 +60,7 @@
             <div class="row align-items-center">
                 <!-- Logo -->
                 <div class="col col-lg-auto col-logo">
-                    <a href="">
+                    <a href="<?= get_home_url(); ?>">
                         <img src="<?php echo get_template_directory_uri() . '/resources/images/main-theme/logos/forest-cliff-camps-logo-original.svg'; ?>"
                              alt="<?php bloginfo('name'); ?>" class="header-logo img-fluid">
                     </a>

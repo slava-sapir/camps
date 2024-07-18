@@ -1,0 +1,52 @@
+#direction-team {
+    background: url(../../resources/images/main-theme/shapes/splatter-beige-top.svg) center bottom -5% no-repeat,
+                url(../../resources/images/main-theme/shapes/splatter-beige-bottom.svg) center top no-repeat;
+
+    .team-card {
+        .team-member-image {
+            &::before {
+                content: '';
+                background: rgba(16, 18, 35, 0.20);
+                transition: background ease-in-out 0.3s;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                @extend .rounded;
+            }
+        }
+
+        h3 {
+            transition: color ease-in-out 0.3s;
+        }
+
+        hr {
+            opacity: 1;
+            transition: border-color ease-in-out 0.3s;
+        }
+
+        &:hover {
+            h3 {
+                color: $brown;
+            }
+            .team-member-image {
+                &::before {
+                    background: rgba(16, 18, 35, 0);
+                }
+            }
+
+            hr {
+                border-color: $green !important;
+            }
+        }
+    }
+}
+
+.team-member-bio {
+    .modal-content {
+        background: url(../../resources/images/main-theme/shapes/splatter-beige-top.svg) center bottom 0 no-repeat,
+                        $white;
+    }
+}

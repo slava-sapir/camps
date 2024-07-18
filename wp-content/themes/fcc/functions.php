@@ -142,6 +142,11 @@ function forest_cliff_camps_scripts()
 
 add_action('wp_enqueue_scripts', 'forest_cliff_camps_scripts');
 
+add_action('enqueue_block_editor_assets','forest_cliff_camps_add_block_editor_assets',10,0);
+function forest_cliff_camps_add_block_editor_assets(){
+  wp_enqueue_style('block_editor_css', get_template_directory_uri() . '/public/css/theme.min.css');
+}
+
 /**
  * Custom template tags for this theme.
  */
@@ -227,3 +232,108 @@ function fcc_register_acf_blocks() {
 add_action( 'init', 'fcc_register_acf_blocks' );
 
 add_image_size( 'blog-thumb', 447, 278, true );
+add_image_size( 'staff-thumb', 466, 670, true );
+
+// FAQs CPT
+// Register Custom Post Type FAQs
+function create_faqs_cpt() {
+    $labels = array(
+        'name'          => 'FAQs',
+        'singular_name' => 'FAQ',
+        'menu_name'     => 'FAQs',
+    );
+    
+    $args = array(
+        'label'         => 'FAQs',
+        'labels'        => $labels,
+        'public'        => true,
+        'has_archive'   => true,
+        'rewrite'       => array( 'slug' => 'faqs' ),
+        'supports'      => array( 'title', 'editor', 'thumbnail' ),
+    );
+    
+    register_post_type( 'faq', $args );
+}
+add_action( 'init', 'create_faqs_cpt', 0 );
+
+// Register Custom Taxonomy FAQ Categories
+function create_faq_categories_taxonomy() {
+    $labels = array(
+        'name'          => 'FAQ Categories',
+        'singular_name' => 'FAQ Category',
+        'menu_name'     => 'FAQ Categories',
+    );
+    
+    $args = array(
+        'labels'        => $labels,
+        'public'        => true,
+        'hierarchical'  => true,
+        'rewrite'       => array( 'slug' => 'faq-category' ),
+        'supports'      => array( 'title', 'editor' ),
+    );
+    
+    register_taxonomy( 'faq_category', array( 'faq' ), $args );
+}
+add_action( 'init', 'create_faq_categories_taxonomy', 0 );
+
+// Add ACF Options Page
+if( function_exists('acf_add_options_page') ) {
+    acf_add_options_sub_page(array(
+        'page_title'  => 'FAQ Settings',
+        'menu_title'  => 'Settings',
+        'parent_slug' => 'edit.php?post_type=faq',
+    ));
+}
+
+// Add custom columns to FAQ CPT and reorder them
+function set_custom_edit_faq_columns($columns) {
+    $new_columns = array();
+
+    // Reorder columns
+    foreach ($columns as $key => $value) {
+        if ($key == 'date') {
+            $new_columns['faq_category'] = __('FAQ Categories', 'text_domain');
+        }
+        $new_columns[$key] = $value;
+    }
+
+    return $new_columns;
+}
+add_filter('manage_faq_posts_columns', 'set_custom_edit_faq_columns');
+
+// Populate custom columns in FAQ CPT
+function custom_faq_column($column, $post_id) {
+    switch ($column) {
+        case 'faq_category':
+            $terms = get_the_term_list($post_id, 'faq_category', '', ', ');
+            if (is_string($terms)) {
+                echo $terms;
+            } else {
+                echo __('No FAQ Categories', 'text_domain');
+            }
+            break;
+    }
+}
+add_action('manage_faq_posts_custom_column', 'custom_faq_column', 10, 2);
+
+// Make FAQ Categories column sortable
+function set_sortable_faq_columns($columns) {
+    $columns['faq_category'] = 'faq_category';
+    return $columns;
+}
+add_filter('manage_edit-faq_sortable_columns', 'set_sortable_faq_columns');
+
+// Ensure sorting works for FAQ Categories column
+function faq_category_column_orderby($query) {
+    if (!is_admin()) {
+        return;
+    }
+
+    $orderby = $query->get('orderby');
+
+    if ('faq_category' == $orderby) {
+        $query->set('meta_key', 'faq_category');
+        $query->set('orderby', 'meta_value');
+    }
+}
+add_action('pre_get_posts', 'faq_category_column_orderby');
