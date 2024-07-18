@@ -1,0 +1,115 @@
+{
+    "key": "group_6698075db67fd",
+    "title": "Block: Two Columns",
+    "fields": [
+        {
+            "key": "field_6698075e4c8e8",
+            "label": "Padding Top",
+            "name": "padding_top",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 100,
+            "min": 0,
+            "max": 150,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6698075e504ab",
+            "label": "Padding Bottom",
+            "name": "padding_bottom",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 100,
+            "min": 0,
+            "max": 150,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6698075e53ef7",
+            "label": "Add Tan Background",
+            "name": "add_tan_background",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_6698077d10f74",
+            "label": "Container Size",
+            "name": "container_size",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "container": "Default",
+                "container container-ed": "Wide",
+                "small-container": "Narrow",
+                "container-fluid": "Full Width"
+            },
+            "default_value": "container",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "fcc\/two-columns"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1721242595
+}

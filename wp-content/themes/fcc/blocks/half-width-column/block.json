@@ -1,10 +1,13 @@
 {
-    "name": "fcc/cta",
-    "title": "Call to Action",
-    "description": "A custom block to display a Call-to-Action section that uses ACF fields.",
+    "name": "fcc/half-width-column",
+    "title": "Half Width Column",
+    "description": "A block used to display a half-width column on screens larger than 992px that uses ACF fields.",
     "category": "formatting",
     "icon": "<svg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 81 80'><defs><style>.cls-1 { fill: none; stroke: #111; stroke-linecap: square; stroke-miterlimit: 10; stroke-width: 9px; } .cls-2 { fill: #111; stroke-width: 0px; }</style></defs><path class='cls-1' d='M4.6,9.5v-5h71.9v71H4.6v-5.8'/><g><path class='cls-2' d='M15.9,20.5c9.5,0,14.3,5.5,14.3,12.3,0,4.9-2.7,9.5-8.7,11.3l9,15.4h-10.6l-8.1-14.7h-2.6v14.7H0V20.5h15.9ZM15.4,28.4h-6.2v9.7h6.1c3.6,0,5.2-1.8,5.2-4.9.1-2.9-1.6-4.8-5.1-4.8Z'/><path class='cls-2' d='M42.2,34c3.3,0,6.1,1.5,7.6,3.8v-11.5h7.6v32.8h-7.6v-3.6c-1.4,2.3-4,3.9-7.6,3.9-6.1,0-10.9-5-10.9-12.8,0-7.7,4.9-12.6,10.9-12.6ZM44.5,40.6c-2.8,0-5.4,2.1-5.4,6.1s2.6,6.2,5.4,6.2,5.4-2.2,5.4-6.1-2.6-6.2-5.4-6.2Z'/></g></svg>",
-    "keywords": ["cta", "call-to-action", "call to action"],
+    "keywords": ["column"],
+    "supports": {
+        "anchor" : true
+    },
     "acf": {
         "mode": "preview",
         "renderTemplate": "render.php"
