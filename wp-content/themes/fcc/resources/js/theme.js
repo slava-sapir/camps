@@ -32,7 +32,7 @@ jQuery(function($) {
       'page': forest_cliff_params.cur_page
     };
 
-    if ($(document).scrollTop() > ($(document).height() - bottomOffset) && canBeLoaded == true) {
+    if ($(document).scrollTop() > ($(document).height() - bottomOffset) && canBeLoaded === true) {
       $.ajax({
         url: forest_cliff_params.ajaxurl,
         data: data,
