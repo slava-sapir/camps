@@ -7,18 +7,21 @@
  * @package shed_village
  */
 
-
+ $id = get_the_ID();
+ if((is_home() && !is_front_page()) || is_category()) :
+    $id = 393;
+ endif;
  ?>
- <section id="hero" class="position-relative d-flex align-items-end justify-content-center" style="background-image: url(<?= get_field('hero_image')['url']; ?>);" role="image" aria-label="<?= get_field('hero_image')['alt']; ?>">
+ <section id="hero" class="position-relative d-flex align-items-end justify-content-center<?= get_field('hero_title', $id) ? ' darken' : ''; ?>" style="background: url(<?= get_field('hero_image', $id)['url']; ?>) lightgray 50% / cover no-repeat;" role="image" aria-label="<?= get_field('hero_image', $id)['alt']; ?>">
     <div class="small-container">
-        <?php if(get_field('hero_title')) : ?>
-        <div>
-            <h1 class="text-center text-white mb-0 pb-100"><?= get_field('hero_title'); ?></h1>
+        <?php if(get_field('hero_title', $id)) : ?>
+        <div class="position-relative z-1">
+            <h1 class="text-center text-white mb-0 pb-100"><?= get_field('hero_title', $id); ?></h1>
         </div>
         <?php endif;
         if(get_field('hero_cta')) : ?>
         <div class="btn-wrapper pt-30 text-center">
-            <a href="<?= get_field('hero_cta')['url']; ?>" class="custom-btn-white" target="<?= get_field('hero_cta')['target']; ?>"><?= get_field('hero_cta')['title']; ?></a>
+            <a href="<?= get_field('hero_cta', $id)['url']; ?>" class="custom-btn-white" target="<?= get_field('hero_cta', $id)['target']; ?>"><?= get_field('hero_cta', $id)['title']; ?></a>
         </div>
         <?php endif; ?>
     </div>

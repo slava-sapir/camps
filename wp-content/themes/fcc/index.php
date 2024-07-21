@@ -16,42 +16,58 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
+        <?php
+        get_template_part('template-parts/hero');
+        ?>
 
-		<?php
-		if ( have_posts() ) :
+        <div class="container py-100">
+            <?php
+            if ( have_posts() ) :
+                $categories = get_categories();
+            ?>
+                <div class="d-md-flex justify-content-md-center align-items-md-center pb-40">
+                    <p class="fw-bold mb-0 me-10">Filter articles by:</p>
+                    <ul class="list-unstyled d-flex align-items-center flex-wrap mb-0">
+                        <?php foreach ($categories as $category) : ?>
+                            <?php
+                            $category_link = get_category_link($category->term_id);
+                            $active_class = (get_query_var('cat') == $category->term_id) ? 'active-cat' : '';
+                            ?>
+                            <li class="<?php echo $active_class; ?> py-10">
+                                <a href="<?php echo esc_url($category_link); ?>"
+                                   class="bg-tan py-5 px-15 rounded-pill me-10">
+                                    <?php echo esc_html($category->name); ?>
+                                </a>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+                <div class="row gx-md-50 gy-50 justify-content-center">
+                    <?php
 
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-				<?php
-			endif;
+                    /* Start the Loop */
+                    while ( have_posts() ) :
+                    the_post();
 
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+                    get_template_part( 'template-parts/blog-card' );
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
+                    endwhile;
+                    ?>
+                </div>
+                <div id="loading-spinner" style="display: none;">
+                    <div class="d-flex justify-content-center mt-50">
+                        <div class="spinner-grow text-green" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+            <?php
+            else :
+            get_template_part( 'template-parts/content', 'none' );
+            endif;
+            ?>
+        </div>
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();
