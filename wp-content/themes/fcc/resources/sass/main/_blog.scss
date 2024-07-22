@@ -1,0 +1,22 @@
+.active-cat {
+    a {
+        @extend .bg-green;
+        @extend .text-white;
+    }
+}
+
+.single-post {
+    main {
+        background: url(../../resources/images/main-theme/shapes/splatter-beige-bottom.svg) center top no-repeat;
+    }
+}
+
+.breadcrumbs {
+    * {
+        font-size: 12px;
+    }
+
+    a {
+        border-bottom: $grey600 solid 1px;
+    }
+}

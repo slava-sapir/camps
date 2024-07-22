@@ -11,30 +11,29 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
+        <div class="blog-container py-100">
+            <?php
+            while (have_posts()) :
+                the_post(); ?>
+                <div class="breadcrumbs d-flex align-items-center pb-20">
+                    <a href="<?= get_home_url(); ?>">Home</a>
+                    <span class="px-10">&gt;</span>
+                    <a href="/blog">Blog</a>
+                    <span class="px-10">&gt;</span>
+                    <span><?php the_title(); ?></span>
+                </div>
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+                <h1 class="h4"><?php the_title(); ?></h1>
+                <div class="pb-20">
+                    <?php get_template_part('template-parts/author-info'); ?>
+                </div>
+                <?php
+                the_content();
 
-			get_template_part( 'template-parts/content', get_post_type() );
-
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'forest-cliff-camps' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'forest-cliff-camps' ) . '</span> <span class="nav-title">%title</span>',
-				)
-			);
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-
+            endwhile; // End of the loop.
+            ?>
+        </div>
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();
