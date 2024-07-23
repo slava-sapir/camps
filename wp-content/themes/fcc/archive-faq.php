@@ -1,12 +1,4 @@
 <?php
-/**
- * The template for displaying search results pages
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
- *
- * @package Forest_Cliff_Camps
- */
-
 get_header();
 get_template_part('template-parts/hero');
 
@@ -52,11 +44,6 @@ $categories = get_terms(array(
                                     </a>
                                 </li>
                             <?php endforeach; ?>
-                            <li>
-                                <a href="/faqs" class="p-10 d-block">
-                                    View All
-                                </a>
-                            </li>
                         </ul>
 
 
