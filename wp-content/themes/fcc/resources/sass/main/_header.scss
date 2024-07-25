@@ -182,3 +182,83 @@
     }
   }
 }
+
+.gold-theme {
+  #masthead {
+    background: url(../../resources/images/day-camp-theme/shapes/splash-header.svg) left center no-repeat,
+    $gold;
+
+    .col-register {
+      a {
+        @extend .btn-gold;
+      }
+    }
+  }
+
+  #top-bar {
+    .center-links {
+      .active {
+        background-color: $gold;
+        color: $white;
+      }
+    }
+  }
+  .hero-cta {
+    a.btn {
+      @extend .btn-gold;
+    }
+  }
+}
+
+.teal-theme {
+  #masthead {
+    background: url(../../resources/images/overnight-camp-theme/shapes/splash-header.svg) left center no-repeat,
+    $teal;
+
+    .col-register {
+      a {
+        @extend .btn-teal;
+      }
+    }
+  }
+
+  #top-bar {
+    .center-links {
+      .active {
+        background-color: $teal;
+        color: $white;
+      }
+    }
+  }
+  .hero-cta {
+    a.btn {
+      @extend .btn-teal;
+    }
+  }
+}
+
+.green-theme {
+  #masthead {
+    background: url(../../resources/images/schools-groups-theme/shapes/splash-header.svg) left center no-repeat,
+    $green;
+    .col-register {
+      a {
+        @extend .btn-green;
+        @extend .tile-shadow;
+      }
+    }
+  }
+  #top-bar {
+    .center-links {
+      .active {
+        background-color: $green;
+        color: $white;
+      }
+    }
+  }
+  .hero-cta {
+    a.btn {
+      @extend .btn-green;
+    }
+  }
+}

@@ -17,6 +17,7 @@
                 "id": ""
             },
             "choices": {
+                "default-theme": "Default",
                 "green-theme": "Green",
                 "gold-theme": "Gold",
                 "teal-theme": "Teal"
@@ -48,5 +49,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1721227746
+    "modified": 1721824757
 }
