@@ -1,6 +1,6 @@
 {
     "key": "group_669926b22e035",
-    "title": "Block: Contact Cards (copy)",
+    "title": "Block: Map",
     "fields": [
         {
             "key": "field_669926b2baadd",
@@ -83,5 +83,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1721312991
+    "modified": 1721929670
 }
