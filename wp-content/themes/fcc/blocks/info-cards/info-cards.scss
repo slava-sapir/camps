@@ -1,0 +1,47 @@
+.info-cards {
+    img {
+        border-radius: 20px 20px 0 0;
+    }
+    .info-card-text {
+        border-radius: 0px 0px 20px 20px;
+
+        a {
+            margin-bottom: -24px;
+        }
+    }
+}
+
+.gold-theme {
+    .info-cards {
+        background: url(../../resources/images/day-camp-theme/shapes/splash-blue-top.svg) center bottom 5% no-repeat,
+        linear-gradient(180deg, white 95%, $teal 95%);
+    }
+    .info-card-text {
+        background: url(../../resources/images/main-theme/shapes/splatter-gold.svg) center bottom 0 no-repeat,
+        $gold;
+        .btn {
+            @extend .btn-gold;
+        }
+    }
+}
+.teal-theme {
+    .info-cards {
+        background: url(../../resources/images/overnight-camp-theme/shapes/splash-gold-bottom.svg) center bottom 50% no-repeat,
+        linear-gradient(180deg, white 60%, $gold 60%);
+    }
+    .info-card-text {
+        background: url(../../resources/images/main-theme/shapes/splatter-blue.svg) center bottom 0 no-repeat,
+        $teal;
+        .btn {
+            @extend .btn-teal;
+        }
+    }
+}
+.green-theme, .default-theme {
+    .info-card-text {
+        background: $white;
+        .btn {
+            @extend .btn-green;
+        }
+    }
+}
