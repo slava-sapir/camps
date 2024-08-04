@@ -1,0 +1,29 @@
+.camp-reviews {
+    .swiper {
+        max-width: 710px;
+    }
+}
+
+.default-theme, .green-theme {
+    .camp-reviews {
+        background: url(../../resources/images/day-camp-theme/shapes/splash-white-bottom.svg) center bottom 0 no-repeat,
+        url(../../resources/images/main-theme/shapes/splatter-green-footer.svg) center bottom 0 no-repeat,
+        linear-gradient(180deg, #ffffff 0%, #6BDE46 25%, #60C052 100%);
+    }
+}
+
+.gold-theme {
+    .camp-reviews {
+        background: url(../../resources/images/day-camp-theme/shapes/splash-white-bottom.svg) center bottom 0 no-repeat,
+        url(../../resources/images/day-camp-theme/shapes/splash-blue-bottom.svg) center bottom 0 no-repeat,
+        linear-gradient(180deg, #1FD3FA 0%, #0FC1E8 100%);
+    }
+}
+
+.teal-theme {
+    .camp-reviews {
+        background: url(../../resources/images/overnight-camp-theme/shapes/splash-white-bottom.svg) center bottom 0 no-repeat,
+        url(../../resources/images/overnight-camp-theme/shapes/splash-gold-bottom.svg) center bottom 0 no-repeat,
+        linear-gradient(180deg, #FFC340 0%, #F5A800 100%);
+    }
+}
