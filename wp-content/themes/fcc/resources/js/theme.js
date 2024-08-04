@@ -3,8 +3,8 @@ import 'bootstrap/js/dist/offcanvas';
 import 'bootstrap/js/dist/collapse';
 import 'bootstrap/js/dist/modal';
 // import 'bootstrap/js/dist/tooltip';
-//import Swiper from 'swiper';
-//import {Navigation} from 'swiper/modules';
+
+import '../../blocks/camp-reviews/camp-reviews';
 
 document.documentElement.style.setProperty('--scrollbar-width', (window.innerWidth - document.documentElement.clientWidth) + "px");
 
