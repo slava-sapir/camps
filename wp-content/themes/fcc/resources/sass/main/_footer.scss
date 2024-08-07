@@ -119,3 +119,79 @@
     margin-top: 10px;
   }
 }
+
+.gold-theme {
+  .curve-shape {
+    color: $gold;
+  }
+  .bottom-links {
+    background-color: $gold;
+  }
+  #footer-navigation {
+    .btn {
+      @extend .btn-gold;
+    }
+    background: url(../../resources/images/day-camp-theme/shapes/trees-gold-footer.svg) right -20px bottom -20px/108px auto no-repeat,
+    url(../../resources/images/day-camp-theme/shapes/splash-gold-footer.svg) center bottom 0 no-repeat,
+    linear-gradient(180deg, #FFC340 0%, #F5A800 100%);
+
+    @include media-breakpoint-up(md) {
+      background: url(../../resources/images/day-camp-theme/shapes/trees-gold-footer.svg) left 0 bottom -10px/108px auto no-repeat,
+      url(../../resources/images/day-camp-theme/shapes/trees-gold-footer.svg) right bottom -20px/236px auto no-repeat,
+      url(../../resources/images/day-camp-theme/shapes/splash-gold-footer.svg) center bottom -50px no-repeat,
+      linear-gradient(180deg, #FFC340 0%, #F5A800 100%);
+    }
+
+    @include media-breakpoint-up(lg) {
+      background: url(../../resources/images/day-camp-theme/shapes/trees-gold-footer.svg) left 10% bottom -10px/108px auto no-repeat,
+      url(../../resources/images/day-camp-theme/shapes/trees-gold-footer.svg) right 5% bottom -20px/236px auto no-repeat,
+      url(../../resources/images/day-camp-theme/shapes/splash-gold-footer.svg) center bottom -50px no-repeat,
+      linear-gradient(180deg, #FFC340 0%, #F5A800 100%);
+    }
+
+    @include media-breakpoint-up(xxxl) {
+      background: url(../../resources/images/day-camp-theme/shapes/trees-gold-footer.svg) left 20% bottom -10px/108px auto no-repeat,
+      url(../../resources/images/day-camp-theme/shapes/trees-gold-footer.svg) right 12% bottom -20px/236px auto no-repeat,
+      url(../../resources/images/day-camp-theme/shapes/splash-gold-footer.svg) center bottom -50px no-repeat,
+      linear-gradient(180deg, #FFC340 0%, #F5A800 100%);
+    }
+  }
+}
+
+.teal-theme {
+  .curve-shape {
+    color: $teal;
+  }
+  .bottom-links {
+    background-color: $teal;
+  }
+  #footer-navigation {
+    .btn {
+      @extend .btn-teal;
+    }
+    background: url(../../resources/images/overnight-camp-theme/shapes/trees-teal-footer.svg) right -20px bottom -20px/108px auto no-repeat,
+    url(../../resources/images/overnight-camp-theme/shapes/splash-blue-footer.svg) center bottom 0 no-repeat,
+    linear-gradient(180deg, #1FD3FA 0%, #00B3DA 100%);
+
+    @include media-breakpoint-up(md) {
+      background: url(../../resources/images/overnight-camp-theme/shapes/trees-teal-footer.svg) left 0 bottom -10px/108px auto no-repeat,
+      url(../../resources/images/overnight-camp-theme/shapes/trees-teal-footer.svg) right bottom -20px/236px auto no-repeat,
+      url(../../resources/images/overnight-camp-theme/shapes/splash-blue-footer.svg) center bottom -50px no-repeat,
+      linear-gradient(180deg, #1FD3FA 0%, #00B3DA 100%);
+    }
+
+    @include media-breakpoint-up(lg) {
+      background: url(../../resources/images/overnight-camp-theme/shapes/trees-teal-footer.svg) left 10% bottom -10px/108px auto no-repeat,
+      url(../../resources/images/overnight-camp-theme/shapes/trees-teal-footer.svg) right 5% bottom -20px/236px auto no-repeat,
+      url(../../resources/images/overnight-camp-theme/shapes/splash-blue-footer.svg) center bottom -50px no-repeat,
+      linear-gradient(180deg, #1FD3FA 0%, #00B3DA 100%);
+    }
+
+    @include media-breakpoint-up(xxxl) {
+      background: url(../../resources/images/overnight-camp-theme/shapes/trees-teal-footer.svg) left 20% bottom -10px/108px auto no-repeat,
+      url(../../resources/images/overnight-camp-theme/shapes/trees-teal-footer.svg) right 12% bottom -20px/236px auto no-repeat,
+      url(../../resources/images/overnight-camp-theme/shapes/splash-blue-footer.svg) center bottom -50px no-repeat,
+      linear-gradient(180deg, #1FD3FA 0%, #00B3DA 100%);
+    }
+  }
+}

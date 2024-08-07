@@ -1,0 +1,52 @@
+.experience-card {
+    .experience-image {
+        &::before {
+            content: '';
+            background: rgba(16, 18, 35, 0.20);
+            transition: background ease-in-out 0.3s;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            @extend .rounded;
+        }
+    }
+
+    h3 {
+        transition: color ease-in-out 0.3s;
+    }
+
+    hr {
+        opacity: 1;
+        transition: border-color ease-in-out 0.3s;
+    }
+
+    &:hover {
+        h3.hover-gold {
+            color: $gold;
+        }
+        h3.hover-teal {
+            color: $teal;
+        }
+        h3.hover-green {
+            color: $green;
+        }
+        .experience-image {
+            &::before {
+                background: rgba(16, 18, 35, 0);
+            }
+        }
+
+        hr.hover-gold {
+            border-color: $gold !important;
+        }
+        hr.hover-teal {
+            border-color: $teal !important;
+        }
+        hr.hover-green {
+            border-color: $green !important;
+        }
+    }
+}
