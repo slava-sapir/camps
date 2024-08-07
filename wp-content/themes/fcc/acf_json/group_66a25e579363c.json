@@ -24,9 +24,51 @@
             "append": ""
         },
         {
+            "key": "field_66b385b98763e",
+            "label": "Padding Top (copy)",
+            "name": "padding_top_copy",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 100,
+            "min": 0,
+            "max": 150,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_66a25e58307eb",
             "label": "Padding Bottom",
             "name": "padding_bottom",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 100,
+            "min": 0,
+            "max": 150,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_66b385c08763f",
+            "label": "Padding Bottom (copy)",
+            "name": "padding_bottom_copy",
             "aria-label": "",
             "type": "range",
             "instructions": "",
@@ -107,5 +149,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1721917478
+    "modified": 1723041225
 }
