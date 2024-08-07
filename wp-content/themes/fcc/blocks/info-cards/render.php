@@ -17,7 +17,7 @@ $anchor = isset($block['anchor']) ? $block['anchor'] : '';
 $classes = isset($block['className']) ? $block['className'] : '';
 ?>
 
-<section class="info-cards tile-shadow <?= esc_attr($classes) ?>" id="<?= esc_attr($anchor) ?>" style="padding-top: <?= get_field('padding_top'); ?>px; padding-bottom: <?= get_field('padding_bottom'); ?>px;">
+<section class="info-cards <?= esc_attr($classes) ?>" id="<?= esc_attr($anchor) ?>" style="padding-top: <?= get_field('padding_top'); ?>px; padding-bottom: <?= get_field('padding_bottom'); ?>px;">
     <div class="container container-ed">
         <h2 class="text-center"><?= get_field('heading'); ?></h2>
         <div class="row gy-50 gx-md-50">
@@ -26,7 +26,7 @@ $classes = isset($block['className']) ? $block['className'] : '';
                 $image = get_sub_field('image');
                 $link = get_sub_field('link'); ?>
                 <div class="col-md-6 col-lg-4 d-flex">
-                    <div class="info-card position-relative d-flex flex-column align-self-stretch w-100">
+                    <div class="info-card rounded fcc-shadow position-relative d-flex flex-column align-self-stretch w-100">
                         <?= wp_get_attachment_image( $image['id'], 'full', false, ['class' => 'img-fluid text-center'] ); ?>
                         <div class="info-card-text tile-shadow pt-40 px-20">
                             <h3 class="h4 text-center text-white"><?= $title ?></h3>

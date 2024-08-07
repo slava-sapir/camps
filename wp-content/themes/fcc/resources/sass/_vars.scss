@@ -26,27 +26,27 @@ $lavendar: #c3bbff;
 
 // scss-docs-start colors-map
 $colors: (
-        "white": $white,
-        "grey100": $grey100,
-        "grey300": $grey300,
-        "grey600": $grey600,
-        "grey900": $grey900,
-        "green": $green,
-        "brown": $brown,
-        "tan": $tan,
-        "gold": $gold,
-        "red": $red,
-        "slate": $slate,
-        "night": $night,
-        "chill": $chill,
-        "teal": $teal,
-        "charcoal": $charcoal,
-        "orange": $orange,
-        "darkgreen": $darkgreen,
-        "darkgold": $darkgold,
-        "darkteal": $darkteal,
-        "darklavendar": $darklavendar,
-        "lavendar": $lavendar,
+    "white": $white,
+    "grey100": $grey100,
+    "grey300": $grey300,
+    "grey600": $grey600,
+    "grey900": $grey900,
+    "green": $green,
+    "brown": $brown,
+    "tan": $tan,
+    "gold": $gold,
+    "red": $red,
+    "slate": $slate,
+    "night": $night,
+    "chill": $chill,
+    "teal": $teal,
+    "charcoal": $charcoal,
+    "orange": $orange,
+    "darkgreen": $darkgreen,
+    "darkgold": $darkgold,
+    "darkteal": $darkteal,
+    "darklavendar": $darklavendar,
+    "lavendar": $lavendar,
 );
 
 $theme-colors: $colors;
@@ -84,20 +84,20 @@ $gradient: radial-gradient(50% 50% at 50% 50%, rgba($white, .25), rgba($white, 0
 
 // scss-docs-start spacer-variables-maps
 $spacers: (
-        0: 0,
-        5: #{divide(5, 16)}rem,
-        10: #{divide(10, 16)}rem,
-        15: #{divide(15, 16)}rem,
-        20:#{divide(20, 16)}rem,
-        30:#{divide(30, 16)}rem,
-        40:#{divide(40, 16)}rem,
-        50:#{divide(50, 16)}rem,
-        60:#{divide(60, 16)}rem,
-        70:#{divide(70, 16)}rem,
-        80:#{divide(80, 16)}rem,
-        90:#{divide(90, 16)}rem,
-        100:#{divide(100, 16)}rem,
-        125:#{divide(125, 16)}rem,
+    0: 0,
+    5: #{divide(5, 16)}rem,
+    10: #{divide(10, 16)}rem,
+    15: #{divide(15, 16)}rem,
+    20:#{divide(20, 16)}rem,
+    30:#{divide(30, 16)}rem,
+    40:#{divide(40, 16)}rem,
+    50:#{divide(50, 16)}rem,
+    60:#{divide(60, 16)}rem,
+    70:#{divide(70, 16)}rem,
+    80:#{divide(80, 16)}rem,
+    90:#{divide(90, 16)}rem,
+    100:#{divide(100, 16)}rem,
+    125:#{divide(125, 16)}rem,
 );
 // scss-docs-end spacer-variables-maps
 
@@ -129,13 +129,13 @@ $paragraph-margin-bottom: 1.25rem;
 
 // scss-docs-start grid-breakpoints
 $grid-breakpoints: (
-        xs: 0,
-        sm: 576px,
-        md: 768px,
-        lg: 992px,
-        xl: 1200px,
-        xxl: 1400px,
-        xxxl: 1520px
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px,
+    xxxl: 1520px
 );
 // scss-docs-end grid-breakpoints
 
@@ -145,25 +145,25 @@ $grid-breakpoints: (
 
 // scss-docs-start container-max-widths
 $container-max-widths: (
-        sm: 540px,
-        md: 720px,
-        lg: 960px,
-        xl: 1140px,
-        xxl: 1320px,
-        xxxl: 1460px
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px,
+    xxl: 1320px,
+    xxxl: 1460px
 );
 
 $small-container-max-widths: (
-        sm: 540px,
-        md: 720px,
-        lg: 960px,
-        xl: 1140px,
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px,
 );
 
 $blog-container-max-widths: (
-        sm: 540px,
-        md: 720px,
-        lg: 960px,
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
 );
 
 // scss-docs-end container-max-widths
@@ -294,3 +294,5 @@ $input-placeholder-color: $grey600;
 $input-border-radius: 5px;
 $input-border-width: 0;
 $input-focus-box-shadow: 0;
+
+$box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.60);
