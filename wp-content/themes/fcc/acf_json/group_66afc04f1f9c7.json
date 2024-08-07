@@ -1,9 +1,9 @@
 {
-    "key": "group_669926b22e035",
-    "title": "Block: Map",
+    "key": "group_66afc04f1f9c7",
+    "title": "Block: Camp Reviews",
     "fields": [
         {
-            "key": "field_669926b2baadd",
+            "key": "field_66afc04fc1c4d",
             "label": "Padding Top",
             "name": "padding_top",
             "aria-label": "",
@@ -24,7 +24,7 @@
             "append": ""
         },
         {
-            "key": "field_669926b2be775",
+            "key": "field_66afc04fc56cf",
             "label": "Padding Bottom",
             "name": "padding_bottom",
             "aria-label": "",
@@ -45,11 +45,11 @@
             "append": ""
         },
         {
-            "key": "field_669926c291e66",
-            "label": "Embed Code",
-            "name": "embed_code",
+            "key": "field_66afc068559fc",
+            "label": "Reviews",
+            "name": "reviews",
             "aria-label": "",
-            "type": "textarea",
+            "type": "post_object",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -58,11 +58,19 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "maxlength": "",
-            "rows": 4,
-            "placeholder": "",
-            "new_lines": ""
+            "post_type": [
+                "review"
+            ],
+            "post_status": [
+                "publish"
+            ],
+            "taxonomy": "",
+            "return_format": "object",
+            "multiple": 1,
+            "allow_null": 0,
+            "bidirectional": 0,
+            "ui": 1,
+            "bidirectional_target": []
         }
     ],
     "location": [
@@ -70,7 +78,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "fcc\/map"
+                "value": "fcc\/camp-reviews"
             }
         ]
     ],
@@ -83,5 +91,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1721929670
+    "modified": 1722794142
 }

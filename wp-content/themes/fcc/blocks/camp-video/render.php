@@ -19,7 +19,7 @@ $background = get_field('background');
 
 <section id="<?= esc_attr($anchor) ?>" class="<?= $background; ?>" style="padding-top: <?= get_field('padding_top'); ?>px; padding-bottom: <?= get_field('padding_bottom'); ?>px;<?= get_field('add_background_colour') ? ' background-color: #f2efeb;"' : ''; ?>">
     <div class="container">
-        <div class="ratio ratio-16x9 <?= esc_attr($classes) ?>">
+        <div class="ratio ratio-16x9 camp-video <?= esc_attr($classes) ?>">
             <?= get_field('youtube_link'); ?>
         </div>
     </div>

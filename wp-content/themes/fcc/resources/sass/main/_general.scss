@@ -24,7 +24,11 @@ a {
 }
 
 .tile-shadow {
-  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.10);
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.10);
+}
+
+.fcc-shadow {
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.10);
 }
 
 body small {

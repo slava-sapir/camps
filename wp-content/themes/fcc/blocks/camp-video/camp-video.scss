@@ -1,5 +1,6 @@
-#video {
+.camp-video {
     iframe {
         @extend .rounded;
+        @extend .tile-shadow;
     }
 }

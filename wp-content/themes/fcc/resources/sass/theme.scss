@@ -4,6 +4,7 @@
 
 @import "../../node_modules/swiper/swiper";
 @import "../../node_modules/swiper/modules/navigation";
+@import "../../node_modules/swiper/modules/effect-fade";
 
 
 // WordPress Core CSS
@@ -30,4 +31,8 @@
     '../../blocks/board-of-directors/board-of-directors',
     '../../blocks/cta-with-image/cta-with-image',
     '../../blocks/faqs-with-search/faqs-with-search',
+    '../../blocks/camp-video/camp-video',
+    '../../blocks/info-cards/info-cards',
+    '../../blocks/camp-reviews/camp-reviews',
+    '../../blocks/experience-cards/experience-cards',
     '../../blocks/page-intro/page-intro';

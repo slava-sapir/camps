@@ -246,6 +246,8 @@ add_action( 'init', 'fcc_register_acf_blocks' );
 
 add_image_size( 'blog-thumb', 447, 278, true );
 add_image_size( 'staff-thumb', 466, 670, true );
+add_image_size( 'review-thumb', 112, 112, true );
+add_image_size( 'experience-thumb', 695, 450, true );
 
 // FAQs CPT
 // Register Custom Post Type FAQs
@@ -288,6 +290,28 @@ function create_faq_categories_taxonomy() {
     register_taxonomy( 'faq_category', array( 'faq' ), $args );
 }
 add_action( 'init', 'create_faq_categories_taxonomy', 0 );
+
+// Reviews CPT
+// Register Custom Post Type Reviews
+function create_reviews_cpt() {
+    $labels = array(
+        'name'          => 'reviews',
+        'singular_name' => 'Review',
+        'menu_name'     => 'Reviews',
+    );
+
+    $args = array(
+        'label'         => 'Reviews',
+        'labels'        => $labels,
+        'public'        => true,
+        'has_archive'   => true,
+        'rewrite'       => array( 'slug' => 'reviews' ),
+        'supports'      => array( 'title', 'editor', 'thumbnail' ),
+    );
+
+    register_post_type( 'review', $args );
+}
+add_action( 'init', 'create_reviews_cpt', 0 );
 
 // Add ACF Options Page
 if( function_exists('acf_add_options_page') ) {
