@@ -26,13 +26,14 @@ endif;
     <div class="small-container">
         <?php if (get_field('hero_title', $id)) : ?>
             <div class="position-relative z-1">
-                <h1 class="text-center text-white mb-0 <?= get_field('hero_cta', $id) ? 'pb-40' : 'pb-100'; ?>"><?= $title; ?></h1>
+                <h1 class="text-center text-white mb-0 pb-100"><?= $title; ?></h1>
             </div>
         <?php endif;
-        if(get_field('hero_cta', $id)) : ?>
-        <div class="hero-cta pb-10 position-relative z-1 text-center">
-            <a href="<?= get_field('hero_cta', $id)['url']; ?>" class="btn" target="<?= get_field('hero_cta', $id)['target']; ?>"><?= get_field('hero_cta', $id)['title']; ?></a>
-        </div>
+        if (get_field('hero_cta')) : ?>
+            <div class="btn-wrapper pt-30 text-center">
+                <a href="<?= get_field('hero_cta', $id)['url']; ?>" class="custom-btn-white"
+                   target="<?= get_field('hero_cta', $id)['target']; ?>"><?= get_field('hero_cta', $id)['title']; ?></a>
+            </div>
         <?php endif; ?>
     </div>
     <img src="<?= get_template_directory_uri(); ?>/resources/images/main-theme/shapes/curve-trees-white-hero.svg" alt=""
