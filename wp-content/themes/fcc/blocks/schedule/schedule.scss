@@ -1,0 +1,75 @@
+.schedule-grid {
+    grid-template-columns: auto repeat(7, 1fr);
+    grid-auto-rows: auto;
+    gap: 5px;
+
+    // Desktop styling
+    .schedule-header {
+        display: contents;
+    }
+
+    .schedule-row {
+        display: contents;
+    }
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+
+        .schedule-header {
+            display: none;
+        }
+
+        .schedule-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-auto-rows: auto;
+            gap: 5px;
+
+            .time-cell {
+                grid-column: 1 / 2;
+                background-color: #f8f8f8;
+                padding: 10px;
+                text-align: left;
+                font-weight: bold;
+            }
+
+            .day-cell {
+                grid-column: 2 / 3;
+                background-color: #ffffff;
+                border: 1px solid #e0e0e0;
+                padding: 10px;
+                text-align: left;
+            }
+        }
+
+        .day-header {
+            font-weight: bold;
+            background-color: #f0f0f0;
+            padding: 10px;
+            text-align: center;
+            grid-column: 1 / -1;
+            grid-row: auto;
+        }
+
+        .time-cell, .day-cell {
+            border: none;
+            padding: 5px 10px;
+        }
+    }
+}
+
+.green-theme, .default-theme {
+    .time-header, .day-header {
+        background-color: $green;
+    }
+}
+.gold-theme {
+    .time-header, .day-header {
+        background-color: $gold;
+    }
+}
+.teal-theme {
+    .time-header, .day-header {
+        background-color: $teal;
+    }
+}
