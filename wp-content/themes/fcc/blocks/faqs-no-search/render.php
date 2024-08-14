@@ -27,5 +27,26 @@ $displayed_category = get_field('displayed_category');
             <path d="M9.59699 14.3199C39.2294 12.0627 70.597 10.4252 99.4285 9.31871C101.475 6.79598 103.388 4.14047 105.079 1.4407C91.2418 0.422752 56.5372 -1.25907 0.920837 1.52922C3.101 6.3534 6.03754 10.6022 9.59699 14.3199Z" fill="<?= get_field('underline_icon_color'); ?>"/>
             </svg>
         </div>
+
+        <div class="mt-10">
+            <!-- FAQ Accordion -->
+            <?php
+            // Get posts from the selected category
+            if ( $displayed_category ) :
+                $i = 1;
+                $query = new WP_Query( array(
+                    'post_type' => 'faq',
+                    'tax_query' => array(
+                        array(
+                            'taxonomy' => 'faq_category',
+                            'field'    => 'term_id',
+                            'terms'    => $displayed_category,
+                        ),
+                    ),
+                ));
+
+                get_template_part('template-parts/faq-accordion', null, array('query' => $query));
+            endif; ?>
+        </div>
     </div>
 </section>

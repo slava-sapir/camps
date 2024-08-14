@@ -45,6 +45,31 @@
             "append": ""
         },
         {
+            "key": "field_66bcd3742148c",
+            "label": "Displayed Category",
+            "name": "displayed_category",
+            "aria-label": "",
+            "type": "taxonomy",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "faq_category",
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "id",
+            "field_type": "select",
+            "allow_null": 0,
+            "bidirectional": 0,
+            "multiple": 0,
+            "bidirectional_target": []
+        },
+        {
             "key": "field_66b52ed61ac76",
             "label": "Title",
             "name": "title",
@@ -169,5 +194,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1723151063
+    "modified": 1723650993
 }
