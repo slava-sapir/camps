@@ -76,48 +76,74 @@ $classes = isset($block['className']) ? $block['className'] : '';
             // Sort the schedule array by time (since the time is now in H:i:s format)
             ksort($schedule);
             ?>
-            <div class="schedule-grid grid">
-                <div class="schedule-header">
-                    <div class="time-header text-white text-center fw-bold d-flex justify-content-center align-items-center rounded-1 p-20">Time</div>
-                    <?php foreach ($days as $day_name): ?>
-                        <div class="day-header text-white text-center fw-bold d-flex justify-content-center align-items-center rounded-1 p-20"><?= $day_name; ?></div>
-                    <?php endforeach; ?>
-                </div>
-
-                <?php foreach ($schedule as $time => $day_entries): ?>
-                    <div class="schedule-row">
+            <div class="d-none d-lg-block">
+                <div class="schedule-grid grid">
+                    <div class="schedule-header">
                         <div
-                            class="time-cell text-center fw-bold d-flex justify-content-center align-items-center bg-tan rounded-1 p-20"><?= $day_entries[array_key_first($day_entries)][0]['formatted_time']; ?></div>
-                        <?php foreach ($day_entries as $day_lower => $activities): ?>
-                            <?php foreach ($activities as $activity_data): ?>
-                                <div
-                                    class="day-cell text-center d-flex justify-content-center align-items-center rounded-1 p-20 <?= $activity_data['bg_colour']; ?>"
-                                    style="grid-column: span <?= $activity_data['col_span']; ?>; grid-row: span <?= $activity_data['row_span']; ?>;">
-                                    <?= $activity_data['activity']; ?>
-                                </div>
-                            <?php endforeach; ?>
+                            class="time-header text-white text-center fw-bold d-flex justify-content-center align-items-center rounded-1 p-20">
+                            Time
+                        </div>
+                        <?php foreach ($days as $day_name): ?>
+                            <div
+                                class="day-header text-white text-center fw-bold d-flex justify-content-center align-items-center rounded-1 p-20"><?= $day_name; ?></div>
                         <?php endforeach; ?>
                     </div>
-                <?php endforeach; ?>
+
+                    <?php foreach ($schedule as $time => $day_entries): ?>
+                        <div class="schedule-row">
+                            <div
+                                class="time-cell text-center fw-bold d-flex justify-content-center align-items-center bg-tan rounded-1 p-20"><?= $day_entries[array_key_first($day_entries)][0]['formatted_time']; ?></div>
+                            <?php foreach ($day_entries as $day_lower => $activities): ?>
+                                <?php foreach ($activities as $activity_data): ?>
+                                    <div
+                                        class="day-cell text-center d-flex justify-content-center align-items-center rounded-1 p-20 <?= $activity_data['bg_colour']; ?>"
+                                        style="grid-column: span <?= $activity_data['col_span']; ?>; grid-row: span <?= $activity_data['row_span']; ?>;">
+                                        <?= $activity_data['activity']; ?>
+                                    </div>
+                                <?php endforeach; ?>
+                            <?php endforeach; ?>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
             </div>
 
-            <div class="mobile-schedule">
+            <div class="mobile-schedule d-lg-none">
                 <?php foreach ($days as $day_name): ?>
                     <div class="mobile-day-group">
                         <h2><?= $day_name; ?></h2>
                         <?php foreach ($schedule as $time => $day_entries): ?>
-                            <?php if (isset($day_entries[strtolower($day_name)])) : ?>
-                                <?php foreach ($day_entries[strtolower($day_name)] as $activity_data) : ?>
-                                    <div class="mobile-entry">
-                                        <div class="time"><?= $activity_data['formatted_time']; ?></div>
-                                        <div class="activity"><?= $activity_data['activity']; ?></div>
-                                    </div>
-                                <?php endforeach; ?>
-                            <?php endif; ?>
+                            <?php
+                            $day_found = false;
+                            $day_index = array_search($day_name, $days);
+
+                            // Check for any activity on the current day or spanning from previous days
+                            foreach ($day_entries as $entry_day => $activities) :
+                                foreach ($activities as $activity_data) :
+                                    $start_day_index = array_search(ucfirst($entry_day), $days);
+                                    $end_day_index = $start_day_index + $activity_data['col_span'] - 1;
+
+                                    if ($day_index >= $start_day_index && $day_index <= $end_day_index) :
+                                        $day_found = true;
+                                        ?>
+                                        <div class="mobile-entry">
+                                            <div class="time"><?= $activity_data['formatted_time']; ?></div>
+                                            <div class="activity"><?= $activity_data['activity']; ?></div>
+                                        </div>
+                                    <?php
+                                    endif;
+                                endforeach;
+                            endforeach;
+
+                            if (!$day_found) :
+                                // Optionally, add an empty div or a message to indicate no activities on this day.
+                                // echo '<div class="mobile-entry">No activities</div>';
+                            endif;
+                            ?>
                         <?php endforeach; ?>
                     </div>
                 <?php endforeach; ?>
             </div>
+
         <?php
         else :
             echo '<p>No schedule selected.</p>';
