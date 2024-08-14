@@ -1,0 +1,51 @@
+
+.bottom-splash {
+  height: 800px;
+  background-image: url(../../resources/images/main-theme/shapes/yellow-bottom-splash.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+    @include media-breakpoint-down(xl) {
+     height: 1200px;
+  }
+}
+
+
+.presentation {
+    height: 171px;
+    transition: ease-in-out cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+.presentation:hover {
+    .hover-event  {
+         transition: ease-in-out cubic-bezier(0.25, 0.1, 0.25, 1);
+    .big-icon
+    {
+      display: block!important;
+      position: absolute;
+      top: 20%;
+    }
+
+    .small-icon {
+      display: none;
+    } 
+
+    .txt {
+      color: $brown!important;
+    }
+
+    .ball {
+      background-color: $brown!important;
+    }
+  }
+}
+
+ul {
+  margin-bottom: 0;
+  padding: 0;
+
+  li {
+    list-style-type: none;
+    padding: 0;
+  }
+}
