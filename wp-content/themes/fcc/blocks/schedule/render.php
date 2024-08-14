@@ -109,8 +109,8 @@ $classes = isset($block['className']) ? $block['className'] : '';
 
             <div class="mobile-schedule d-lg-none">
                 <?php foreach ($days as $day_name): ?>
-                    <div class="mobile-day-group">
-                        <h2><?= $day_name; ?></h2>
+                    <div class="mobile-day-group container mb-30">
+                        <div class="day-header d-flex justify-content-center align-items-center rounded-1 p-20 mb-5"><h3 class="h5 text-center text-white mb-0"><?= $day_name; ?></h3></div>
                         <?php foreach ($schedule as $time => $day_entries): ?>
                             <?php
                             $day_found = false;
@@ -125,9 +125,13 @@ $classes = isset($block['className']) ? $block['className'] : '';
                                     if ($day_index >= $start_day_index && $day_index <= $end_day_index) :
                                         $day_found = true;
                                         ?>
-                                        <div class="mobile-entry">
-                                            <div class="time"><?= $activity_data['formatted_time']; ?></div>
-                                            <div class="activity"><?= $activity_data['activity']; ?></div>
+                                        <div class="mobile-entry gx-5 mb-5 row">
+                                            <div class="col-6 d-flex">
+                                                <div class="time bg-tan fw-bold text-center d-flex align-self-stretch w-100 justify-content-center align-items-center rounded-1 p-20"><?= $activity_data['formatted_time']; ?></div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="activity text-center d-flex justify-content-center align-items-center rounded-1 p-20 <?= $activity_data['bg_colour']; ?>"><?= $activity_data['activity']; ?></div>
+                                            </div>
                                         </div>
                                     <?php
                                     endif;
