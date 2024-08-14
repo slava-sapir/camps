@@ -45,6 +45,31 @@
             "append": ""
         },
         {
+            "key": "field_66bcf91a9eab6",
+            "label": "Bottom Image",
+            "name": "bottom_image",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "yes": "Yes",
+                "no": "No"
+            },
+            "default_value": "",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "vertical",
+            "save_other_choice": 0
+        },
+        {
             "key": "field_668eaad736a41",
             "label": "Image + Text Rows",
             "name": "image_text_rows",
@@ -112,6 +137,32 @@
                     "media_upload": 1,
                     "delay": 0,
                     "parent_repeater": "field_668eaad736a41"
+                },
+                {
+                    "key": "field_66bcee7a99f81",
+                    "label": "Content Size",
+                    "name": "content_size",
+                    "aria-label": "",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "col-lg-6": "Large",
+                        "col-lg-4": "Small"
+                    },
+                    "default_value": "",
+                    "return_format": "value",
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "layout": "vertical",
+                    "save_other_choice": 0,
+                    "parent_repeater": "field_668eaad736a41"
                 }
             ]
         }
@@ -134,5 +185,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1720627348
+    "modified": 1723660982
 }
