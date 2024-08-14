@@ -312,6 +312,27 @@ function create_reviews_cpt() {
     register_post_type( 'review', $args );
 }
 add_action( 'init', 'create_reviews_cpt', 0 );
+// Schedules CPT
+// Register Custom Post Type Schedules
+function create_schedules_cpt() {
+    $labels = array(
+        'name'          => 'schedules',
+        'singular_name' => 'Schedule',
+        'menu_name'     => 'Schedules',
+    );
+
+    $args = array(
+        'label'         => 'Schedules',
+        'labels'        => $labels,
+        'public'        => true,
+        'has_archive'   => true,
+        'rewrite'       => array( 'slug' => 'schedules' ),
+        'supports'      => array( 'title', 'editor', 'thumbnail' ),
+    );
+
+    register_post_type( 'schedule', $args );
+}
+add_action( 'init', 'create_schedules_cpt', 0 );
 
 // Add ACF Options Page
 if( function_exists('acf_add_options_page') ) {

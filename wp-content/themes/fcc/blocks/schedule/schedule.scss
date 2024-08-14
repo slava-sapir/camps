@@ -1,0 +1,30 @@
+.schedule-grid {
+    grid-template-columns: auto repeat(7, 1fr);
+    grid-auto-rows: auto;
+    gap: 5px;
+
+    // Desktop styling
+    .schedule-header {
+        display: contents;
+    }
+
+    .schedule-row {
+        display: contents;
+    }
+}
+
+.green-theme, .default-theme {
+    .time-header, .day-header {
+        background-color: $green;
+    }
+}
+.gold-theme {
+    .time-header, .day-header {
+        background-color: $gold;
+    }
+}
+.teal-theme {
+    .time-header, .day-header {
+        background-color: $teal;
+    }
+}

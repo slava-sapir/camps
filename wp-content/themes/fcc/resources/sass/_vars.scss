@@ -58,6 +58,7 @@ $theme-colors: $colors;
 // scss-docs-end theme-color-variables
 
 $enable-negative-margins: true;
+$enable-cssgrid: true;
 
 // Options
 //
@@ -285,6 +286,7 @@ $offcanvas-vertical-height: 100vh;
 
 $border-radius: #{divide(20, 16)}rem;
 $border-radius-lg: 50%;
+$border-radius-sm: 5px;
 
 // Form Control
 $input-padding-y: 10px;
