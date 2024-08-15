@@ -49,7 +49,7 @@
             "label": "Bottom Image",
             "name": "bottom_image",
             "aria-label": "",
-            "type": "radio",
+            "type": "true_false",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -58,16 +58,11 @@
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "yes": "Yes",
-                "no": "No"
-            },
-            "default_value": "",
-            "return_format": "value",
-            "allow_null": 0,
-            "other_choice": 0,
-            "layout": "vertical",
-            "save_other_choice": 0
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
         },
         {
             "key": "field_668eaad736a41",
@@ -185,5 +180,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1723660982
+    "modified": 1723728596
 }

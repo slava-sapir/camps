@@ -13,7 +13,7 @@
 * @package Forest_Cliff_Camps
 */
 
-$bottom_image = (get_field('bottom_image') == 'yes')? 'image-text-rows' : '';
+$bottom_image = (get_field('bottom_image'))? 'image-text-rows' : '';
 if(have_rows('image_text_rows')) :
 ?>
 <section id="<?= $bottom_image ?>" style="padding-top: <?= get_field('padding_top'); ?>px; padding-bottom: <?= get_field('padding_bottom'); ?>px;">
