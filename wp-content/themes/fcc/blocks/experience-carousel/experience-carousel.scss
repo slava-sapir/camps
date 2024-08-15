@@ -1,0 +1,41 @@
+
+.bottom-splash {
+  background-image: url(../../resources/images/main-theme/shapes/yellow-bottom-splash.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.presentation {
+  transition:transform 0.7s ease;
+}
+
+  .small-icon {
+       transition: transform 0.7s ease;
+} 
+
+.presentation:hover {
+    .hover-event  {
+    .small-icon {
+      transform: scale(1.5) translateY(-10px);
+    } 
+
+    .txt {
+      color: $brown!important;
+    }
+
+    .ball {
+      background-color: $brown!important;
+    }
+  }
+}
+
+//Bootstrap classes overriding
+.nav-tabs, .nav-tabs .nav-link {
+  border: none;
+}
+.nav-tabs .nav-link.active {
+  background-color: transparent;
+}
+

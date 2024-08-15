@@ -1,3 +1,4 @@
+$enable-rfs: true;
 // Color system
 
 // scss-docs-start color-variables
@@ -74,6 +75,7 @@ $variable-prefix: fcc-;
 // This gradient is also added to elements with `.bg-gradient`
 // scss-docs-start variable-gradient
 $gradient: radial-gradient(50% 50% at 50% 50%, rgba($white, .25), rgba($white, 0)) !default;
+$secondary-gradient: linear-gradient(180deg, #FFC340 0%, #F5A800 100%);
 // scss-docs-end variable-gradient
 
 
@@ -86,11 +88,16 @@ $gradient: radial-gradient(50% 50% at 50% 50%, rgba($white, .25), rgba($white, 0
 // scss-docs-start spacer-variables-maps
 $spacers: (
     0: 0,
+    1: #{divide(1, 16)}rem,
     5: #{divide(5, 16)}rem,
     10: #{divide(10, 16)}rem,
+    12: #{divide(12, 16)}rem,
     15: #{divide(15, 16)}rem,
+    16:#{divide(16, 16)}rem,
     20:#{divide(20, 16)}rem,
+    25:#{divide(25, 16)}rem,
     30:#{divide(30, 16)}rem,
+    35:#{divide(35, 16)}rem,
     40:#{divide(40, 16)}rem,
     50:#{divide(50, 16)}rem,
     60:#{divide(60, 16)}rem,
@@ -99,6 +106,7 @@ $spacers: (
     90:#{divide(90, 16)}rem,
     100:#{divide(100, 16)}rem,
     125:#{divide(125, 16)}rem,
+    225:#{divide(225, 16)}rem,
 );
 // scss-docs-end spacer-variables-maps
 
@@ -172,7 +180,7 @@ $blog-container-max-widths: (
 // Grid columns
 //
 // Set the number of columns and specify the width of the gutters.
-$grid-gutter-width: 1.25rem;
+ $grid-gutter-width: 1.25rem;
 
 
 // Typography
@@ -200,7 +208,6 @@ $h4-font-size: 1.75rem; // 28px
 $h5-font-size: 1.3125rem; // 21px
 $h6-font-size: 1rem; // 16px
 // scss-docs-end font-variables
-
 
 // scss-docs-start headings-variables
 $headings-font-family: $font-family-sans-serif;
@@ -287,6 +294,7 @@ $offcanvas-vertical-height: 100vh;
 $border-radius: #{divide(20, 16)}rem;
 $border-radius-lg: 50%;
 $border-radius-sm: 5px;
+$border-radius-xxl: #{divide(670, 16)}rem;
 
 // Form Control
 $input-padding-y: 10px;

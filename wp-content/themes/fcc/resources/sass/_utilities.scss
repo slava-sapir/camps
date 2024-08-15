@@ -1,9 +1,24 @@
 // Utilities
-
 $utilities: () !default;
+
 // stylelint-disable-next-line scss/dollar-variable-default
 $utilities: map-merge(
   (
+    // scss-docs-start utils-text-hover
+    "text": (
+      property: color,
+      class: text,
+      state: hover,
+      values: $theme-colors
+    ),
+    // scss-docs-end utils-text-hover
+    "background": (
+      property: background-color,
+      class: bg,
+      state: hover,
+      values: $theme-colors
+    ),
+    // scss-docs-end utils-background-hover
     // scss-docs-start utils-vertical-align
     "align": (
       property: vertical-align,
@@ -126,6 +141,13 @@ $utilities: map-merge(
       )
     ),
     // scss-docs-end utils-position
+    "transform": (
+      property: transform,
+      class: transform,
+      values: (
+        "rotateY-rotateX": rotateY(180deg) rotateX(180deg),
+      )
+    ),
     // scss-docs-start utils-borders
     "border": (
       property: border,
@@ -180,7 +202,12 @@ $utilities: map-merge(
     "border-width": (
       property: border-width,
       class: border,
-      values: $border-widths
+      values: (
+        '1': 1px,
+        '2': 2px,
+        '5': 5px,
+        '20': 20px,
+      )
     ),
     "border-opacity": (
       css-var: true,
@@ -203,6 +230,7 @@ $utilities: map-merge(
         25: 25%,
         50: 50%,
         75: 75%,
+        85: 85%,
         100: 100%,
         auto: auto
       )
@@ -238,6 +266,36 @@ $utilities: map-merge(
       class: mh,
       values: (100: 100%)
     ),
+    "width-pixels": (
+          property: width,
+          class: wp,
+          responsive: true,
+          values: (
+              2: 2px,
+              10: 10px,
+              20: 20px,
+              420: 420px,
+              520: 520px,
+              671: 671px,
+          ),
+      ),
+    "height-pixels": (
+        property: height,
+        class: hp,
+        responsive: true,
+        values: (
+            10: 10px,
+            20: 20px,
+            171: 171px,
+            420: 420px,
+            520: 520px,
+            671: 671px,
+            800: 800px,
+            1000: 1000px,
+            1200: 1200px,
+            1400: 1400px,
+        ),
+  ),
     "viewport-height": (
       property: height,
       class: vh,
@@ -350,6 +408,7 @@ $utilities: map-merge(
     // scss-docs-end utils-flex
     // Margin utilities
     // scss-docs-start utils-spacing
+  
     "margin": (
       responsive: true,
       property: margin,
@@ -574,23 +633,16 @@ $utilities: map-merge(
     ),
     // scss-docs-end utils-text
     // scss-docs-start utils-color
-    "color": (
-      property: color,
-      class: text,
-      local-vars: (
-        "text-opacity": 1
-      ),
-      values: map-merge(
-        $utilities-text-colors,
-        (
-          "muted": var(--#{$prefix}secondary-color), // deprecated
-          "black-50": rgba($black, .5), // deprecated
-          "white-50": rgba($white, .5), // deprecated
-          "body-secondary": var(--#{$prefix}secondary-color),
-          "body-tertiary": var(--#{$prefix}tertiary-color),
-          "body-emphasis": var(--#{$prefix}emphasis-color),
-          "reset": inherit,
-        )
+    values: map-merge(
+      $utilities-text-colors,
+      (
+        "muted": var(--#{$prefix}secondary-color), // deprecated
+        "black-50": rgba($black, .5), // deprecated
+        "white-50": rgba($white, .5), // deprecated
+        "body-secondary": var(--#{$prefix}secondary-color),
+        "body-tertiary": var(--#{$prefix}tertiary-color),
+        "body-emphasis": var(--#{$prefix}emphasis-color),
+        "reset": inherit,
       )
     ),
     "text-opacity": (
@@ -696,7 +748,17 @@ $utilities: map-merge(
     "gradient": (
       property: background-image,
       class: bg,
-      values: (gradient: var(--#{$prefix}gradient))
+      values: (
+        gradient: var(--#{$prefix}gradient),
+      )
+    ),
+
+    "gradient-secondary": (
+      property: background-image,
+      class: bg,
+      values: (
+        secondary-gradient:  $secondary-gradient,  // Using the CSS custom property
+      )
     ),
     // scss-docs-start utils-interaction
     "user-select": (
