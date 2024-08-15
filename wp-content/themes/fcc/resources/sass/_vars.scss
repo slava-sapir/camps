@@ -91,7 +91,9 @@ $spacers: (
     1: #{divide(1, 16)}rem,
     5: #{divide(5, 16)}rem,
     10: #{divide(10, 16)}rem,
+    12: #{divide(12, 16)}rem,
     15: #{divide(15, 16)}rem,
+    16:#{divide(16, 16)}rem,
     20:#{divide(20, 16)}rem,
     25:#{divide(25, 16)}rem,
     30:#{divide(30, 16)}rem,
@@ -206,18 +208,6 @@ $h4-font-size: 1.75rem; // 28px
 $h5-font-size: 1.3125rem; // 21px
 $h6-font-size: 1rem; // 16px
 // scss-docs-end font-variables
-
-$font-sizes: (
-    1: $h1-font-size,
-    2: $h2-font-size,
-    3: $h3-font-size,
-    4: $h4-font-size,
-    5: $h5-font-size,
-    6: $h6-font-size,
-);
-
-$font-weight-semibold: 600;
-$font-weight-normal: 400;
 
 // scss-docs-start headings-variables
 $headings-font-family: $font-family-sans-serif;

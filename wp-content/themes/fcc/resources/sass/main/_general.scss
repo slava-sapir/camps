@@ -44,3 +44,9 @@ body small {
     max-width: 1440px;
   }
 }
+
+$position-values: (
+    0: 0,
+    20: 20%,
+    20px: rem-calc(20px),
+);

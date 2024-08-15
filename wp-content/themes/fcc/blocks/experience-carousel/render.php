@@ -17,7 +17,7 @@
 <section id="experience-carousel" class="bg-gold bg-secondary-gradient mb-50">
 
     <img src="<?= esc_url(get_template_directory_uri() . '/resources/images/main-theme/shapes/white-top-splash.png'); ?>" alt="white-top-splash" class="img-fluid w-100 mt-n1">
-    <div class="bottom-splash position-relative">
+    <div class="bottom-splash hp-1400 hp-sm-1000 hp-md-1200 hp-xl-800 position-relative">
 
       <div class="d-flex flex-column-reverse flex-xl-row align-items-center">
 
@@ -35,7 +35,7 @@
                      $index = get_row_index();
                      $count++;
                     ?>
-                      <a href="javascript:void(0);" role="presentation" class="nav-link d-flex justify-content-center align-items-end position-relative presentation <?= $count == 1 ? 'active' : ''; ?>"
+                      <a href="javascript:void(0);" role="presentation" class="presentation hp-171 nav-link d-flex justify-content-center align-items-end position-relative <?= $count == 1 ? 'active' : ''; ?>"
                             id="nav-<?php echo $index; ?>-tab"
                             data-bs-toggle="tab"
                             data-bs-target="#nav-<?php echo $index; ?>"
@@ -43,7 +43,7 @@
                             role="tab"
                             aria-controls="nav-<?php echo $index; ?>"
                             aria-selected="false">
-                            <div class="click-event mb-n10 flex-column justify-content-center align-items-center <?= $count == 1 ? 'd-flex' : 'd-none'; ?>">
+                            <div class="click-event mb-n16 flex-column justify-content-center align-items-center <?= $count == 1 ? 'd-flex' : 'd-none'; ?>">
                                 <div class="bordered-big-icon p-20 border border-2 border-white rounded-circle d-flex align-items-center justify-content-center">
                                     <?= wp_get_attachment_image( $big_icon['id'], 'full', false, ['class' => 'img-fluid'] ); ?>
                                 </div>
@@ -55,8 +55,7 @@
                                   </div>
                                 </div>
                             </div>
-                            <div class="hover-event mb-n5 d-flex flex-column gap-10 justify-content-center align-items-center <?= $count == 1 ? 'd-none' : 'd-flex'; ?>">
-                                <?= wp_get_attachment_image( $big_icon['id'], 'full', false, ['class' => 'img-fluid big-icon d-none'] ); ?>
+                            <div class="hover-event mb-n12 d-flex flex-column gap-10 justify-content-center align-items-center <?= $count == 1 ? 'd-none' : 'd-flex'; ?>">
                                 <?= wp_get_attachment_image( $small_icon['id'], 'full', false, ['class' => 'img-fluid small-icon'] ); ?>
                                 <p class="fs-6 fw-semibold text-white txt"><?= $experience_title ?></p>
                                 <div class="ball bg-white rounded-circle wp-10 hp-10"></div>
@@ -68,7 +67,7 @@
             </div>
         </div>
 
-        <div class="tab-content w-100 w-xl-50 ms-0 ms-xl-n50 d-flex align-items-center justify-content-center">
+        <div class="tab-content w-100 w-xl-50 ms-0 ms-xl-n50 d-flex align-items-center justify-content-center justify-content-xl-start ">
               <?php
                 $count = 0;
                 if(have_rows('experience_repeater')):
@@ -81,7 +80,7 @@
                   $count++;
               ?>
 
-              <div class="tab-pane fade <?php echo $count === 1 ? 'show active' : 'd-none'; ?>" id="nav-<?php echo $index; ?>" role="tabpanel" aria-labelledby="nav-<?php echo $index; ?>-tab" tabindex="0">
+              <div class="tab-pane fade <?php echo $count === 1 ? 'show active' : ''; ?>" id="nav-<?php echo $index; ?>" role="tabpanel" aria-labelledby="nav-<?php echo $index; ?>-tab" tabindex="0">
                 <div class="d-flex flex-column bg-white rounded-circle border-20 border border-white wp-420 wp-md-520 wp-lg-671 hp-420 hp-md-520 hp-lg-671" >
           
                   <?= wp_get_attachment_image( $experience_image['id'], 'circled-image', false, ['class' => 'img-fluid rounded-top-5'] ); ?>
