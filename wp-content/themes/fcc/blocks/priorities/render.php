@@ -17,7 +17,7 @@ $anchor = isset($block['anchor']) ? $block['anchor'] : '';
 $classes = isset($block['className']) ? $block['className'] : '';
 ?>
 
-<section id="<?= esc_attr($anchor) ?>" class="priorities <?= esc_attr($classes) ?>"
+<section id="<?= esc_attr($anchor) ?>" class="priorities <?= esc_attr($classes) ?> <?= get_field('add_tan_background') ? 'add-tan-bg' : ''; ?>"
          style="padding-top: <?= get_field('padding_top'); ?>px; padding-bottom: <?= get_field('padding_bottom'); ?>px;<?= get_field('add_background_colour') ? ' background-color: #f2efeb;"' : ''; ?>">
 
     <InnerBlocks/>
@@ -41,3 +41,4 @@ $classes = isset($block['className']) ? $block['className'] : '';
         </div>
     </div>
 </section>
+
