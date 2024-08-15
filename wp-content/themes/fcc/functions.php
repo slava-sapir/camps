@@ -247,6 +247,7 @@ add_image_size( 'blog-thumb', 447, 278, true );
 add_image_size( 'staff-thumb', 466, 670, true );
 add_image_size( 'review-thumb', 112, 112, true );
 add_image_size( 'experience-thumb', 695, 450, true );
+add_image_size( 'priority-thumb', 330, 330, true );
 
 // FAQs CPT
 // Register Custom Post Type FAQs

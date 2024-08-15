@@ -1,6 +1,6 @@
 {
     "key": "group_66b4e2729d4d0",
-    "title": "Block: Camp Cards (copy)",
+    "title": "Block: Schedule",
     "fields": [
         {
             "key": "field_66b4e27327a99",
@@ -91,5 +91,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1723131221
+    "modified": 1723664231
 }
