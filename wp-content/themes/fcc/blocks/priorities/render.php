@@ -27,7 +27,7 @@ $classes = isset($block['className']) ? $block['className'] : '';
                 <div class="col-md-6 col-lg-4 col-xl-3 d-flex">
                     <div class="d-flex align-self-stretch w-100 flex-column">
                         <div class="text-center">
-                            <?= wp_get_attachment_image(get_sub_field('image')['id'], 'priority-thumb', false, ['class' => 'img-fluid']); ?>
+                            <?= wp_get_attachment_image(get_sub_field('image')['id'], 'priority-thumb', false, ['class' => 'img-fluid rounded-circle']); ?>
                         </div>
                         <?php if (get_sub_field('title')): ?>
                             <h3 class="h6 mt-20 mb-10 text-center px-10"><?= get_sub_field('title'); ?></h3>
