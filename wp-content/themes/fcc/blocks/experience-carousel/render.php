@@ -106,17 +106,9 @@
 
       <?php 
        if($theme_color != 'green-theme') : ?>
-      <img src="<?= esc_url(get_template_directory_uri() . '/resources/images/main-theme/shapes/white-top-splash.png'); ?>" alt="white-top-splash-rotate" class="img-fluid w-100 position-absolute start-0 bottom-0 transform-rotateY-rotateX mb-n1">
+      <img src="<?= esc_url(get_template_directory_uri() . '/resources/images/day-camp-theme/shapes/splash-beige-bottom.svg'); ?>" alt="white-top-splash-rotate" class="img-fluid w-100 position-absolute start-0 bottom-0 mb-n1">
       <?php endif; ?>
      
     </div>
 
 </section>
-
-<!-- <script>
-  if (typeof jQuery !== 'undefined') {
-    console.log('jQuery is loaded!');
-  } else {
-    console.log('jQuery is not loaded.');
-  }
-</script> -->
