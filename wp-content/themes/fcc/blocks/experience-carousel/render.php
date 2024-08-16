@@ -14,8 +14,7 @@
 */
 ?>
 
-<!-- <section id="experience-carousel" class="bg-gold bg-secondary-gradient"> -->
-  <section id="experience-carousel" >
+<section id="experience-carousel">
 <?php 
   $id = get_the_ID();
   $theme_color = get_field('theme_colour', $id);
