@@ -1,0 +1,9 @@
+
+  .presentation-tab.active,
+  .show > .presentation-tab,
+  .presentation-tab:hover,
+  .presentation-tab:focus {
+    color: $white;
+    background: $gold;
+    border: 3px solid $gold!important;
+  }

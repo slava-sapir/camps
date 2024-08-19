@@ -17,6 +17,11 @@ a {
   transition: all .3s ease;
 }
 
+p {
+  padding: 0;
+  margin: 0;
+}
+
 .has-background {
   background-size: cover;
   background-repeat: no-repeat;

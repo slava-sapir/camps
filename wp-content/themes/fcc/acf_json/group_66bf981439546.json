@@ -3,6 +3,46 @@
     "title": "Block: Rates & Dates",
     "fields": [
         {
+            "key": "field_66c24030471c4",
+            "label": "Title",
+            "name": "title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_66c24038471c5",
+            "label": "Text",
+            "name": "text",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
             "key": "field_66bf9814850f5",
             "label": "Rates Dates",
             "name": "rates_dates",
@@ -59,8 +99,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "layout": "table",
-                    "pagination": 0,
+                    "layout": "block",
                     "min": 0,
                     "max": 0,
                     "collapsed": "",
@@ -72,7 +111,7 @@
                             "label": "Date",
                             "name": "date",
                             "aria-label": "",
-                            "type": "date_picker",
+                            "type": "text",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -81,9 +120,11 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "display_format": "F j",
-                            "return_format": "F j, Y",
-                            "first_day": 1,
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
                             "parent_repeater": "field_66bf9dd5a0bc0"
                         },
                         {
@@ -169,5 +210,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1723834114
+    "modified": 1724006570
 }
