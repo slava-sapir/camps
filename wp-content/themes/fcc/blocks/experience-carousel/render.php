@@ -19,8 +19,7 @@
   $id = get_the_ID();
   $theme_color = get_field('theme_colour', $id);
 ?>
-<?php 
-  if($theme_color != 'green-theme') : ?>
+<?php if($theme_color != 'green-theme') : ?>
   <img src="<?= esc_url(get_template_directory_uri() . '/resources/images/main-theme/shapes/white-top-splash.png'); ?>" alt="white-top-splash" class="img-fluid w-100 mt-n1">
 <?php endif; ?>
 
@@ -104,11 +103,12 @@
 
       </div>
 
-      <?php 
-       if($theme_color != 'green-theme') : ?>
-      <img src="<?= esc_url(get_template_directory_uri() . '/resources/images/day-camp-theme/shapes/splash-beige-bottom.svg'); ?>" alt="white-top-splash-rotate" class="img-fluid w-100 position-absolute start-0 bottom-0 mb-n1">
+      <?php if($theme_color == 'gold-theme') : ?>
+        <img src="<?= esc_url(get_template_directory_uri() . '/resources/images/day-camp-theme/shapes/splash-beige-bottom.svg'); ?>" alt="splash-beige-bottom" class="img-fluid w-100 position-absolute start-0 bottom-0 mb-n1">
+        <?php elseif($theme_color == 'teal-theme') : ?>
+        <img src="<?= esc_url(get_template_directory_uri() . '/resources/images/overnight-camp-theme/shapes/splash-off-white-bottom.svg'); ?>" alt="off-white-splash-bottom" class="img-fluid w-100 position-absolute start-0 bottom-0 mb-n1">
       <?php endif; ?>
-     
+
     </div>
 
 </section>
