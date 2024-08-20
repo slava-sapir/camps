@@ -15,16 +15,9 @@
 
 $anchor = isset($block['anchor']) ? $block['anchor'] : '';
 $classes = isset($block['className']) ? $block['className'] : '';
-$theme_colour = get_field('theme_colour', get_the_ID());
-$bg_colour = 'bg-white';
-if($theme_colour === 'gold-theme') :
-    $bg_colour = 'bg-tan';
-elseif ($theme_colour === 'teal-theme') :
-    $bg_colour = 'bg-grey100';
-endif;
 ?>
 
-<section id="<?= esc_attr($anchor) ?>" class="priorities <?= esc_attr($classes) ?> <?= get_field('add_background_colour') ? $bg_colour : ''; ?>"
+<section id="<?= esc_attr($anchor) ?>" class="priorities <?= esc_attr($classes) ?> <?= get_field('add_background_colour') ? '' : 'bg-white'; ?>"
          style="padding-top: <?= get_field('padding_top'); ?>px; padding-bottom: <?= get_field('padding_bottom'); ?>px;">
 
     <InnerBlocks/>
