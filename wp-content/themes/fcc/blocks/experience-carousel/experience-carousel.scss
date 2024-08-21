@@ -24,29 +24,43 @@
     box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.10);
   }
  
-.presentation {
-  transition:transform 0.7s ease;
-}
+  .stick {
+    opacity: 0;
+  }
 
-  .small-icon {
-       transition: transform 0.7s ease;
-} 
+  .border_opacity {
+    border: 2px solid transparent;
+  }
+
 
 .presentation:hover {
-    .hover-event  {
-    .small-icon {
+
+    .bordered-icon {
       transform: scale(1.5) translateY(-10px);
     } 
-
+    .ball
+    {
+      background-color: $brown!important;
+    }
     .txt {
       color: $brown!important;
     }
 
-    .ball {
-      background-color: $brown!important;
+}
+
+  .nav-tabs .nav-link.active {
+    .stick {
+      opacity: 1;
+    }
+    .bordered-icon {
+      transform: scale(1.5) translateY(-10px);
+      border: 2px solid $white;
+   } 
+
+    .border_opacity {
+      border: 2px solid $white;
     }
   }
-}
 
 //Bootstrap classes overriding
 .nav-tabs, .nav-tabs .nav-link {
@@ -55,4 +69,3 @@
 .nav-tabs .nav-link.active {
   background-color: transparent;
 }
-
