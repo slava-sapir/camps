@@ -23,7 +23,7 @@
   <img src="<?= esc_url(get_template_directory_uri() . '/resources/images/main-theme/shapes/white-top-splash.png'); ?>" alt="white-top-splash" class="img-fluid w-100 mt-n1">
 <?php endif; ?>
 
-    <div class="hp-1400 hp-sm-1000 hp-md-1200 hp-xl-800 position-relative">
+    <div class="hp-1400 hp-sm-1000 hp-md-1200 hp-xl-800 position-relative mt-xl-n200 mt-n0">
 
       <div class="d-flex flex-column-reverse flex-xl-row align-items-center">
 
@@ -49,14 +49,14 @@
                             role="tab"
                             aria-controls="nav-<?php echo $index; ?>"
                             aria-selected="false">
-                            <div class="tab_class mb-n16 flex-column justify-content-center align-items-center">
-                                <div class="bordered-icon rounded-circle p-20 <?= $theme_color == 'green-theme' ? 'border-grey600' : 'border-white '; ?> text-center">
+                            <div class="tab_class mb-n16 d-flex flex-column justify-content-center align-items-center">
+                                <div class="bordered-icon rounded-circle p-15 <?= $theme_color == 'green-theme' ? 'border-grey600' : 'border-white '; ?> ">
                                     <?= wp_get_attachment_image( $small_icon['id'], 'full', false, ['class' => 'img-fluid'] ); ?>
                                 </div>
                                 <div class="txt fs-6 fw-semibold <?= $theme_color == 'green-theme' ? 'text-grey600' : 'text-white '; ?> pt-10 pb-5"><?= $experience_title ?></div>
-                                <div class="stick-ball d-flex flex-column align-items-center justify-content-center">
+                                <div class="d-flex flex-column align-items-center justify-content-center">
                                   <div class="stick wp-2 hp-20 <?= $theme_color == 'green-theme' ? 'bg-grey600' : 'bg-white '; ?>"></div> 
-                                  <div class="bordered-ball p-3 rounded-circle border_opacity">
+                                  <div class="bordered-ball p-3 rounded-circle <?= $theme_color == 'green-theme' ? 'grey_border_opacity' : 'border_opacity'; ?>">
                                      <div class="ball rounded-circle <?= $theme_color == 'green-theme' ? 'bg-grey600' : 'bg-white'; ?> wp-10 hp-10"></div>
                                   </div>
                                 </div>

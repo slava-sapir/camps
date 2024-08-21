@@ -1,10 +1,9 @@
 
 .gold-theme {
-  #experience-carousel {
-    background:  url(../../resources/images/day-camp-theme/shapes/splash-bottom-gold.png) center / cover no-repeat,
-    linear-gradient(180deg, #FFC340 0%, #F5A800 100%);
-  }
-    
+    #experience-carousel {
+      background:  url(../../resources/images/day-camp-theme/shapes/splash-bottom-gold.png) center / cover no-repeat, 
+      linear-gradient(180deg, #FFC340 0%, #F5A800 100%);
+    }
   }
 
   .teal-theme {
@@ -28,15 +27,16 @@
     opacity: 0;
   }
 
-  .border_opacity {
+  .grey_border_opacity, .border_opacity {
     border: 2px solid transparent;
   }
 
 
 .presentation:hover {
-
+    transition: transform 0.7s ease;
     .bordered-icon {
       transform: scale(1.5) translateY(-10px);
+       transition: transform 0.7s ease;
     } 
     .ball
     {
@@ -49,6 +49,7 @@
 }
 
   .nav-tabs .nav-link.active {
+     transition: transform 0.7s ease;
     .stick {
       opacity: 1;
     }
@@ -59,6 +60,10 @@
 
     .border_opacity {
       border: 2px solid $white;
+    }
+
+    .grey_border_opacity {
+      border: 2px solid $grey600;
     }
   }
 

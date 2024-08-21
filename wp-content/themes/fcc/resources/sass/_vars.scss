@@ -89,6 +89,7 @@ $secondary-gradient: linear-gradient(180deg, #FFC340 0%, #F5A800 100%);
 $spacers: (
     0: 0,
     1: #{divide(1, 16)}rem,
+    3: #{divide(3, 16)}rem,
     5: #{divide(5, 16)}rem,
     10: #{divide(10, 16)}rem,
     12: #{divide(12, 16)}rem,
@@ -106,6 +107,7 @@ $spacers: (
     90:#{divide(90, 16)}rem,
     100:#{divide(100, 16)}rem,
     125:#{divide(125, 16)}rem,
+    200:#{divide(200, 16)}rem,
     225:#{divide(225, 16)}rem,
 );
 // scss-docs-end spacer-variables-maps
