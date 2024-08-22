@@ -14,15 +14,21 @@
 */
 ?>
 
-<section id="rates-dates">
+<section id="locations">
 
- <img src="<?= esc_url(get_template_directory_uri() . '/resources/images/main-theme/shapes/white-top-splash.png'); ?>" alt="white-top-splash" class="img-fluid w-100 mt-n1">
+ <img src="<?= esc_url(get_template_directory_uri() . '/resources/images/day-camp-theme/shapes/splash-white-top.svg'); ?>" alt="white-top-splash" class="img-fluid w-100 mb-n300">
 
     <div class="container">
-                
-      
-    
 
+        <div class="position-relative z-1">
+        <?php 
+        $locatiions_map = get_field('locations_map');
+        echo $locatiions_map;
+        ?>
+        </div>
+        
     </div>
-    
+
+ <img src="<?= esc_url(get_template_directory_uri() . '/resources/images/day-camp-theme/shapes/splash-white-bottom.svg'); ?>" alt="white-top-splash" class="img-fluid w-100 mt-n300">
+
 </section>
