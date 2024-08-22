@@ -7,3 +7,18 @@
     background: $gold;
     border: 3px solid $gold!important;
   }
+
+  .nav-tabs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(161px, 1fr)); 
+}
+  
+ $position-values: (
+    0: 0,
+    15: 15%,
+    20: 20%,
+    50: 50%,
+    55: 55%,
+    100: 100%,
+    100px: 100px,
+);
