@@ -1,6 +1,6 @@
 <?php
 /**
- * Rates & Dates Block Template.
+ * Locations Map Block Template.
  *
 * @param array $block The block settings and attributes.
 * @param string $content The block inner HTML (empty).
@@ -14,21 +14,11 @@
 */
 ?>
 
-<section id="locations">
-
- <img src="<?= esc_url(get_template_directory_uri() . '/resources/images/day-camp-theme/shapes/splash-white-top.svg'); ?>" alt="white-top-splash" class="img-fluid w-100 mb-n300">
-
+<section id="locations" class="my-50">
     <div class="container">
-
-        <div class="position-relative z-1">
         <?php 
-        $locatiions_map = get_field('locations_map');
-        echo $locatiions_map;
-        ?>
-        </div>
-        
+            $locatiions_map = get_field('locations_map');
+            echo $locatiions_map;
+        ?>    
     </div>
-
- <img src="<?= esc_url(get_template_directory_uri() . '/resources/images/day-camp-theme/shapes/splash-white-bottom.svg'); ?>" alt="white-top-splash" class="img-fluid w-100 mt-n300">
-
 </section>
