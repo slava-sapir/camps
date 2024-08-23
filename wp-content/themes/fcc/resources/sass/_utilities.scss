@@ -4,6 +4,18 @@
 // stylelint-disable-next-line scss/dollar-variable-default
 $utilities: map-merge($utilities,
     (
+
+      // scss-docs-start utils-shadow
+      "shadow": (
+        property: box-shadow,
+        class: shadow,
+        values: (
+          null: var(--#{$prefix}box-shadow),
+          sm: var(--#{$prefix}box-shadow-sm),
+          lg: var(--#{$prefix}box-shadow-lg),
+          none: none,
+        )
+      ),
         // scss-docs-start utils-text-hover
         "text": (
             property: color,

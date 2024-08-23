@@ -82,7 +82,7 @@
               ?>
 
               <div class="tab-pane fade <?php echo $count === 1 ? 'show active' : ''; ?>" id="nav-<?php echo $index; ?>" role="tabpanel" aria-labelledby="nav-<?php echo $index; ?>-tab" tabindex="0">
-                <div class="rounded-container d-flex flex-column bg-white rounded-circle border-20 border border-white wp-420 wp-md-520 wp-lg-671 hp-420 hp-md-520 hp-lg-671" >
+                <div class="shadow-sm d-flex flex-column bg-white rounded-circle border-20 border border-white wp-420 wp-md-520 wp-lg-671 hp-420 hp-md-520 hp-lg-671" >
                   <?= wp_get_attachment_image( $experience_image['id'], 'circled-image', false, ['class' => 'img-fluid rounded-top-5'] ); ?>
                   <div class="d-flex flex-column gap-5 justify-content-center align-items-center">
                     <div class="mt-n30 bg-white rounded-circle p-10">

@@ -19,10 +19,6 @@
     }
   }
 
-  .rounded-container {
-    box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.10);
-  }
- 
   .stick {
     opacity: 0;
   }
@@ -30,7 +26,6 @@
   .grey_border_opacity, .border_opacity {
     border: 2px solid transparent;
   }
-
 
 .presentation:hover {
     transition: transform 0.7s ease;
