@@ -17,6 +17,8 @@ $categories = get_terms( array(
     'hide_empty' => false,
 ));
 $displayed_category = get_field('displayed_category');
+$link = get_field('link');
+global $theme_color;
 ?>
 
 <section id="faqs-no-search" style="padding-top: <?= get_field('padding_top'); ?>px; padding-bottom: <?= get_field('padding_bottom'); ?>px;">
@@ -48,5 +50,19 @@ $displayed_category = get_field('displayed_category');
                 get_template_part('template-parts/faq-accordion', null, array('query' => $query));
             endif; ?>
         </div>
+
+        <?php
+        $theme_colors = [
+            'gold-theme' => 'btn-gold',
+            'green-theme' => 'btn-green',
+            'teal-theme' => 'btn-teal',
+        ];
+        $theme_class = isset($theme_colors[$theme_color]) ? $theme_colors[$theme_color] : ''; ?>
+
+        <?php if ($link): ?>
+            <div class="text-center">
+                <a href="<?= $link['url']; ?>" target="<?= $link['target']; ?>" class="btn <?= $theme_class ?> mx-10"><?= $link['title']; ?></a>
+            </div>
+        <?php endif; ?>
     </div>
 </section>

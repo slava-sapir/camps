@@ -19,6 +19,7 @@
     <?php wp_head(); ?>
 </head>
 <?php
+global $theme_color;
 $theme_color = 'default-theme';
 $camp_args = [
     'post_type' => 'page',
