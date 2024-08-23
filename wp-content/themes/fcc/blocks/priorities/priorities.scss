@@ -1,6 +1,12 @@
-.priorities {
-    &.add-tan-bg {
+.gold-theme {
+    .priorities {
         background: url(../../resources/images/day-camp-theme/shapes/splash-white-bottom-flipped.svg) center bottom no-repeat,
         $tan;
+    }
+}
+.teal-theme, .green-theme {
+    .priorities {
+        background: url(../../resources/images/day-camp-theme/shapes/splash-white-bottom-flipped.svg) center bottom no-repeat,
+        $grey100;
     }
 }

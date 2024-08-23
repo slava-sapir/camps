@@ -89,14 +89,14 @@
 
               <div class="tab-pane fade <?php echo $count === 1 ? 'show active' : ''; ?>" id="nav-<?php echo $index; ?>" role="tabpanel" aria-labelledby="nav-<?php echo $index; ?>-tab" tabindex="0">
                 <div class="rounded-container d-flex flex-column bg-white rounded-circle border-20 border border-white wp-420 wp-md-520 wp-lg-671 hp-420 hp-md-520 hp-lg-671" >
-          
                   <?= wp_get_attachment_image( $experience_image['id'], 'circled-image', false, ['class' => 'img-fluid rounded-top-5'] ); ?>
                   <div class="d-flex flex-column gap-5 justify-content-center align-items-center">
-                  <?= wp_get_attachment_image( $yellow_icon['id'], 'full', false, ['class' => 'img-fluid mt-n30 position-relative z-1'] ); ?>
-                  <p class="fs-4 fw-normal text-grey600 m-0"><?php echo $experience_title; ?></p>
-                  <p class="fs-6 fw-normal w-75 text-grey600 text-center m-0 d-none d-md-block"><?php echo $experience_text; ?></p>
+                    <div class=" mt-n30 bg-white rounded-circle p-10">
+                    <?= wp_get_attachment_image( $yellow_icon['id'], 'full', false, ['class' => 'img-fluid'] ); ?>
+                    </div>
+                    <p class="fs-4 fw-normal text-grey600 m-0"><?php echo $experience_title; ?></p>
+                    <p class="fs-6 fw-normal w-75 text-grey600 text-center m-0 d-none d-md-block"><?php echo $experience_text; ?></p>
                   </div>
-            
                 </div>
               </div>
           <?php endwhile; endif; ?>

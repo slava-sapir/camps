@@ -1,5 +1,5 @@
-@import "~bootstrap/scss/mixins/banner";
-@include bsBanner("");
+//@import "~bootstrap/scss/mixins/banner";
+//@include bsBanner("");
 
 // Configuration
 @import "~bootstrap/scss/functions";
@@ -12,14 +12,12 @@
 //Custom Maps
 @import "maps";
 
-@import "~bootstrap/scss/variables-dark";
+//@import "~bootstrap/scss/variables-dark";
 @import "~bootstrap/scss/maps";
 @import "~bootstrap/scss/mixins";
 
 // Custom Mixins
 @import "mixins";
-
-@import "utilities";
 
 @import "~bootstrap/scss/utilities";
 
@@ -59,4 +57,5 @@
 @import "~bootstrap/scss/helpers";
 
 // Utilities
+@import "utilities";
 @import "~bootstrap/scss/utilities/api";
