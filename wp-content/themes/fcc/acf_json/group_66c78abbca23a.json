@@ -3,6 +3,48 @@
     "title": "Block: Locations",
     "fields": [
         {
+            "key": "field_66cde8d33fddd",
+            "label": "Padding Top",
+            "name": "padding_top",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 100,
+            "min": 0,
+            "max": 300,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_66cde9053fdde",
+            "label": "Padding Bottom",
+            "name": "padding_bottom",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 100,
+            "min": 0,
+            "max": 300,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_66c78abcf1044",
             "label": "Locations Map",
             "name": "locations_map",
@@ -41,5 +83,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1724354529
+    "modified": 1724770626
 }

@@ -12,13 +12,16 @@
 * 
 * @package Forest_Cliff_Camps
 */
+
+$anchor = isset($block['anchor']) ? $block['anchor'] : '';
+$classes = isset($block['className']) ? $block['className'] : '';
 ?>
 
-<section id="locations" class="my-50">
+<section class="locations <?= esc_attr($classes) ?>" id="<?= esc_attr($anchor) ?>" style="padding-top: <?= get_field('padding_top'); ?>px; padding-bottom: <?= get_field('padding_bottom'); ?>px;">
     <div class="container">
         <?php 
-            $locatiions_map = get_field('locations_map');
-            echo $locatiions_map;
+            $locations_map = get_field('locations_map');
+            echo $locations_map;
         ?>    
     </div>
 </section>
