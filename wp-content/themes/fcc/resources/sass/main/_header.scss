@@ -146,6 +146,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    .menu-item {
+      a {
+        @extend .btn;
+        @extend .btn-text;
+        @extend .text-white;
+      }
+    }
   }
 }
 
