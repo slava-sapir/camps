@@ -51,7 +51,10 @@ function forest_cliff_camps_setup()
     // This theme uses wp_nav_menu() in one location.
     register_nav_menus(
         array(
-            'menu-1' => esc_html__('Primary', 'forest-cliff-camps'),
+            'day-camps'       => esc_html__('Day Camps', 'forest-cliff-camps'),
+            'overnight-camps' => esc_html__('Overnight Camps', 'forest-cliff-camps'),
+            'schools-groups'  => esc_html__('Schools Groups', 'forest-cliff-camps'),
+            'menu-1'          => esc_html__('Primary', 'forest-cliff-camps'),
         )
     );
 
