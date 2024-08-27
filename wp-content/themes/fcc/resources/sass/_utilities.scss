@@ -38,6 +38,8 @@ $utilities: map-merge($utilities,
             class: transform,
             values: (
                 "rotateY-rotateX": rotateY(180deg) rotateX(180deg),
+                "rotateY": rotateY(180deg),
+                "rotateX": rotateX(180deg),
             )
         ),
         "border-width": (
