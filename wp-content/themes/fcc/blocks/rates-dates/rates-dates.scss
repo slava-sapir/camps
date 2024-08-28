@@ -1,24 +1,39 @@
 
+  .gold-theme {
+  
   .presentation-tab.active,
-  .show > .presentation-tab,
+  .show > .presentation-tab, 
+  .title-tab,
   .presentation-tab:hover,
   .presentation-tab:focus {
-    color: $white;
-    background: $gold;
-    border: 3px solid $gold!important;
+      color: $white;
+      background: $gold;
+      border: 3px solid $gold!important;
+  }
+
+}
+   .teal-theme {
+
+    .presentation-tab.active,
+    .show > .presentation-tab, 
+    .title-tab,
+    .presentation-tab:hover,
+    .presentation-tab:focus {
+      color: $white;
+      background: $teal;
+      border: 3px solid $teal!important;
+    }
+
   }
 
   .nav-tabs {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(161px, 1fr)); 
 }
-  
- $position-values: (
-    0: 0,
-    15: 15%,
-    20: 20%,
-    50: 50%,
-    55: 55%,
-    100: 100%,
-    100px: 100px,
-);
+
+//Bootstrap table
+.table {
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+
