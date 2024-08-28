@@ -12,10 +12,13 @@
 * 
 * @package Forest_Cliff_Camps
 */
+
+$anchor = isset($block['anchor']) ? $block['anchor'] : '';
+$classes = isset($block['className']) ? $block['className'] : '';
 ?>
 
-<section style="padding-top: <?= get_field('padding_top'); ?>px; padding-bottom: <?= get_field('padding_bottom'); ?>px;<?= get_field('add_tan_background') ? ' background-color: #f2efeb;"' : ''; ?>">
-    <div class="container">
+<section is="<?= $anchor; ?>" class="<?= get_field('background'); ?> <?= $classes; ?>" style="padding-top: <?= get_field('padding_top'); ?>px; padding-bottom: <?= get_field('padding_bottom'); ?>px;">
+    <div class="<?= get_field('container_width'); ?>">
         <InnerBlocks />
     </div>
 </section>
