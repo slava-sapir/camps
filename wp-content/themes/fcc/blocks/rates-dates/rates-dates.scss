@@ -26,6 +26,21 @@
 
   }
 
+   .green-theme {
+
+    .presentation-tab.active,
+    .show > .presentation-tab, 
+    .title-tab,
+    .presentation-tab:hover,
+    .presentation-tab:focus {
+      color: $white;
+      background: $green;
+      border: 3px solid $green!important;
+    }
+
+  }
+
+
   .nav-tabs {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(161px, 1fr)); 

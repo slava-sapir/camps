@@ -12,15 +12,6 @@ $utilities: map-merge($utilities,
             values: $theme-colors
         ),
         // scss-docs-end utils-text-hover
-        //"background": (
-        //  property: background-color,
-        //  class: bg,
-        //  state: hover,
-        //  values: $theme-colors
-        //),
-        // scss-docs-end utils-background-hover
-        // Opacity utilities
-        // scss-docs-start utils-opacity
         "opacity": (
             property: opacity,
             values: (
@@ -288,17 +279,8 @@ $utilities: map-merge($utilities,
                 pill: var(--#{$prefix}border-radius-pill)
             )
         ),
-        // scss-docs-end utils-border-radius
-    )
-$utilities: map-merge(
-  (
-    // scss-docs-start utils-text-hover
-    "text": (
-      property: color,
-      class: text,
-      state: hover,
-      values: $theme-colors
-    ),
+    // scss-docs-end utils-border-radius
+
     // scss-docs-end utils-text-hover
     "background": (
       property: background-color,
@@ -338,21 +320,7 @@ $utilities: map-merge(
         none: none,
       )
     ),
-    // scss-docs-end utils-object-fit
-    // Opacity utilities
-    // scss-docs-start utils-opacity
-    "opacity": (
-      property: opacity,
-      values: (
-        0: 0,
-        25: .25,
-        30: .3,
-        50: .5,
-        75: .75,
-        100: 1,
-      )
-    ),
-    // scss-docs-end utils-opacity
+
     // scss-docs-start utils-overflow
     "overflow": (
       property: overflow,
@@ -429,13 +397,7 @@ $utilities: map-merge(
       )
     ),
     // scss-docs-end utils-position
-    "transform": (
-      property: transform,
-      class: transform,
-      values: (
-        "rotateY-rotateX": rotateY(180deg) rotateX(180deg),
-      )
-    ),
+ 
     // scss-docs-start utils-borders
     "border": (
       property: border,
@@ -470,7 +432,7 @@ $utilities: map-merge(
       property: border-left,
       class: border-start,
       values: (
-        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+        null: var(--#{$prefix}title-tab) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
         0: 0,
       )
     ),
@@ -487,115 +449,7 @@ $utilities: map-merge(
       class: border,
       values: $utilities-border-subtle
     ),
-    "border-width": (
-      property: border-width,
-      class: border,
-      values: (
-        '1': 1px,
-        '2': 2px,
-        '3': 3px,
-        '5': 5px,
-        '20': 20px,
-      )
-    ),
-    "border-opacity": (
-      css-var: true,
-      class: border-opacity,
-      values: (
-        10: .1,
-        25: .25,
-        50: .5,
-        75: .75,
-        100: 1
-      )
-    ),
-    // scss-docs-end utils-borders
-    // Sizing utilities
-    // scss-docs-start utils-sizing
-    "width": (
-      property: width,
-      class: w,
-      values: (
-        25: 25%,
-        50: 50%,
-        75: 75%,
-        85: 85%,
-        100: 100%,
-        auto: auto
-      )
-    ),
-    "max-width": (
-      property: max-width,
-      class: mw,
-      values: (100: 100%)
-    ),
-    "viewport-width": (
-      property: width,
-      class: vw,
-      values: (100: 100vw)
-    ),
-    "min-viewport-width": (
-      property: min-width,
-      class: min-vw,
-      values: (100: 100vw)
-    ),
-    "height": (
-      property: height,
-      class: h,
-      values: (
-        25: 25%,
-        50: 50%,
-        75: 75%,
-        100: 100%,
-        auto: auto
-      )
-    ),
-    "max-height": (
-      property: max-height,
-      class: mh,
-      values: (100: 100%)
-    ),
-    "width-pixels": (
-          property: width,
-          class: wp,
-          responsive: true,
-          values: (
-              2: 2px,
-              10: 10px,
-              20: 20px,
-              420: 420px,
-              520: 520px,
-              671: 671px,
-          ),
-      ),
-    "height-pixels": (
-        property: height,
-        class: hp,
-        responsive: true,
-        values: (
-            10: 10px,
-            20: 20px,
-            171: 171px,
-            420: 420px,
-            520: 520px,
-            671: 671px,
-            800: 800px,
-            1000: 1000px,
-            1200: 1200px,
-            1400: 1400px,
-        ),
-  ),
-    "viewport-height": (
-      property: height,
-      class: vh,
-      values: (100: 100vh)
-    ),
-    "min-viewport-height": (
-      property: min-height,
-      class: min-vh,
-      values: (100: 100vh)
-    ),
-    // scss-docs-end utils-sizing
+  
     // Flex utilities
     // scss-docs-start utils-flex
     "flex": (
@@ -921,19 +775,6 @@ $utilities: map-merge(
       rtl: false
     ),
     // scss-docs-end utils-text
-    // scss-docs-start utils-color
-    values: map-merge(
-      $utilities-text-colors,
-      (
-        "muted": var(--#{$prefix}secondary-color), // deprecated
-        "black-50": rgba($black, .5), // deprecated
-        "white-50": rgba($white, .5), // deprecated
-        "body-secondary": var(--#{$prefix}secondary-color),
-        "body-tertiary": var(--#{$prefix}tertiary-color),
-        "body-emphasis": var(--#{$prefix}emphasis-color),
-        "reset": inherit,
-      )
-    ),
     "text-opacity": (
       css-var: true,
       class: text-opacity,
@@ -1000,55 +841,14 @@ $utilities: map-merge(
       ),
     ),
     // scss-docs-end utils-links
-    // scss-docs-start utils-bg-color
-    "background-color": (
-      property: background-color,
-      class: bg,
-      local-vars: (
-        "bg-opacity": 1
-      ),
-      values: map-merge(
-        $utilities-bg-colors,
-        (
-          "transparent": transparent,
-          "body-secondary": rgba(var(--#{$prefix}secondary-bg-rgb), var(--#{$prefix}bg-opacity)),
-          "body-tertiary": rgba(var(--#{$prefix}tertiary-bg-rgb), var(--#{$prefix}bg-opacity)),
-        )
-      )
-    ),
-    "bg-opacity": (
-      css-var: true,
-      class: bg-opacity,
-      values: (
-        10: .1,
-        25: .25,
-        30: .3,
-        50: .5,
-        75: .75,
-        100: 1
-      )
-    ),
+  
     "subtle-background-color": (
       property: background-color,
       class: bg,
       values: $utilities-bg-subtle
     ),
     // scss-docs-end utils-bg-color
-    "gradient": (
-      property: background-image,
-      class: bg,
-      values: (
-        gradient: var(--#{$prefix}gradient),
-      )
-    ),
-
-    "gradient-secondary": (
-      property: background-image,
-      class: bg,
-      values: (
-        secondary-gradient:  $secondary-gradient,  // Using the CSS custom property
-      )
-    ),
+  
     // scss-docs-start utils-interaction
     "user-select": (
       property: user-select,
@@ -1060,88 +860,7 @@ $utilities: map-merge(
       values: none auto,
     ),
     // scss-docs-end utils-interaction
-    // scss-docs-start utils-border-radius
-    "rounded": (
-      responsive: true,
-      property: border-radius,
-      class: rounded,
-      values: (
-        null: var(--#{$prefix}border-radius),
-        0: 0,
-        1: var(--#{$prefix}border-radius-sm),
-        2: var(--#{$prefix}border-radius),
-        3: var(--#{$prefix}border-radius-lg),
-        4: var(--#{$prefix}border-radius-xl),
-        5: var(--#{$prefix}border-radius-xxl),
-        circle: 50%,
-        pill: var(--#{$prefix}border-radius-pill)
-      )
-    ),
-    "rounded-top": (
-      responsive: true,
-      property: border-top-left-radius border-top-right-radius,
-      class: rounded-top,
-      values: (
-        null: var(--#{$prefix}border-radius),
-        0: 0,
-        1: var(--#{$prefix}border-radius-sm),
-        2: var(--#{$prefix}border-radius),
-        3: var(--#{$prefix}border-radius-lg),
-        4: var(--#{$prefix}border-radius-xl),
-        5: var(--#{$prefix}border-radius-xxl),
-        circle: 50%,
-        pill: var(--#{$prefix}border-radius-pill)
-      )
-    ),
-    "rounded-end": (
-        responsive: true,
-      property: border-top-right-radius border-bottom-right-radius,
-      class: rounded-end,
-      values: (
-        null: var(--#{$prefix}border-radius),
-        0: 0,
-        1: var(--#{$prefix}border-radius-sm),
-        2: var(--#{$prefix}border-radius),
-        3: var(--#{$prefix}border-radius-lg),
-        4: var(--#{$prefix}border-radius-xl),
-        5: var(--#{$prefix}border-radius-xxl),
-        circle: 50%,
-        pill: var(--#{$prefix}border-radius-pill)
-      )
-    ),
-    "rounded-bottom": (
-        responsive: true,
-      property: border-bottom-right-radius border-bottom-left-radius,
-      class: rounded-bottom,
-      values: (
-        null: var(--#{$prefix}border-radius),
-        0: 0,
-        1: var(--#{$prefix}border-radius-sm),
-        2: var(--#{$prefix}border-radius),
-        3: var(--#{$prefix}border-radius-lg),
-        4: var(--#{$prefix}border-radius-xl),
-        5: var(--#{$prefix}border-radius-xxl),
-        circle: 50%,
-        pill: var(--#{$prefix}border-radius-pill)
-      )
-    ),
-    "rounded-start": (
-        responsive: true,
-      property: border-bottom-left-radius border-top-left-radius,
-      class: rounded-start,
-      values: (
-        null: var(--#{$prefix}border-radius),
-        0: 0,
-        1: var(--#{$prefix}border-radius-sm),
-        2: var(--#{$prefix}border-radius),
-        3: var(--#{$prefix}border-radius-lg),
-        4: var(--#{$prefix}border-radius-xl),
-        5: var(--#{$prefix}border-radius-xxl),
-        circle: 50%,
-        pill: var(--#{$prefix}border-radius-pill)
-      )
-    ),
-    // scss-docs-end utils-border-radius
+   
     // scss-docs-start utils-visibility
     "visibility": (
       property: visibility,

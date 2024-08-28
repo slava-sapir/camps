@@ -15,6 +15,7 @@
 
   $id = get_the_ID();
   $theme_color = get_field('theme_colour', $id);
+  
 ?>
 
 <section id="rates-dates">
@@ -122,7 +123,10 @@
        if( $register_link ) :
       ?>
       <div class="d-flex justify-content-center">
-        <a href="<?= $register_link['url']; ?>" class="btn <?= $theme_color === 'gold-theme' ? 'btn-gold' : 'btn-teal'; ?> btn-gold mb-50 mx-auto"><?= $register_link['title']; ?></a>
+        <a href="<?= $register_link['url']; ?>" class="btn 
+            <?= $theme_color === 'gold-theme' ? 'btn-gold' : ($theme_color === 'green-theme' ? 'btn-green' : 'btn-teal'); ?> 
+            mb-50 mx-auto"><?= $register_link['title']; ?>
+        </a>
       </div>
       <?php endif; ?>
     
