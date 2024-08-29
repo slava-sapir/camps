@@ -8,7 +8,6 @@
  */
 
 $id = get_the_ID();
-$title = get_field('hero_title', $id);
 $title_spacing = 'pb-100';
 
 if (is_search()) :
@@ -19,6 +18,8 @@ elseif ((is_home() && !is_front_page()) || is_category()) :
 elseif (get_post_type() === 'faq') :
     $id = is_archive() ? 'options' : 'term_' . get_queried_object()->term_id;
 endif;
+
+$title = get_field('hero_title', $id);
 
 global $post;
 $camp_model = new Camp($post);

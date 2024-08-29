@@ -24,27 +24,6 @@
             "append": ""
         },
         {
-            "key": "field_66b385b98763e",
-            "label": "Padding Top (copy)",
-            "name": "padding_top_copy",
-            "aria-label": "",
-            "type": "range",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": 100,
-            "min": 0,
-            "max": 150,
-            "step": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_66a25e58307eb",
             "label": "Padding Bottom",
             "name": "padding_bottom",
@@ -66,54 +45,6 @@
             "append": ""
         },
         {
-            "key": "field_66b385c08763f",
-            "label": "Padding Bottom (copy)",
-            "name": "padding_bottom_copy",
-            "aria-label": "",
-            "type": "range",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": 100,
-            "min": 0,
-            "max": 150,
-            "step": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_66a25e583454e",
-            "label": "Background",
-            "name": "background",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "None": "None",
-                "bg-splash": "Splash",
-                "bg-curve": "Curve"
-            },
-            "default_value": "None",
-            "return_format": "value",
-            "multiple": 0,
-            "allow_null": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": ""
-        },
-        {
             "key": "field_66a25e5829488",
             "label": "YouTube Link",
             "name": "youtube_link",
@@ -129,6 +60,26 @@
             },
             "width": "",
             "height": ""
+        },
+        {
+            "key": "field_66a25e583454e",
+            "label": "Background",
+            "name": "background",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
         }
     ],
     "location": [
@@ -149,5 +100,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1723041225
+    "modified": 1724959469
 }

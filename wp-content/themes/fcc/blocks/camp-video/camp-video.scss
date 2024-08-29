@@ -4,3 +4,24 @@
         @extend .tile-shadow;
     }
 }
+
+.gold-theme {
+    .theme-splash {
+        background: url(../../resources/images/day-camp-theme/shapes/splash-white-top.svg) center top 0 no-repeat,
+        url(../../resources/images/day-camp-theme/shapes/splash-white-bottom-flipped.svg) center bottom 0 no-repeat,
+        linear-gradient(180deg, #FFC340 0%, #F5A800 100%);
+    }
+}
+.teal-theme {
+    .theme-splash {
+        background: url(../../resources/images/day-camp-theme/shapes/splash-white-top.svg) center top 0 no-repeat,
+        url(../../resources/images/day-camp-theme/shapes/splash-white-bottom-flipped.svg) center bottom 0 no-repeat,
+        linear-gradient(180deg, #1FD3FA 0%, #0FC1E8 100%);
+    }
+}
+.green-theme, .default-theme {
+    .theme-splash {
+        background: url(../../resources/images/schools-groups-theme/shapes/curve-off-white.svg) center no-repeat,
+        $white;
+    }
+}

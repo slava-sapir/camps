@@ -33,7 +33,7 @@
                                 <li><a href="https://forestcliff.reachapp.co/donations/new" target="_blank">Donate</a></li>
                                 <li><a href="/join-our-team">Join Our Team</a></li>
                                 <li><a href="/about-us">About</a></li>
-                                <li><a href="/faq">FAQ</a></li>
+                                <li><a href="/faqs">FAQ</a></li>
                                 <li><a href="/blog">Blog</a></li>
                                 <li><a href="/contact-us">Contact</a></li>
                             </ul>
