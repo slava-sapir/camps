@@ -93,17 +93,13 @@ endif;
                         </ul>
                     <?php else :
                         wp_nav_menu(['theme_location' => $camp_menu, 'menu_class' => 'nav-list'])?>
-<!--                            --><?php //foreach ($child_pages as $page) : ?>
-<!--                                <li><a href="--><?php //= get_permalink($page->ID); ?><!--"-->
-<!--                                       class="btn btn-text text-white">--><?php //echo $page->post_title; ?><!--</a></li>-->
-<!--                            --><?php //endforeach; ?>
                     <?php endif; ?>
                 </div>
 
                 <!-- Register Button -->
                 <div class="col-auto text-end d-none d-lg-block col-register">
                     <?php if ($camp_model->is_camp_page()) : ?>
-                        <a href="<?= get_field('submenu_button', $camp_model->active_camp)['url']; ?>>"
+                        <a href="<?= get_field('submenu_button', $camp_model->active_camp)['url']; ?>"
                            target="<?= get_field('submenu_button', $camp_model->active_camp)['target']; ?>"
                            class="btn"><?= get_field('submenu_button', $camp_model->active_camp)['title']; ?></a>
                     <?php else : ?>
@@ -213,6 +209,6 @@ endif;
 
         <!-- Mobile Register Button -->
         <div class="container nav-footer">
-            <a href="" class="btn btn-green w-100 py-20">Register Now</a>
+            <a href="https://forestcliffcamp.campbrainregistration.com/" target="_blank" class="btn d-flex justify-content-center py-20">Register Now</a>
         </div>
     </div><!-- /#mobile-navigation -->
