@@ -15,7 +15,7 @@
 
   $id = get_the_ID();
   $theme_color = get_field('theme_colour', $id);
-  
+
 ?>
 
 <section id="rates-dates">
@@ -50,12 +50,12 @@
             $index = get_row_index();
           ?>
             <div class="tab-pane fade <?php echo $index === 1 ? 'show active' : ''; ?>" 
-            id="nav-<?php echo $index; ?>" 
-            role="tabpanel" 
-            aria-labelledby="nav-<?php echo $index; ?>-tab" 
-            tabindex="0"
-            data-title="<?= esc_attr(get_sub_field('title')); ?>" 
-            data-text="<?= esc_attr(get_sub_field('text')); ?>">
+              id="nav-<?php echo $index; ?>" 
+              role="tabpanel" 
+              aria-labelledby="nav-<?php echo $index; ?>-tab" 
+              tabindex="0"
+              data-title="<?= esc_attr(get_sub_field('title')); ?>" 
+              data-text="<?= esc_attr(get_sub_field('text')); ?>">
 
               <div class="w-100 w-lg-75 d-flex flex-column gap-10 position-absolute mt-n250 start-50 translate-middle-x">
                 <h3 class="text-center mb-0"><?= esc_attr(get_sub_field('title')); ?></h3>
@@ -65,50 +65,39 @@
               <div class="table-responsive-md">
                 <table class="table table-borderless">
                     <thead>
+                        <?php
+                          if(have_rows('rate_dates_content')):
+                          while(have_rows('rate_dates_content')): the_row(); 
+                           $index = get_row_index();
+                        ?>
+                  
+                     <?php if($index == 1) : ?>
                       <tr>
-                        <th scope="col" class="col-md-3 p-10 rounded-1 text-center title-tab text-white fs-6 fw-semibold align-middle">
-                          <span class="text-white fs-6 fw-semibold">Date</span>
+                        <?php while(have_rows('data_content')): the_row(); ?>
+                        
+                        <th scope="col" class="col-md-2 p-10 rounded-1 text-center title-tab text-white fs-6 fw-semibold align-middle">
+                          <span class="text-white fs-6 fw-semibold"><?= get_sub_field('data_title'); ?></span>
                         </th>
-                        <th scope="col" class="col-md-3 p-10 rounded-1 text-center title-tab text-white fs-6 fw-semibold align-middle">
-                          <span class="text-white fs-6 fw-semibold">Location</span>
-                        </th>
-                        <th scope="col" class="col-md-3 p-10 rounded-1  text-center title-tab text-white fs-6 fw-semibold align-middle">
-                          <span class="text-white fs-6 fw-semibold">Day Camp</span>
-                        </th>
-                        <th scope="col" class="col-md-3 p-10 rounded-1  text-center title-tab text-white fs-6 fw-semibold align-middle">
-                          <span class="text-white fs-6 fw-semibold">Grade 6-8</span>
-                        </th>
+
+                         <?php endwhile; ?>
                       </tr>
+                      <?php endif; ?>    
+                      <?php endwhile; endif; ?>
                     </thead>
-                  <tbody>
+                  <tbody> 
                     <?php
                       if(have_rows('rate_dates_content')):
-                      while(have_rows('rate_dates_content')): the_row(); 
-                      $date = get_sub_field('date');
-                      $location = get_sub_field('location');
-                      $day_camp_price = get_sub_field('day_camp_price');
-                      $grade_price = get_sub_field('grade_price');
-                      $index = get_row_index();
+                      while(have_rows('rate_dates_content')): the_row();
                     ?>
                     <tr>
-                      <td class="bg-tan text-center rounded-1 py-20 px-10">
-                          <span class="fs-6"><?php echo $date; ?></span>
-                      </td>
-                      <td class="d-flex flex-column gap-5 bg-tan text-center rounded-1 py-20 px-10">
-                        <?php if( $location ) : ?>
-                          <p class="fs-6 mb-0"><?php echo $location['title']; ?></p>
-                          <a href="<?php echo $location['url']; ?>" class="small"><?php echo $location['url']; ?></a>
-                        <?php endif; ?>
-                      </td>
-                      <td class="bg-tan text-center rounded-1 py-20 px-10">  
-                          <span class="fs-6"><?php echo $day_camp_price; ?></span>
-                      </td>
-                      <td class="bg-tan text-center rounded-1 py-20 px-10">   
-                          <span class="fs-6"><?php echo $grade_price; ?></span>
-                      </td>
+                      <?php while(have_rows('data_content')): the_row();  ?>
+                        <td class="bg-tan text-center rounded-1 py-20 px-10 align-middle">
+                            <span class="fs-6"><?= get_sub_field('data'); ?></span>
+                        </td>
+                      <?php endwhile; ?>
                     </tr>
-
                     <?php endwhile; endif; ?>
+            
                   </tbody>
                 </table>
               </div>

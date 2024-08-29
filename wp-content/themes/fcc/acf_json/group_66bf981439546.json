@@ -125,11 +125,11 @@
                     "rows_per_page": 20,
                     "sub_fields": [
                         {
-                            "key": "field_66bf9e14a0bc1",
-                            "label": "Date",
-                            "name": "date",
+                            "key": "field_66cf92a8d0652",
+                            "label": "Data Content",
+                            "name": "data_content",
                             "aria-label": "",
-                            "type": "text",
+                            "type": "repeater",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -138,70 +138,57 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "parent_repeater": "field_66bf9dd5a0bc0"
-                        },
-                        {
-                            "key": "field_66bf9e78a0bc2",
-                            "label": "Location",
-                            "name": "location",
-                            "aria-label": "",
-                            "type": "link",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "array",
-                            "parent_repeater": "field_66bf9dd5a0bc0"
-                        },
-                        {
-                            "key": "field_66bf9e87a0bc3",
-                            "label": "Day Camp Price",
-                            "name": "day_camp_price",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "parent_repeater": "field_66bf9dd5a0bc0"
-                        },
-                        {
-                            "key": "field_66bf9ea3a0bc4",
-                            "label": "Grade Price",
-                            "name": "grade_price",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
+                            "layout": "table",
+                            "pagination": 0,
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": "",
+                            "button_label": "Add Row",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_66cf92bfd0653",
+                                    "label": "Data Title",
+                                    "name": "data_title",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_66cf92a8d0652"
+                                },
+                                {
+                                    "key": "field_66cf92cdd0654",
+                                    "label": "Data",
+                                    "name": "data",
+                                    "aria-label": "",
+                                    "type": "wysiwyg",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "tabs": "all",
+                                    "toolbar": "full",
+                                    "media_upload": 1,
+                                    "delay": 0,
+                                    "parent_repeater": "field_66cf92a8d0652"
+                                }
+                            ],
                             "parent_repeater": "field_66bf9dd5a0bc0"
                         }
                     ],
@@ -228,5 +215,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1724348891
+    "modified": 1724880856
 }
