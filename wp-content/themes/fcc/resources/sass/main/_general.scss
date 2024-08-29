@@ -45,6 +45,10 @@ body small {
   }
 }
 
+.wp-block-image img[class*=wp-image-] {
+  @extend .rounded;
+}
+
 $position-values: (
     0: 0,
     20: 20%,
