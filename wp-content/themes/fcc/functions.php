@@ -51,7 +51,10 @@ function forest_cliff_camps_setup()
     // This theme uses wp_nav_menu() in one location.
     register_nav_menus(
         array(
-            'menu-1' => esc_html__('Primary', 'forest-cliff-camps'),
+            'day-camps'       => esc_html__('Day Camps', 'forest-cliff-camps'),
+            'overnight-camps' => esc_html__('Overnight Camps', 'forest-cliff-camps'),
+            'schools-groups'  => esc_html__('Schools Groups', 'forest-cliff-camps'),
+            'menu-1'          => esc_html__('Primary', 'forest-cliff-camps'),
         )
     );
 
@@ -464,3 +467,17 @@ function forest_cliff_ajax_handler(){
     endif;
     die; // here we exit the script and even no wp_reset_query() required!
 }
+
+
+function custom_admin_css() {
+    echo '
+    <style>
+        .edit-post-sidebar { 
+            width: 650px !important; /* Increase this value as needed */
+        }
+        .edit-post-layout__content { 
+            margin-right: 420px !important; /* Adjust this value accordingly */
+        }
+    </style>';
+}
+add_action('admin_head', 'custom_admin_css');

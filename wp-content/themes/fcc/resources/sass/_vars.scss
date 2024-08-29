@@ -1,4 +1,16 @@
 $enable-rfs: true;
+
+// Position variable
+ $position-values: (
+    0: 0,
+    15: 15%,
+    20: 20%,
+    50: 50%,
+    55: 55%,
+    100: 100%,
+    100px: 100px,
+);
+
 // Color system
 
 // scss-docs-start color-variables
@@ -89,6 +101,8 @@ $secondary-gradient: linear-gradient(180deg, #FFC340 0%, #F5A800 100%);
 $spacers: (
     0: 0,
     1: #{divide(1, 16)}rem,
+    3: #{divide(3, 16)}rem,
+    2: #{divide(2.5, 16)}rem,
     5: #{divide(5, 16)}rem,
     10: #{divide(10, 16)}rem,
     12: #{divide(12, 16)}rem,
@@ -107,6 +121,8 @@ $spacers: (
     100:#{divide(100, 16)}rem,
     125:#{divide(125, 16)}rem,
     225:#{divide(225, 16)}rem,
+    250:#{divide(250, 16)}rem,
+    300:#{divide(300, 16)}rem,
 );
 // scss-docs-end spacer-variables-maps
 
@@ -208,7 +224,6 @@ $h4-font-size: 1.75rem; // 28px
 $h5-font-size: 1.3125rem; // 21px
 $h6-font-size: 1rem; // 16px
 // scss-docs-end font-variables
-
 
 // scss-docs-start headings-variables
 $headings-font-family: $font-family-sans-serif;
