@@ -425,3 +425,17 @@ function forest_cliff_ajax_handler(){
     endif;
     die; // here we exit the script and even no wp_reset_query() required!
 }
+
+
+function custom_admin_css() {
+    echo '
+    <style>
+        .edit-post-sidebar { 
+            width: 650px !important; /* Increase this value as needed */
+        }
+        .edit-post-layout__content { 
+            margin-right: 420px !important; /* Adjust this value accordingly */
+        }
+    </style>';
+}
+add_action('admin_head', 'custom_admin_css');
