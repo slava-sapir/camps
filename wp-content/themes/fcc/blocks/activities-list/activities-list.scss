@@ -1,0 +1,40 @@
+#activities-list{
+    .nav-link.active{
+        color: $grey600;
+    }
+}
+
+.gold-theme{
+    #activities-list{
+        .tab-content{
+            background: url(../../resources/images/day-camp-theme/shapes/splash-white-top.svg) center top 0 no-repeat,
+            url(../../resources/images/day-camp-theme/shapes/splash-beige-bottom.svg) center bottom 0 no-repeat,
+            linear-gradient(180deg, #FFC340 0%, #F5A800 100%);
+        }
+        .nav-link.active{
+            background-color: $gold !important;
+        }
+    }
+}
+.green-theme{
+    #activities-list{
+        .tab-content{
+            background: url(../../resources/images/schools-groups-theme/shapes/curve-off-white.svg) center 0 no-repeat;
+        }
+        .nav-link.active{
+            background-color: $green !important;
+        }
+    }
+}
+.teal-theme{
+    #activities-list{
+        .tab-content{
+            background: url(../../resources/images/day-camp-theme/shapes/splash-white-top.svg) center top 0 no-repeat,
+            url(../../resources/images/day-camp-theme/shapes/splash-white-bottom-flipped.svg) center bottom 0 no-repeat,
+            linear-gradient(180deg, #1FD3FA 0%, #0FC1E8 100%);
+        }
+        .nav-link.active{
+            background-color: $teal !important;
+        }
+    }
+}

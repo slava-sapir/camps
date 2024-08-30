@@ -337,6 +337,48 @@ function create_schedules_cpt() {
 }
 add_action( 'init', 'create_schedules_cpt', 0 );
 
+// Activities CPT
+// Register Custom Post Type Schedules
+function create_activities_cpt() {
+    $labels = array(
+        'name'          => 'activities',
+        'singular_name' => 'Activity',
+        'menu_name'     => 'Activities',
+    );
+
+    $args = array(
+        'label'         => 'Ativities',
+        'labels'        => $labels,
+        'public'        => true,
+        'has_archive'   => true,
+        'rewrite'       => array( 'slug' => 'activities' ),
+        'supports'      => array( 'title', 'editor', 'thumbnail' ),
+    );
+
+    register_post_type( 'activity', $args );
+}
+add_action( 'init', 'create_activities_cpt', 0 );
+
+// Register Custom Taxonomy for Activity Categories
+function create_activity_categories_taxonomy() {
+    $labels = array(
+        'name'          => 'Activity Categories',
+        'singular_name' => 'Activity Category',
+        'menu_name'     => 'Activity Categories',
+    );
+    
+    $args = array(
+        'labels'        => $labels,
+        'public'        => true,
+        'hierarchical'  => true,
+        'rewrite'       => array( 'slug' => 'activity-category' ),
+        'supports'      => array( 'title', 'editor' ),
+    );
+    
+    register_taxonomy( 'activity_category', array( 'activity' ), $args );
+}
+add_action( 'init', 'create_activity_categories_taxonomy', 0 );
+
 // Add ACF Options Page
 if( function_exists('acf_add_options_page') ) {
     acf_add_options_sub_page(array(
