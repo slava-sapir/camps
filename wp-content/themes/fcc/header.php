@@ -29,6 +29,10 @@ if (get_field('theme_colour')) :
 endif;
 
 global $post;
+
+if (!$post) :
+    $post = get_post(get_option('page_on_front'));
+endif;
 $camp_model = new Camp($post);
 
 $child_pages = [];
@@ -50,7 +54,7 @@ endif;
 
             <!-- Center Links -->
             <div class="col-lg d-none d-lg-flex justify-content-center">
-                <?php if ($camp_model->is_camp_page()) : ?>
+                <?php if ($camp_model && $camp_model->is_camp_page()) : ?>
                     <ul class="list-unstyled justify-content-center center-links">
                         <?php foreach ($camp_model->parent_pages as $page_id => $page_slug) : ?>
                             <li class="d-flex"><a class="<?= $camp_model->active_camp === $page_id ? 'active' : ''; ?>"
