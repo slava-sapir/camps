@@ -14,7 +14,7 @@
 */
 ?>
 
-<section id="page-intro" style="padding-top: <?= get_field('padding_top'); ?>px; padding-bottom: <?= get_field('padding_bottom'); ?>px;<?= get_field('add_tan_background') ? ' background-color: #f2efeb;"' : ''; ?>">
+<section id="page-intro" style="padding-top: <?= get_field('padding_top'); ?>px; padding-bottom: <?= get_field('padding_bottom'); ?>px;" class="<?= get_field('background'); ?>">
     <div class="small-container">
         <h2 class="text-center px-md-50 px-lg-125"><?= get_field('heading'); ?></h2>
         <div class="text-center">
