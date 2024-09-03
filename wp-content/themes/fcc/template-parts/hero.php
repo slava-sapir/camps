@@ -9,26 +9,29 @@
 
 $id = get_the_ID();
 $title_spacing = 'pb-100';
+$title = get_field('hero_title', $id);
 
 if (is_search()) :
     $id = 'options';
     $title = 'Search Results for: ' . get_search_query();
 elseif ((is_home() && !is_front_page()) || is_category()) :
     $id = 393;
+    $title = get_field('hero_title', $id);
 elseif (get_post_type() === 'faq') :
     $id = is_archive() ? 'options' : 'term_' . get_queried_object()->term_id;
+    $title = get_field('hero_title', $id);
 endif;
-
-$title = get_field('hero_title', $id);
 
 global $post;
-$camp_model = new Camp($post);
+if ($post) :
+    $camp_model = new Camp($post);
 
-if ($camp_model->is_camp_page()) :
-    $title_spacing = 'pb-80';
-endif;
-if(get_field('hero_cta')) :
-    $title_spacing = 'pb-40';
+    if ($camp_model->is_camp_page()) :
+        $title_spacing = 'pb-80';
+    endif;
+    if (get_field('hero_cta')) :
+        $title_spacing = 'pb-40';
+    endif;
 endif;
 ?>
 <section id="hero"
