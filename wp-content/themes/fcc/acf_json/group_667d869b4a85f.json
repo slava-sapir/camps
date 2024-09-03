@@ -3,6 +3,75 @@
     "title": "Block: Page Intro",
     "fields": [
         {
+            "key": "field_667d9fa89f9d4",
+            "label": "Padding Top",
+            "name": "padding_top",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 100,
+            "min": 0,
+            "max": 150,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_667d9fbd9f9d5",
+            "label": "Padding Bottom",
+            "name": "padding_bottom",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 100,
+            "min": 0,
+            "max": 150,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_668eddc1c5804",
+            "label": "Background",
+            "name": "background",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "bg-white": "White",
+                "bg-tan": "Tan",
+                "tan-splash": "Tan Splash"
+            },
+            "default_value": "bg-white",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_667d869b60958",
             "label": "Heading",
             "name": "heading",
@@ -67,68 +136,6 @@
             "rows": "",
             "placeholder": "",
             "new_lines": ""
-        },
-        {
-            "key": "field_667d9fa89f9d4",
-            "label": "Padding Top",
-            "name": "padding_top",
-            "aria-label": "",
-            "type": "range",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": 100,
-            "min": 0,
-            "max": 150,
-            "step": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_667d9fbd9f9d5",
-            "label": "Padding Bottom",
-            "name": "padding_bottom",
-            "aria-label": "",
-            "type": "range",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": 100,
-            "min": 0,
-            "max": 150,
-            "step": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_668eddc1c5804",
-            "label": "Add Tan Background",
-            "name": "add_tan_background",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui_on_text": "",
-            "ui_off_text": "",
-            "ui": 1
         }
     ],
     "location": [
@@ -149,5 +156,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1720638954
+    "modified": 1725386411
 }
