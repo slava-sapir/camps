@@ -68,7 +68,7 @@ endif;
             <div class="col-lg-3">
                 <ul class="list-unstyled side-links">
                     <li><a target="_blank" href="https://forestcliff.reachapp.co/donations/new">Donate</a></li>
-                    <li><a href="">Join Our Team</a></li>
+                    <li><a href="/join-our-team">Join Our Team</a></li>
                 </ul>
             </div>
         </div>
