@@ -30,7 +30,7 @@ $classes = isset($block['className']) ? $block['className'] : '';
                         <?= wp_get_attachment_image( $image['id'], 'full', false, ['class' => 'img-fluid text-center'] ); ?>
                         <div class="info-card-text tile-shadow pt-40 px-20">
                             <h3 class="h4 text-center text-white"><?= $title ?></h3>
-                            <div class="text-center"><a href="/<?= $link['url']; ?>" target="<?= $link['target']; ?>" class="btn stretched-link"><?= $link['title']; ?></a></div>
+                            <div class="text-center"><a href="<?= $link['url']; ?>" target="<?= $link['target']; ?>" class="btn stretched-link"><?= $link['title']; ?></a></div>
                         </div>
                     </div>
                 </div>
