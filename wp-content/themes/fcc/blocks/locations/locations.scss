@@ -15,6 +15,13 @@
          }
     }
 
+    .green-theme {
+        .locations {
+            background: url(../../resources/images/schools-groups-theme/shapes/curve-off-white.svg) center no-repeat,
+            $white;
+        }
+    }
+
   .locations {
     iframe {
         @extend .rounded-2;
