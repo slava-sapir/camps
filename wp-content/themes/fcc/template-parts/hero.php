@@ -8,6 +8,7 @@
  */
 
 $id = get_the_ID();
+$title_spacing = 'pb-100';
 $title = get_field('hero_title', $id);
 
 if (is_search()) :
@@ -15,8 +16,22 @@ if (is_search()) :
     $title = 'Search Results for: ' . get_search_query();
 elseif ((is_home() && !is_front_page()) || is_category()) :
     $id = 393;
+    $title = get_field('hero_title', $id);
 elseif (get_post_type() === 'faq') :
     $id = is_archive() ? 'options' : 'term_' . get_queried_object()->term_id;
+    $title = get_field('hero_title', $id);
+endif;
+
+global $post;
+if ($post) :
+    $camp_model = new Camp($post);
+
+    if ($camp_model->is_camp_page()) :
+        $title_spacing = 'pb-80';
+    endif;
+    if (get_field('hero_cta')) :
+        $title_spacing = 'pb-40';
+    endif;
 endif;
 ?>
 <section id="hero"
@@ -26,12 +41,12 @@ endif;
     <div class="small-container">
         <?php if (get_field('hero_title', $id)) : ?>
             <div class="position-relative z-1">
-                <h1 class="text-center text-white mb-0 pb-100"><?= $title; ?></h1>
+                <h1 class="text-center text-white mb-0 <?= $title_spacing ?>"><?= $title; ?></h1>
             </div>
         <?php endif;
         if (get_field('hero_cta')) : ?>
-            <div class="btn-wrapper pt-30 text-center">
-                <a href="<?= get_field('hero_cta', $id)['url']; ?>" class="custom-btn-white"
+            <div class="position-relative z-1 pb-10 text-center">
+                <a href="<?= get_field('hero_cta', $id)['url']; ?>" class="btn"
                    target="<?= get_field('hero_cta', $id)['target']; ?>"><?= get_field('hero_cta', $id)['title']; ?></a>
             </div>
         <?php endif; ?>

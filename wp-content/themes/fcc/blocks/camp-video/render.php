@@ -17,7 +17,7 @@ $classes = isset($block['className']) ? $block['className'] : '';
 $background = get_field('background');
 ?>
 
-<section id="<?= esc_attr($anchor) ?>" class="<?= $background; ?>" style="padding-top: <?= get_field('padding_top'); ?>px; padding-bottom: <?= get_field('padding_bottom'); ?>px;<?= get_field('add_background_colour') ? ' background-color: #f2efeb;"' : ''; ?>">
+<section id="<?= esc_attr($anchor) ?>" class="<?= $background ? 'theme-splash' : ''; ?>" style="padding-top: <?= get_field('padding_top'); ?>px; padding-bottom: <?= get_field('padding_bottom'); ?>px;<?= get_field('add_background_colour') ? ' background-color: #f2efeb;"' : ''; ?>">
     <div class="container">
         <div class="ratio ratio-16x9 camp-video <?= esc_attr($classes) ?>">
             <?= get_field('youtube_link'); ?>

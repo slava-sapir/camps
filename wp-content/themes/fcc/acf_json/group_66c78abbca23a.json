@@ -1,9 +1,9 @@
 {
-    "key": "group_66a25e579363c",
-    "title": "Block: Camp Video",
+    "key": "group_66c78abbca23a",
+    "title": "Block: Locations",
     "fields": [
         {
-            "key": "field_66a25e582cdf0",
+            "key": "field_66cde8d33fddd",
             "label": "Padding Top",
             "name": "padding_top",
             "aria-label": "",
@@ -18,13 +18,13 @@
             },
             "default_value": 100,
             "min": 0,
-            "max": 150,
+            "max": 300,
             "step": "",
             "prepend": "",
             "append": ""
         },
         {
-            "key": "field_66a25e58307eb",
+            "key": "field_66cde9053fdde",
             "label": "Padding Bottom",
             "name": "padding_bottom",
             "aria-label": "",
@@ -39,17 +39,17 @@
             },
             "default_value": 100,
             "min": 0,
-            "max": 150,
+            "max": 300,
             "step": "",
             "prepend": "",
             "append": ""
         },
         {
-            "key": "field_66a25e5829488",
-            "label": "YouTube Link",
-            "name": "youtube_link",
+            "key": "field_66c78abcf1044",
+            "label": "Locations Map",
+            "name": "locations_map",
             "aria-label": "",
-            "type": "oembed",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -58,28 +58,11 @@
                 "class": "",
                 "id": ""
             },
-            "width": "",
-            "height": ""
-        },
-        {
-            "key": "field_66a25e583454e",
-            "label": "Background",
-            "name": "background",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui_on_text": "",
-            "ui_off_text": "",
-            "ui": 1
+            "default_value": "",
+            "maxlength": "",
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
         }
     ],
     "location": [
@@ -87,7 +70,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "fcc\/camp-video"
+                "value": "fcc\/locations"
             }
         ]
     ],
@@ -100,5 +83,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1724959469
+    "modified": 1724770626
 }

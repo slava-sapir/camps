@@ -1,9 +1,9 @@
 {
-    "key": "group_66a25e579363c",
-    "title": "Block: Camp Video",
+    "key": "group_66ce0b674e3e1",
+    "title": "Block: Activities List",
     "fields": [
         {
-            "key": "field_66a25e582cdf0",
+            "key": "field_66ce0b67b3cc3",
             "label": "Padding Top",
             "name": "padding_top",
             "aria-label": "",
@@ -16,15 +16,15 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": 100,
-            "min": 0,
-            "max": 150,
+            "default_value": 50,
+            "min": "",
+            "max": "",
             "step": "",
             "prepend": "",
             "append": ""
         },
         {
-            "key": "field_66a25e58307eb",
+            "key": "field_66ce0ba1b3cc4",
             "label": "Padding Bottom",
             "name": "padding_bottom",
             "aria-label": "",
@@ -37,19 +37,19 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": 100,
-            "min": 0,
-            "max": 150,
+            "default_value": 50,
+            "min": "",
+            "max": "",
             "step": "",
             "prepend": "",
             "append": ""
         },
         {
-            "key": "field_66a25e5829488",
-            "label": "YouTube Link",
-            "name": "youtube_link",
+            "key": "field_66ce0dd21d495",
+            "label": "Activities",
+            "name": "activities",
             "aria-label": "",
-            "type": "oembed",
+            "type": "select",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -58,28 +58,18 @@
                 "class": "",
                 "id": ""
             },
-            "width": "",
-            "height": ""
-        },
-        {
-            "key": "field_66a25e583454e",
-            "label": "Background",
-            "name": "background",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
+            "choices": {
+                "day-camps": "Day Camp Activities",
+                "overnight-camps": "Overnight Camp Activities",
+                "schools-groups": "Schools & Groups"
             },
-            "message": "",
-            "default_value": 0,
-            "ui_on_text": "",
-            "ui_off_text": "",
-            "ui": 1
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
         }
     ],
     "location": [
@@ -87,7 +77,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "fcc\/camp-video"
+                "value": "fcc\/activities-list"
             }
         ]
     ],
@@ -100,5 +90,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1724959469
+    "modified": 1724782624
 }

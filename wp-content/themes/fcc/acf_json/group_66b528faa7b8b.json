@@ -116,11 +116,11 @@
             "save_other_choice": 0
         },
         {
-            "key": "field_66b531d7ba726",
-            "label": "Button",
-            "name": "button",
+            "key": "field_66b532a6ba727",
+            "label": "Link",
+            "name": "link",
             "aria-label": "",
-            "type": "group",
+            "type": "link",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -129,51 +129,7 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "block",
-            "sub_fields": [
-                {
-                    "key": "field_66b532b3ba728",
-                    "label": "Button Color",
-                    "name": "button_color",
-                    "aria-label": "",
-                    "type": "radio",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "green": "Green",
-                        "gold": "Gold",
-                        "teal": "Teal"
-                    },
-                    "default_value": "",
-                    "return_format": "value",
-                    "allow_null": 0,
-                    "other_choice": 0,
-                    "layout": "horizontal",
-                    "save_other_choice": 0
-                },
-                {
-                    "key": "field_66b532a6ba727",
-                    "label": "Link",
-                    "name": "link",
-                    "aria-label": "",
-                    "type": "link",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array"
-                }
-            ]
+            "return_format": "array"
         }
     ],
     "location": [
@@ -194,5 +150,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1723650993
+    "modified": 1724428446
 }

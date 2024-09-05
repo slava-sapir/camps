@@ -19,6 +19,7 @@
     <?php wp_head(); ?>
 </head>
 <?php
+global $theme_color;
 $theme_color = 'default-theme';
 $camp_args = [
     'post_type' => 'page',
@@ -28,12 +29,17 @@ if (get_field('theme_colour')) :
 endif;
 
 global $post;
+
+if (!$post) :
+    $post = get_post(get_option('page_on_front'));
+endif;
 $camp_model = new Camp($post);
 
 $child_pages = [];
 
 if ($camp_model->is_camp_page()) :
     $child_pages = $camp_model->get_submenu_items();
+    $camp_menu = $camp_model->parent_pages[$camp_model->active_camp];
 endif;
 ?>
 <body <?php body_class($theme_color); ?>>
@@ -48,7 +54,7 @@ endif;
 
             <!-- Center Links -->
             <div class="col-lg d-none d-lg-flex justify-content-center">
-                <?php if ($camp_model->is_camp_page()) : ?>
+                <?php if ($camp_model && $camp_model->is_camp_page()) : ?>
                     <ul class="list-unstyled justify-content-center center-links">
                         <?php foreach ($camp_model->parent_pages as $page_id => $page_slug) : ?>
                             <li class="d-flex"><a class="<?= $camp_model->active_camp === $page_id ? 'active' : ''; ?>"
@@ -61,8 +67,8 @@ endif;
             <!-- Side Links -->
             <div class="col-lg-3">
                 <ul class="list-unstyled side-links">
-                    <li><a href="">Donate</a></li>
-                    <li><a href="">Join Our Team</a></li>
+                    <li><a target="_blank" href="https://forestcliff.reachapp.co/donations/new">Donate</a></li>
+                    <li><a href="/join-our-team">Join Our Team</a></li>
                 </ul>
             </div>
         </div>
@@ -83,24 +89,21 @@ endif;
 
                 <!-- Navigation Links -->
                 <div class="col d-none d-lg-block">
-                    <ul class="nav-list">
-                        <?php if ($theme_color === 'default-theme') : ?>
+                    <?php if ($theme_color === 'default-theme') : ?>
+                        <ul class="nav-list">
                             <li><a href="/day-camps" class="btn btn-text">Day Camps</a></li>
                             <li><a href="/overnight-camps" class="btn btn-text">Overnight Camps</a></li>
                             <li><a href="/schools-groups" class="btn btn-text">Schools & Groups</a></li>
-                        <?php else : ?>
-                            <?php foreach ($child_pages as $page) : ?>
-                                <li><a href="<?= get_permalink($page->ID); ?>"
-                                       class="btn btn-text text-white"><?php echo $page->post_title; ?></a></li>
-                            <?php endforeach; ?>
-                        <?php endif; ?>
-                    </ul>
+                        </ul>
+                    <?php else :
+                        wp_nav_menu(['theme_location' => $camp_menu, 'menu_class' => 'nav-list'])?>
+                    <?php endif; ?>
                 </div>
 
                 <!-- Register Button -->
                 <div class="col-auto text-end d-none d-lg-block col-register">
                     <?php if ($camp_model->is_camp_page()) : ?>
-                        <a href="<?= get_field('submenu_button', $camp_model->active_camp)['url']; ?>>"
+                        <a href="<?= get_field('submenu_button', $camp_model->active_camp)['url']; ?>"
                            target="<?= get_field('submenu_button', $camp_model->active_camp)['target']; ?>"
                            class="btn"><?= get_field('submenu_button', $camp_model->active_camp)['title']; ?></a>
                     <?php else : ?>
@@ -167,14 +170,8 @@ endif;
                         <div id="collapseOne" class="accordion-collapse collapse"
                              data-bs-parent="#accordion-mobile-navigation">
                             <div class="accordion-body">
-                                <ul class="list-unstyled mb-0">
-                                    <li><a href="">Overview</a></li>
-                                    <li><a href="">The Experience</a></li>
-                                    <li><a href="">Activities</a></li>
-                                    <li><a href="">Dates & Locations</a></li>
-                                    <li><a href="">SK - Grade 5 Program</a></li>
-                                    <li><a href="">Grade 6 - 8 Program</a></li>
-                                </ul>
+                                <a href="/day-camps" class="d-flex mb-10">Overview</a>
+                                <?php wp_nav_menu(['theme_location' => 'day-camps', 'menu_class' => 'list-unstyled mb-0']); ?>
                             </div>
                         </div>
                     </div>
@@ -189,14 +186,8 @@ endif;
                         <div id="collapseTwo" class="accordion-collapse collapse"
                              data-bs-parent="#accordion-mobile-navigation">
                             <div class="accordion-body">
-                                <ul class="list-unstyled mb-0">
-                                    <li><a href="">Overview</a></li>
-                                    <li><a href="">The Experience</a></li>
-                                    <li><a href="">Activities</a></li>
-                                    <li><a href="">Dates & Locations</a></li>
-                                    <li><a href="">SK - Grade 5 Program</a></li>
-                                    <li><a href="">Grade 6 - 8 Program</a></li>
-                                </ul>
+                                <a href="/overnight-camps" class="d-flex mb-10">Overview</a>
+                                <?php wp_nav_menu(['theme_location' => 'overnight-camps', 'menu_class' => 'list-unstyled mb-0']); ?>
                             </div>
                         </div>
                     </div>
@@ -211,14 +202,8 @@ endif;
                         <div id="collapseThree" class="accordion-collapse collapse"
                              data-bs-parent="#accordion-mobile-navigation">
                             <div class="accordion-body">
-                                <ul class="list-unstyled mb-0">
-                                    <li><a href="">Overview</a></li>
-                                    <li><a href="">The Experience</a></li>
-                                    <li><a href="">Activities</a></li>
-                                    <li><a href="">Dates & Locations</a></li>
-                                    <li><a href="">SK - Grade 5 Program</a></li>
-                                    <li><a href="">Grade 6 - 8 Program</a></li>
-                                </ul>
+                                <a href="/schools-groups" class="d-flex mb-10">Overview</a>
+                                <?php wp_nav_menu(['theme_location' => 'schools-groups', 'menu_class' => 'list-unstyled mb-0']); ?>
                             </div>
                         </div>
                     </div>
@@ -228,6 +213,6 @@ endif;
 
         <!-- Mobile Register Button -->
         <div class="container nav-footer">
-            <a href="" class="btn btn-green w-100 py-20">Register Now</a>
+            <a href="https://forestcliffcamp.campbrainregistration.com/" target="_blank" class="btn d-flex justify-content-center py-20">Register Now</a>
         </div>
     </div><!-- /#mobile-navigation -->

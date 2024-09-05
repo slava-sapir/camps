@@ -1,7 +1,14 @@
 #hero {
-    min-height: 800px;
+    min-height: 400px;
     position: relative;
     padding: 30px;
+
+    @include media-breakpoint-up(md) {
+        height: 600px;
+    }
+    @include media-breakpoint-up(xl) {
+        height: 800px;
+    }
     .hero-text {
         max-width: 755px;
     }
@@ -15,6 +22,28 @@
             height: 100%;
             width: 100%;
             background-color: rgba(0,0,0,0.5);
+        }
+    }
+}
+
+.green-theme, .default-theme {
+    #hero, #mobile-navigation {
+        .btn {
+            @extend .btn-green;
+        }
+    }
+}
+.gold-theme {
+    #hero, #mobile-navigation {
+        .btn {
+            @extend .btn-gold;
+        }
+    }
+}
+.teal-theme {
+    #hero, #mobile-navigation {
+        .btn {
+            @extend .btn-teal;
         }
     }
 }

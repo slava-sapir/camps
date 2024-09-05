@@ -1,6 +1,6 @@
 <?php
 /**
- * Container Block Template.
+ * Theme Buttons Block Template.
  *
 * @param array $block The block settings and attributes.
 * @param string $content The block inner HTML (empty).
@@ -17,8 +17,9 @@ $anchor = isset($block['anchor']) ? $block['anchor'] : '';
 $classes = isset($block['className']) ? $block['className'] : '';
 ?>
 
-<section id="<?= $anchor; ?>" class="<?= get_field('background'); ?> <?= $classes; ?>" style="padding-top: <?= get_field('padding_top'); ?>px; padding-bottom: <?= get_field('padding_bottom'); ?>px;">
-    <div class="<?= get_field('container_width'); ?>">
-        <InnerBlocks />
-    </div>
-</section>
+<div id="<?= $anchor; ?>" class="theme-buttons d-flex flex-wrap <?= get_field('button_positioning'); ?> <?= $classes; ?>" style="padding-top: <?= get_field('padding_top'); ?>px; padding-bottom: <?= get_field('padding_bottom'); ?>px;">
+    <?php if(have_rows('buttons')): ?>
+    <?php while(have_rows('buttons')): the_row(); ?>
+            <a href="<?= get_sub_field('button')['url']; ?>" target="<?= get_sub_field('button')['target']; ?>" class="mx-10 btn <?= get_sub_field('button_colour'); ?>"><?= get_sub_field('button')['title']; ?></a>
+    <?php endwhile; endif; ?>
+</div>

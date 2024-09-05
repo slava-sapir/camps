@@ -51,7 +51,10 @@ function forest_cliff_camps_setup()
     // This theme uses wp_nav_menu() in one location.
     register_nav_menus(
         array(
-            'menu-1' => esc_html__('Primary', 'forest-cliff-camps'),
+            'day-camps'       => esc_html__('Day Camps', 'forest-cliff-camps'),
+            'overnight-camps' => esc_html__('Overnight Camps', 'forest-cliff-camps'),
+            'schools-groups'  => esc_html__('Schools Groups', 'forest-cliff-camps'),
+            'menu-1'          => esc_html__('Primary', 'forest-cliff-camps'),
         )
     );
 
@@ -334,6 +337,48 @@ function create_schedules_cpt() {
 }
 add_action( 'init', 'create_schedules_cpt', 0 );
 
+// Activities CPT
+// Register Custom Post Type Schedules
+function create_activities_cpt() {
+    $labels = array(
+        'name'          => 'activities',
+        'singular_name' => 'Activity',
+        'menu_name'     => 'Activities',
+    );
+
+    $args = array(
+        'label'         => 'Ativities',
+        'labels'        => $labels,
+        'public'        => true,
+        'has_archive'   => true,
+        'rewrite'       => array( 'slug' => 'activities' ),
+        'supports'      => array( 'title', 'editor', 'thumbnail' ),
+    );
+
+    register_post_type( 'activity', $args );
+}
+add_action( 'init', 'create_activities_cpt', 0 );
+
+// Register Custom Taxonomy for Activity Categories
+function create_activity_categories_taxonomy() {
+    $labels = array(
+        'name'          => 'Activity Categories',
+        'singular_name' => 'Activity Category',
+        'menu_name'     => 'Activity Categories',
+    );
+    
+    $args = array(
+        'labels'        => $labels,
+        'public'        => true,
+        'hierarchical'  => true,
+        'rewrite'       => array( 'slug' => 'activity-category' ),
+        'supports'      => array( 'title', 'editor' ),
+    );
+    
+    register_taxonomy( 'activity_category', array( 'activity' ), $args );
+}
+add_action( 'init', 'create_activity_categories_taxonomy', 0 );
+
 // Add ACF Options Page
 if( function_exists('acf_add_options_page') ) {
     acf_add_options_sub_page(array(
@@ -422,3 +467,17 @@ function forest_cliff_ajax_handler(){
     endif;
     die; // here we exit the script and even no wp_reset_query() required!
 }
+
+
+function custom_admin_css() {
+    echo '
+    <style>
+        .edit-post-sidebar { 
+            width: 650px !important; /* Increase this value as needed */
+        }
+        .edit-post-layout__content { 
+            margin-right: 420px !important; /* Adjust this value accordingly */
+        }
+    </style>';
+}
+add_action('admin_head', 'custom_admin_css');

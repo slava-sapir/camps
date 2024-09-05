@@ -15,6 +15,7 @@
 
 $anchor = isset($block['anchor']) ? $block['anchor'] : '';
 $classes = isset($block['className']) ? $block['className'] : '';
+global $theme_color;
 ?>
 
 <section class="info-cards <?= esc_attr($classes) ?>" id="<?= esc_attr($anchor) ?>" style="padding-top: <?= get_field('padding_top'); ?>px; padding-bottom: <?= get_field('padding_bottom'); ?>px;">
@@ -29,8 +30,8 @@ $classes = isset($block['className']) ? $block['className'] : '';
                     <div class="info-card rounded fcc-shadow position-relative d-flex flex-column align-self-stretch w-100">
                         <?= wp_get_attachment_image( $image['id'], 'full', false, ['class' => 'img-fluid text-center'] ); ?>
                         <div class="info-card-text tile-shadow pt-40 px-20">
-                            <h3 class="h4 text-center text-white"><?= $title ?></h3>
-                            <div class="text-center"><a href="/<?= $link['url']; ?>" target="<?= $link['target']; ?>" class="btn stretched-link"><?= $link['title']; ?></a></div>
+                            <h3 class="h4 text-center <?= $theme_color === 'green-theme' ? '' : 'text-white'; ?>"><?= $title ?></h3>
+                            <div class="text-center"><a href="<?= $link['url']; ?>" target="<?= $link['target']; ?>" class="btn stretched-link"><?= $link['title']; ?></a></div>
                         </div>
                     </div>
                 </div>
