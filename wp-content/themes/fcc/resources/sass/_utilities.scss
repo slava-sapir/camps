@@ -130,6 +130,8 @@ $utilities: map-merge($utilities,
                 2: 2px,
                 10: 10px,
                 20: 20px,
+                100: 100px,
+                320: 320px,
                 420: 420px,
                 520: 520px,
                 671: 671px,
@@ -142,6 +144,8 @@ $utilities: map-merge($utilities,
             values: (
                 10: 10px,
                 20: 20px,
+                100: 100px,
+                320 : 320px,
                 171: 171px,
                 420: 420px,
                 520: 520px,
@@ -302,5 +306,6 @@ $utilities: map-merge($utilities,
             )
         ),
         // scss-docs-end utils-border-radius
+           // Negative margin utilities
     )
 );

@@ -21,9 +21,9 @@
 ?>
 
 
-<div class="d-flex flex-column-reverse flex-xl-row align-items-center justify-content-center">
+<div class="d-flex flex-column-reverse flex-xxl-row align-items-center justify-content-center pe-0 pe-xxl-240">
 
-        <div class="d-flex align-item-center justify-content-center w-100 w-xl-50 mb-200 mb-xl-0 border-bottom border-1 <?= $theme_color == 'green-theme' ? 'border-grey600' : 'border-white' ?>">
+        <div class="d-flex align-item-center justify-content-center w-100 w-xl-50 mb-200 mb-xxl-0 border-bottom border-1 <?= $theme_color == 'green-theme' ? 'border-grey600' : 'border-white' ?>">
             <div class="d-flex flex-column gap-30 gap-md-80">
              <h2 class="text-center <?= $theme_color == 'green-theme' ? 'text-grey600' : 'text-white '; ?>"><?= get_field('main_title'); ?></h2>
               <div class="nav nav-tabs d-flex flex-column flex-sm-row justify-content-end align-items-center gap-10 gap-md-20" id="nav-tab" role="tablist">
@@ -76,15 +76,15 @@
                   $count++;
               ?>
 
-              <div class="tab-pane fade mb-125 mt-100 <?php echo $count === 1 ? 'show active' : ''; ?>" id="nav-<?php echo $index; ?>" role="tabpanel" aria-labelledby="nav-<?php echo $index; ?>-tab" tabindex="0">
-                <div class="shadow-sm d-flex flex-column bg-white rounded-circle border-20 border border-white wp-420 wp-md-520 wp-lg-671 hp-420 hp-md-520 hp-lg-671" >
-                  <?= wp_get_attachment_image( $experience_image['id'], 'circled-image', false, ['class' => 'img-fluid rounded-top-5'] ); ?>
+              <div class="tab-pane fade mb-20 mb-xl-125 mt-100 <?php echo $count === 1 ? 'show active' : ''; ?>" id="nav-<?php echo $index; ?>" role="tabpanel" aria-labelledby="nav-<?php echo $index; ?>-tab" tabindex="0">
+                <div class="shadow-sm d-flex flex-column bg-white rounded-circle border-20 border border-white wp-320 wp-md-520 wp-lg-671 hp-320 hp-md-520 hp-lg-671" >
+                  <?= wp_get_attachment_image( $experience_image['id'], 'circled-image', false, ['class' => 'img-fluid rounded-top-5  '] ); ?>
                   <div class="d-flex flex-column gap-5 justify-content-center align-items-center">
                     <div class="mt-n30 bg-white rounded-circle p-10">
                       <?= wp_get_attachment_image( $yellow_icon['id'], 'full', false, ['class' => 'img-fluid'] ); ?>
                     </div>
                     <p class="fs-4 fw-normal text-grey600 m-0"><?php echo $experience_title; ?></p>
-                    <p class="fs-6 fw-normal w-75 text-grey600 text-center m-0 d-none d-md-block"><?php echo $experience_text; ?></p>
+                    <p class="fs-6 fw-normal w-75 text-grey600 text-center m-0 d-none d-lg-block"><?php echo $experience_text; ?></p>
                   </div>
                 </div>
               </div>
