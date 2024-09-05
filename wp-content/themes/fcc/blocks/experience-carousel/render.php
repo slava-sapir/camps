@@ -19,23 +19,18 @@
   $id = get_the_ID();
   $theme_color = get_field('theme_colour', $id);
 ?>
-<?php if($theme_color != 'green-theme') : ?>
-  <img src="<?= esc_url(get_template_directory_uri() . '/resources/images/main-theme/shapes/white-top-splash.png'); ?>" alt="white-top-splash" class="img-fluid w-100 mt-n1">
-<?php endif; ?>
 
-    <div class="hp-1400 hp-sm-1000 hp-md-1200 hp-xl-800 position-relative mt-xl-n200 mt-n0">
 
-      <div class="d-flex flex-column-reverse flex-xl-row align-items-center">
+<div class="d-flex flex-column-reverse flex-xl-row align-items-center justify-content-center">
 
-        <div class="d-flex align-item-center justify-content-center w-100 w-xl-50 border-bottom border-1 <?= $theme_color == 'green-theme' ? 'border-grey600' : 'border-white' ?>">
+        <div class="d-flex align-item-center justify-content-center w-100 w-xl-50 mb-200 mb-xl-0 border-bottom border-1 <?= $theme_color == 'green-theme' ? 'border-grey600' : 'border-white' ?>">
             <div class="d-flex flex-column gap-30 gap-md-80">
              <h2 class="text-center <?= $theme_color == 'green-theme' ? 'text-grey600' : 'text-white '; ?>"><?= get_field('main_title'); ?></h2>
-              <div class="nav nav-tabs d-flex flex-column flex-sm-row justify-content-end align-items-center gap-5 gap-md-20" id="nav-tab" role="tablist">
+              <div class="nav nav-tabs d-flex flex-column flex-sm-row justify-content-end align-items-center gap-10 gap-md-20" id="nav-tab" role="tablist">
                     <?php
                     $count = 0;
                     if(have_rows('experience_repeater')):
                      while(have_rows('experience_repeater')): the_row(); 
-                     $big_icon = get_sub_field('big_icon');
                      $small_icon = get_sub_field('small_icon');
                      $experience_title = get_sub_field('experience__title');
                      $index = get_row_index();
@@ -68,7 +63,7 @@
             </div>
         </div>
 
-        <div class="tab-content w-100 w-xl-50 ms-0 ms-xl-n50 d-flex align-items-center justify-content-center justify-content-xl-start ">
+        <div class="tab-content mw-100 w-xl-50 ms-0 ms-xl-n50 d-flex align-items-center justify-content-center justify-content-xl-start ">
               <?php
                 $count = 0;
                 if(have_rows('experience_repeater')):
@@ -81,12 +76,12 @@
                   $count++;
               ?>
 
-              <div class="tab-pane fade <?php echo $count === 1 ? 'show active' : ''; ?>" id="nav-<?php echo $index; ?>" role="tabpanel" aria-labelledby="nav-<?php echo $index; ?>-tab" tabindex="0">
+              <div class="tab-pane fade mb-125 mt-100 <?php echo $count === 1 ? 'show active' : ''; ?>" id="nav-<?php echo $index; ?>" role="tabpanel" aria-labelledby="nav-<?php echo $index; ?>-tab" tabindex="0">
                 <div class="shadow-sm d-flex flex-column bg-white rounded-circle border-20 border border-white wp-420 wp-md-520 wp-lg-671 hp-420 hp-md-520 hp-lg-671" >
                   <?= wp_get_attachment_image( $experience_image['id'], 'circled-image', false, ['class' => 'img-fluid rounded-top-5'] ); ?>
                   <div class="d-flex flex-column gap-5 justify-content-center align-items-center">
                     <div class="mt-n30 bg-white rounded-circle p-10">
-                    <?= wp_get_attachment_image( $yellow_icon['id'], 'full', false, ['class' => 'img-fluid'] ); ?>
+                      <?= wp_get_attachment_image( $yellow_icon['id'], 'full', false, ['class' => 'img-fluid'] ); ?>
                     </div>
                     <p class="fs-4 fw-normal text-grey600 m-0"><?php echo $experience_title; ?></p>
                     <p class="fs-6 fw-normal w-75 text-grey600 text-center m-0 d-none d-md-block"><?php echo $experience_text; ?></p>
@@ -96,14 +91,5 @@
           <?php endwhile; endif; ?>
         </div>
 
-      </div>
-
-      <?php if($theme_color == 'gold-theme') : ?>
-        <img src="<?= esc_url(get_template_directory_uri() . '/resources/images/day-camp-theme/shapes/splash-beige-bottom.svg'); ?>" alt="splash-beige-bottom" class="img-fluid w-100 position-absolute start-0 bottom-0 mb-n1">
-        <?php elseif($theme_color == 'teal-theme') : ?>
-        <img src="<?= esc_url(get_template_directory_uri() . '/resources/images/overnight-camp-theme/shapes/splash-off-white-bottom.svg'); ?>" alt="off-white-splash-bottom" class="img-fluid w-100 position-absolute start-0 bottom-0 mb-n1">
-      <?php endif; ?>
-
-    </div>
-
+</div>
 </section>

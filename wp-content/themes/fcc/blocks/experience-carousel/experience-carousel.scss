@@ -1,14 +1,18 @@
 
 .gold-theme {
     #experience-carousel {
-      background:  url(../../resources/images/day-camp-theme/shapes/splash-bottom-gold.png) center / cover no-repeat, 
-      linear-gradient(180deg, #FFC340 0%, #F5A800 100%);
+       background: url(../../resources/images/day-camp-theme/shapes/splash-white-top.svg) center top 0 no-repeat,
+       url(../../resources/images/day-camp-theme/shapes/splash-beige-bottom.svg) center bottom 0 no-repeat,
+       url(../../resources/images/day-camp-theme/shapes/splash-bottom-gold.png) center / cover no-repeat,
+       linear-gradient(180deg, #FFC340 0%, #F5A800 100%);
     }
   }
 
   .teal-theme {
   #experience-carousel {
-    background:  url(../../resources/images/day-camp-theme/shapes/splash-bottom-teal.png) center / cover no-repeat,
+    background:  url(../../resources/images/day-camp-theme/shapes/splash-white-top.svg) center top 0 no-repeat,
+    url(../../resources/images/overnight-camp-theme/shapes/splash-off-white-bottom.svg) center bottom 0 no-repeat,
+    url(../../resources/images/day-camp-theme/shapes/splash-bottom-teal.png) center / cover no-repeat,
     linear-gradient(180deg, #1FD3FA 0%, #0FC1E8 100%);
     }
   }
