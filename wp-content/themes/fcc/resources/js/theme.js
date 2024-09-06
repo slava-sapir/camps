@@ -7,7 +7,6 @@ import "bootstrap/js/dist/tab";
 
 
 import '../../blocks/camp-reviews/camp-reviews';
-import "../../blocks/experience-carousel/experience-carousel";
 import "../../blocks/rates-dates/rates-dates";
 
 document.documentElement.style.setProperty('--scrollbar-width', (window.innerWidth - document.documentElement.clientWidth) + "px");
