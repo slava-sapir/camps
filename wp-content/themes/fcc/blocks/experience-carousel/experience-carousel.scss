@@ -1,15 +1,18 @@
 
 .gold-theme {
-  #experience-carousel {
-    background:  url(../../resources/images/day-camp-theme/shapes/splash-bottom-gold.png) center / cover no-repeat,
-    linear-gradient(180deg, #FFC340 0%, #F5A800 100%);
-  }
-    
+    #experience-carousel {
+       background: url(../../resources/images/day-camp-theme/shapes/splash-white-top.svg) center top 0 no-repeat,
+       url(../../resources/images/day-camp-theme/shapes/splash-beige-bottom.svg) center bottom 0 no-repeat,
+       url(../../resources/images/day-camp-theme/shapes/splash-bottom-gold.png) center / cover no-repeat,
+       linear-gradient(180deg, #FFC340 0%, #F5A800 100%);
+    }
   }
 
   .teal-theme {
   #experience-carousel {
-    background:  url(../../resources/images/day-camp-theme/shapes/splash-bottom-teal.png) center / cover no-repeat,
+    background:  url(../../resources/images/day-camp-theme/shapes/splash-white-top.svg) center top 0 no-repeat,
+    url(../../resources/images/overnight-camp-theme/shapes/splash-off-white-bottom.svg) center bottom 0 no-repeat,
+    url(../../resources/images/day-camp-theme/shapes/splash-bottom-teal.png) center / cover no-repeat,
     linear-gradient(180deg, #1FD3FA 0%, #0FC1E8 100%);
     }
   }
@@ -20,33 +23,48 @@
     }
   }
 
-  .rounded-container {
-    box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.10);
+  .stick {
+    opacity: 0;
   }
- 
-.presentation {
-  transition:transform 0.7s ease;
-}
 
-  .small-icon {
-       transition: transform 0.7s ease;
-} 
+  .grey_border_opacity, .border_opacity {
+    border: 2px solid transparent;
+  }
 
 .presentation:hover {
-    .hover-event  {
-    .small-icon {
+    transition: transform 0.7s ease;
+    .bordered-icon {
       transform: scale(1.5) translateY(-10px);
+       transition: transform 0.7s ease;
     } 
-
+    .ball
+    {
+      background-color: $brown!important;
+    }
     .txt {
       color: $brown!important;
     }
 
-    .ball {
-      background-color: $brown!important;
+}
+
+  .nav-tabs .nav-link.active {
+     transition: transform 0.7s ease;
+    .stick {
+      opacity: 1;
+    }
+    .bordered-icon {
+      transform: scale(1.5) translateY(-10px);
+      border: 2px solid $white;
+   } 
+
+    .border_opacity {
+      border: 2px solid $white;
+    }
+
+    .grey_border_opacity {
+      border: 2px solid $grey600;
     }
   }
-}
 
 //Bootstrap classes overriding
 .nav-tabs, .nav-tabs .nav-link {
@@ -55,4 +73,3 @@
 .nav-tabs .nav-link.active {
   background-color: transparent;
 }
-
