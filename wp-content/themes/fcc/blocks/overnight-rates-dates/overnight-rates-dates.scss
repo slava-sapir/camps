@@ -1,0 +1,48 @@
+
+  .gold-theme {
+  
+  .presentation-tab.active,
+  .show > .presentation-tab, 
+  .title-tab,
+  .presentation-tab:hover,
+  .presentation-tab:focus {
+      color: $white;
+      background: $gold;
+      border: 3px solid $gold!important;
+  }
+
+}
+   .teal-theme {
+
+    .presentation-tab.active,
+    .show > .presentation-tab, 
+    .title-tab,
+    .presentation-tab:hover,
+    .presentation-tab:focus {
+      color: $white;
+      background: $teal;
+      border: 3px solid $teal!important;
+    }
+
+  }
+
+   .green-theme {
+
+    .presentation-tab.active,
+    .show > .presentation-tab, 
+    .title-tab,
+    .presentation-tab:hover,
+    .presentation-tab:focus {
+      color: $white;
+      background: $green;
+      border: 3px solid $green!important;
+    }
+
+  }
+
+
+  .nav-tabs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(161px, 1fr)); 
+}
+
