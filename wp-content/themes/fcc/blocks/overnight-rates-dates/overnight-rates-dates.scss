@@ -1,48 +1,58 @@
-
-  .gold-theme {
-  
-  .presentation-tab.active,
-  .show > .presentation-tab, 
-  .title-tab,
-  .presentation-tab:hover,
-  .presentation-tab:focus {
-      color: $white;
-      background: $gold;
-      border: 3px solid $gold!important;
-  }
-
+.overnight-rates-dates {
+    #nav-tab {
+        a.active {
+            background-color: $teal;
+            border-color: $teal !important;
+            p {
+                color: $white !important;
+                &:first-child {
+                    @extend .h5;
+                }
+            }
+        }
+    }
 }
-   .teal-theme {
 
-    .presentation-tab.active,
-    .show > .presentation-tab, 
-    .title-tab,
-    .presentation-tab:hover,
-    .presentation-tab:focus {
-      color: $white;
-      background: $teal;
-      border: 3px solid $teal!important;
-    }
-
-  }
-
-   .green-theme {
-
-    .presentation-tab.active,
-    .show > .presentation-tab, 
-    .title-tab,
-    .presentation-tab:hover,
-    .presentation-tab:focus {
-      color: $white;
-      background: $green;
-      border: 3px solid $green!important;
-    }
-
-  }
-
-
-  .nav-tabs {
+.camp-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(161px, 1fr)); 
+    grid-template-columns: 150px repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: auto auto;
+    gap: 5px;
+
+    @include media-breakpoint-down(lg) {
+        display: none;
+    }
+
+    .camp-label {
+        grid-row: 1;
+    }
+    .rate-label {
+        grid-row: 2;
+        order: -1;
+    }
+
+    .dates {
+        grid-row: 1;
+        min-width: 100px;
+    }
+
+    .rate {
+        grid-row: 2;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
 }
+
+.rates-dates-swiper {
+    p {
+        margin-bottom: 0;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: $teal;
+    }
+}
+
 

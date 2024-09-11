@@ -8,6 +8,7 @@ import "bootstrap/js/dist/tab";
 
 import '../../blocks/camp-reviews/camp-reviews';
 import "../../blocks/rates-dates/rates-dates";
+import "../../blocks/overnight-rates-dates/overnight-rates-dates";
 
 document.documentElement.style.setProperty('--scrollbar-width', (window.innerWidth - document.documentElement.clientWidth) + "px");
 
