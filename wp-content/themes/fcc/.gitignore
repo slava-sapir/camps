@@ -7,3 +7,4 @@ composer.lock
 mix-manifest.json
 script.js
 !js/script.js
+!sass/
